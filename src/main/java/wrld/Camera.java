@@ -41,8 +41,6 @@ public class Camera {
     shift = KeyEvent.VK_SHIFT,
     ctrl = KeyEvent.VK_CONTROL;
 
-    protected int lastX,lastY;
-
     protected float
             xrot,
             yrot,
@@ -129,11 +127,7 @@ public class Camera {
             strafeRight();
         }
         if (keyPressed[space]){
-            if(flying) {
-                p.y += .25;
-            }else {
-
-            }
+                jump();
         }
         if (keyPressed[z]){
             if(flying)
@@ -149,7 +143,7 @@ public class Camera {
         }
     }//..
 
-    float forceFactor = 5000;
+    float forceFactor = 1000;
     protected void forward(){
         if(flying) {
             setCartesian();
@@ -157,7 +151,7 @@ public class Camera {
             p.z -= (Math.cos(yrotrad))*flySpeed;
             p.y -= (Math.sin(xrotrad)) * flySpeed;
         }else if(standing()){
-            body.applyCentralForce(getDirection(forceFactor,0));
+            body.applyCentralImpulse(getDirection(forceFactor, 0));
             //body.setLinearVelocity(getRunVelocity(speed,0));
         }
     }//..
@@ -169,7 +163,7 @@ public class Camera {
             p.z += (Math.cos(yrotrad))*flySpeed*.5;
             p.y += (Math.sin(xrotrad)) * flySpeed;
         }else if(standing()){
-            body.applyCentralForce(getDirection(-forceFactor,0));
+            body.applyCentralImpulse(getDirection(-forceFactor, 0));
         }
     }//..
 
@@ -179,7 +173,7 @@ public class Camera {
             p.x -= (Math.cos(yrotrad)) * flySpeed * .25;
             p.z -= (Math.sin(yrotrad)) * flySpeed * .25;
         }else if(standing()){
-            body.applyCentralForce(getRunVelocity(forceFactor,-90));
+            body.applyCentralImpulse(getRunVelocity(forceFactor,-90));
         }
     }//..
 
@@ -189,7 +183,15 @@ public class Camera {
             p.x += (Math.cos(yrotrad)) * flySpeed;
             p.z += (Math.sin(yrotrad)) * flySpeed;
         }else if(standing()){
-            body.applyCentralForce(getRunVelocity(forceFactor,90));
+            body.applyCentralImpulse(getRunVelocity(forceFactor, 90));
+        }
+    }//..
+
+    protected void jump(){
+        if(flying) {
+            p.y += .25;
+        }else if (standing()) {
+            body.applyCentralImpulse(new Vector3f(0, 800, 0));
         }
     }//..
 
