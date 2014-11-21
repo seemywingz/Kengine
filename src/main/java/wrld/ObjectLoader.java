@@ -23,8 +23,6 @@ public class ObjectLoader {
 
     GL2 gl;
 
-    //boolean isMaterial=false, isNormal = false, isTexture = false,isAnimation =false;
-
     ObjectLoader(GL2 gl) {
        this.gl = gl;
     }//..
@@ -36,12 +34,10 @@ public class ObjectLoader {
         Vector<Coordinate> vertex = new Vector<Coordinate>();
         Vector<Face> faces = new Vector<Face>();
         Vector<Coordinate> normal = new Vector<Coordinate>();
-        Vector<Texture> textures = new Vector<Texture>();
-        Vector<Long> lists = new Vector<Long>();
         Vector<Material> material = new Vector<Material>();
         Vector<TexCoord> textureCoord = new Vector<TexCoord>();
 
-        boolean isMaterial=false, isNormal = false, isTexture = false;
+        boolean isNormal = false, isTexture = false;
 
         int curmat=0;
 
@@ -53,20 +49,23 @@ public class ObjectLoader {
 
         try {
             br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(fileLocation+filename), "UTF-8"));
-            while((line = br.readLine()) != null) {// read entire .callist file into ram
+            while((line = br.readLine()) != null) {// read entire .obj file into ram
                 if(line.length() > 0)
                     coord.add(line);
             }
 
-        } catch (Exception e){}
+        } catch (Exception e){
+            e.printStackTrace();
+            System.out.println("Error Loading: "+fileLocation+filename);
+        }
 
 
-        for(int i=0; i<coord.size();i++){// loop through all lines of .callist in ram
+        for(int i=0; i<coord.size();i++){// loop through all lines of .obg in ram
 
             line = coord.get(i);
 
             if(line.charAt(0) == '#'){ // check what the line is describing i.e comment, vertex, vector normal, face
-                continue;
+                //continue;
             }else if(line.charAt(0) == 'v' && line.charAt(1) == ' '){
                 // if it is a vector add to vectors array
                 String[] token = line.split(delims);
@@ -135,7 +134,7 @@ public class ObjectLoader {
                     }
                 }
             }else if(line.charAt(0) == 'm' && line.charAt(1) == 't' && line.charAt(2) == 'l' && line.charAt(3) == 'l'){// if use mtllib
-                isMaterial = true;
+                //isMaterial = true;
                 String[] token = line.split(delims);
 
                 String mtlLine;
@@ -151,7 +150,10 @@ public class ObjectLoader {
                         if(mtlLine.length() > 0)
                             temp.add(mtlLine);
                     }
-                }catch (Exception e){}
+                }catch (Exception e){
+                    e.printStackTrace();
+                    System.out.println("Error Loading: "+mtlFileLocation);
+                }
 
                 String matName = " ", texFilename;
                 float
@@ -167,7 +169,7 @@ public class ObjectLoader {
                 //begin iterating through .mtl
                 for(int m =0; m < temp.size(); m++ ){
                     if(temp.get(m).charAt(0) == '#'){// skip comments
-                        continue;
+                        //continue;
                     }else if(temp.get(m).charAt(0) == 'n' && temp.get(m).charAt(1) == 'e' && temp.get(m).charAt(2) == 'w'){
                         if(isMat){
                             if(!texFilename.equals("n")){
@@ -231,7 +233,7 @@ public class ObjectLoader {
 
                     }
                 }// end for .mtl
-                //System.out.println("Materials Loaded");
+                System.out.println("Materials Loaded");
                 if(isMat){
                     if(!texFilename.equals("n")){
                         material.add(new Material(matName,alpha,ns,ni,dif,amb,spec,illum,texture));
@@ -247,22 +249,16 @@ public class ObjectLoader {
 
             }// end check what line is describing// endif mtllib
 
-        }// end looping through .callist
+        }// end looping through .obj
         // System.out.println("Object File Loaded");
 
-
-        if(material.size() == 0){
-            isMaterial = false;
-        }else{
-            isMaterial = true;
-        }
 
         //draw
         int num = gl.glGenLists(1);
         gl.glNewList(num, gl.GL_COMPILE);
         int last = -1;
         for(int i=0; i<faces.size();i++){
-            if(last != faces.get(i).mat && isMaterial){
+            if(last != faces.get(i).mat){
                 float diffuse [] ={ material.get(faces.get(i).mat).dif[0],material.get(faces.get(i).mat).dif[1],material.get(faces.get(i).mat).dif[2],1};
                 float ambient[] = {material.get(faces.get(i).mat).amb[0],material.get(faces.get(i).mat).amb[1],material.get(faces.get(i).mat).amb[2],1};
                 float specular[] = {material.get(faces.get(i).mat).spec[0],material.get(faces.get(i).mat).spec[1],material.get(faces.get(i).mat).spec[2],1};
@@ -345,13 +341,12 @@ public class ObjectLoader {
 
     public int LoadOBJ(String fileLocation,String filename, ObjectArrayList<Vector3f> points){
 
+        System.out.println("Loading Object: "+filename);
 
         Vector<String> coord= new Vector<String>();
         Vector<Coordinate> vertex = new Vector<Coordinate>();
         Vector<Face> faces = new Vector<Face>();
         Vector<Coordinate> normal = new Vector<Coordinate>();
-        Vector<Texture> textures = new Vector<Texture>();
-        Vector<Long> lists = new Vector<Long>();
         Vector<Material> material = new Vector<Material>();
         Vector<TexCoord> textureCoord = new Vector<TexCoord>();
 
@@ -367,20 +362,23 @@ public class ObjectLoader {
 
         try {
             br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(fileLocation+filename), "UTF-8"));
-            while((line = br.readLine()) != null) {// read entire .callist file into ram
+            while((line = br.readLine()) != null) {// read entire .obj file into ram
                 if(line.length() > 0)
                     coord.add(line);
             }
 
-        } catch (Exception e){}
+        } catch (Exception e){
+            e.printStackTrace();
+            System.out.println("Error Loading: "+fileLocation+filename);
+        }
 
 
-        for(int i=0; i<coord.size();i++){// loop through all lines of .callist in ram
+        for(int i=0; i<coord.size();i++){// loop through all lines of .obj in ram
 
             line = coord.get(i);
 
             if(line.charAt(0) == '#'){ // check what the line is describing i.e comment, vertex, vector normal, face
-                continue;
+                //continue;
             }else if(line.charAt(0) == 'v' && line.charAt(1) == ' '){
                 // if it is a vector add to vectors array
                 String[] token = line.split(delims);
@@ -481,7 +479,7 @@ public class ObjectLoader {
                 //begin iterating through .mtl
                 for(int m =0; m < temp.size(); m++ ){
                     if(temp.get(m).charAt(0) == '#'){// skip comments
-                        continue;
+                        //continue;
                     }else if(temp.get(m).charAt(0) == 'n' && temp.get(m).charAt(1) == 'e' && temp.get(m).charAt(2) == 'w'){
                         if(isMat){
                             if(!texFilename.equals("n")){
@@ -561,7 +559,7 @@ public class ObjectLoader {
 
             }// end check what line is describing// endif mtllib
 
-        }// end looping through .callist
+        }// end looping through .obj
         // System.out.println("Object File Loaded");
 
 
@@ -697,6 +695,7 @@ public class ObjectLoader {
 
     public void loadAnimation(Vector<Integer> frames,String fileLocation,String filename, int num){
 
+        System.out.println("Loading Object: "+filename);
         String tmp ="";
 
         for (int i=1;i<num;i++){

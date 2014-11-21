@@ -15,8 +15,7 @@ public class BasketBall extends Ball {
         super(gl, p, world, texture);
 
         p.size=0.254f;
-        //p.mass=0.623f;
-        p.mass=5f;
+        p.mass=0.623f;
         callist=mkGLCallList();
 
         friction=1;

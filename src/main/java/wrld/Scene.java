@@ -127,7 +127,7 @@ public class Scene implements GLEventListener{
 
         Vector<Integer>frames = new Vector<Integer>();// Skleton A
         objectLoader.loadAnimation(frames,"/obj/Skeleton/","Skeleton",20);
-        models.add(new Model(gl, new Point3d(10, 2, 5, .42f, 3f), frames, 1000));// world, points, callist));
+        models.add(new Model(gl, new Point3d(10, 2, 5, .25f, 3f), frames, 1000));// world, points, callist));
 
         textures = new Textures(gl);
         balls.add(b = new BasketBall(gl, new Point3d(0, 1000, 5), world, textures.bball));
