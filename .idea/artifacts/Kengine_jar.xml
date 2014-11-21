@@ -1,0 +1,35 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="Kengine:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Kengine_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Kengine.jar">
+        <element id="module-output" name="Kengine" />
+      </element>
+      <element id="library" level="project" name="Maven: org.jogamp.jogl:jogl-all:natives-macosx-universal:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.jogl:jogl-all:natives-solaris-amd64:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.gluegen:gluegen-rt:natives-windows-amd64:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.gluegen:gluegen-rt:natives-solaris-amd64:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.jogl:jogl-all:natives-linux-amd64:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.jogl:jogl-all:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.gluegen:gluegen-rt:natives-linux-amd64:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.jogl:jogl-all:natives-windows-i586:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.gluegen:gluegen-rt:natives-linux-armv6hf:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.jogl:jogl-all:natives-linux-armv6hf:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.gluegen:gluegen-rt:natives-linux-i586:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.gluegen:gluegen-rt:natives-solaris-i586:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.jogl:jogl-all:natives-windows-amd64:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.jogl:jogl-all:natives-linux-armv6:2.0.2" />
+      <element id="library" level="project" name="lib" />
+      <element id="library" level="project" name="Maven: org.jogamp.jogl:jogl-all:natives-linux-i586:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.gluegen:gluegen-rt:natives-linux-armv6:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.gluegen:gluegen-rt:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.gluegen:gluegen-rt:natives-windows-i586:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.jogl:jogl-all:natives-solaris-i586:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.gluegen:gluegen-rt:natives-macosx-universal:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.gluegen:gluegen-rt-main:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.jogl:jogl-all-main:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.jogl:jogl-all:natives-android-armv6:2.0.2" />
+      <element id="library" level="project" name="Maven: org.jogamp.gluegen:gluegen-rt:natives-android-armv6:2.0.2" />
+    </root>
+  </artifact>
+</component>

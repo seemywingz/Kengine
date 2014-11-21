@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Class-Path: jogl-all-2.0.2-natives-macosx-universal.jar jogl-all-2.0.2
+ -natives-solaris-amd64.jar gluegen-rt-2.0.2-natives-windows-amd64.jar
+  gluegen-rt-2.0.2-natives-solaris-amd64.jar jogl-all-2.0.2-natives-li
+ nux-amd64.jar jogl-all-2.0.2.jar gluegen-rt-2.0.2-natives-linux-amd64
+ .jar jogl-all-2.0.2-natives-windows-i586.jar gluegen-rt-2.0.2-natives
+ -linux-armv6hf.jar jogl-all-2.0.2-natives-linux-armv6hf.jar gluegen-r
+ t-2.0.2-natives-linux-i586.jar gluegen-rt-2.0.2-natives-solaris-i586.
+ jar jogl-all-2.0.2-natives-windows-amd64.jar jogl-all-2.0.2-natives-l
+ inux-armv6.jar jbullet.jar vecmath.jar jogl-all-2.0.2-natives-linux-i
+ 586.jar gluegen-rt-2.0.2-natives-linux-armv6.jar gluegen-rt-2.0.2.jar
+  gluegen-rt-2.0.2-natives-windows-i586.jar jogl-all-2.0.2-natives-sol
+ aris-i586.jar gluegen-rt-2.0.2-natives-macosx-universal.jar gluegen-r
+ t-main-2.0.2.jar jogl-all-main-2.0.2.jar jogl-all-2.0.2-natives-andro
+ id-armv6.jar gluegen-rt-2.0.2-natives-android-armv6.jar
+Main-Class: wrld.Kengine
+
