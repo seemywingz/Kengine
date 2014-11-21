@@ -129,10 +129,6 @@ public class Scene implements GLEventListener{
         objectLoader.loadAnimation(frames,"/obj/Skeleton/","Skeleton",20);
         models.add(new Model(gl, new Point3d(10, 2, 5, .42f, 3f), frames, 1000));// world, points, callist));
 
-        /*points = new ObjectArrayList<Vector3f>();// Deadpool
-        callist = objectLoader.LoadOBJ("/obj/Deadpool/","deadpool.obj",points);
-        models.add(new ConvexCollisionModel(gl,new Point3d(0,0,0,.08f),world,points,callist));*/
-
         textures = new Textures(gl);
         balls.add(b = new BasketBall(gl, new Point3d(0, 1000, 5), world, textures.bball));
 
