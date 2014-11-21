@@ -118,11 +118,11 @@ public class Scene implements GLEventListener{
         int callist;
 
         points = new ObjectArrayList<Vector3f>();// Map
-        callist = objectLoader.LoadOBJ("/obj/map/","map1.obj",points);
+        callist = objectLoader.LoadOBJ("/obj/map/","map1.obj",points,null);
         models.add(new ConcaveCollisionModel(gl,new Point3d(0,-200,-10,3000f),world,points,callist));
 
         points = new ObjectArrayList<Vector3f>();// Tree
-        callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points);
+        callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points,null);
         models.add(new ConvexCollisionModel(gl,new Point3d(50,0,0,.08f),world,points,callist));
 
         Vector<Integer>frames = new Vector<Integer>();// Skleton A
@@ -130,7 +130,7 @@ public class Scene implements GLEventListener{
         models.add(new Model(gl, new Point3d(10, 2, 5, .25f, 3f), frames, 1000));// world, points, callist));
 
         textures = new Textures(gl);
-        balls.add(b = new BasketBall(gl, new Point3d(0, 1000, 5), world, textures.bball));
+        balls.add(b = new BasketBall(gl, new Point3d(0, 1000, 5), world, textures.basketBall));
 
         floor = new FloorModel(gl,textures.grass,new Point3d(0,0), world);
         sky = new SkyDome(gl,textures.sky,new Point3d(0,-500,0,1));
@@ -277,7 +277,7 @@ public class Scene implements GLEventListener{
                     @Override
                     public void apply() throws Exception {
                         Vector3f c = camera.getPosition(1);
-                        balls.add(b = new BasketBall(gl, new Point3d(c.x,c.y,c.z), world, textures.bball));
+                        balls.add(b = new BasketBall(gl, new Point3d(c.x,c.y,c.z), world, textures.basketBall));
                         b.setVelocity(camera.getDirection(10,0));
                         balls.add(b);
                         addLogic =null;

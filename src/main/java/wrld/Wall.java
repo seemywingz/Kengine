@@ -15,6 +15,7 @@ import javax.vecmath.Vector3f;
 
 /**
  * Created by Kevin on 1/8/14.
+ * a wall segment with physics
  */
 public class Wall extends CollisionModel {
 
@@ -28,8 +29,7 @@ public class Wall extends CollisionModel {
 
         if(obj == 0){
             try {
-                Textures tex = new Textures(gl);
-                texture = tex.loadTexture(texture, "/tex/wall.jpg", ".jpg");
+                texture = Utils.loadTexture(getClass(),gl, "/tex/wall.jpg");
                 TextureCoords textureCoords = texture.getImageTexCoords();
                 textureTop = textureCoords.top();
                 textureBottom = textureCoords.bottom();

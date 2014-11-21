@@ -1,7 +1,10 @@
 package wrld;
 
+import com.jogamp.opengl.util.texture.Texture;
+import com.jogamp.opengl.util.texture.TextureIO;
 import sun.audio.AudioPlayer;
 import javax.imageio.ImageIO;
+import javax.media.opengl.GL2;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -20,7 +23,7 @@ interface Logic {
 
 public class Utils {
 
-    //Class c = getClass();
+
 
     protected static Clip mkClip(Class c,String soundFile){
         Clip clip = null;
@@ -36,6 +39,43 @@ public class Utils {
         return clip;
         //clip.loop(2);
         //Clip theme = AudioSystem.getClip();
+    }//..
+
+    public static Texture loadTexture(Class c,GL2 gl,String textureFileName){
+        Texture texture;
+        String delims = "[.]+";
+        String file[] = textureFileName.split(delims);
+        // Load texture from image
+        try {
+            // Create a OpenGL Texture object from (URL, mipmap, file suffix)
+            // Use URL so that can read from JAR and disk file.
+            //BufferedImage image = ImageIO.read(getClass().getClassLoader().getResource(textureFileName));
+
+            texture = TextureIO.newTexture(c.getResourceAsStream(textureFileName), true, file[1]);
+
+            // Use linear filter for texture if image is larger than the original texture
+            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MAG_FILTER, gl.GL_LINEAR);
+            // Use linear filter for texture if image is smaller than the original texture
+            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MIN_FILTER, gl.GL_NEAREST_MIPMAP_LINEAR);
+            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_BASE_LEVEL ,0);
+            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MAX_LEVEL , 20 );
+
+            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE, gl.GL_REPEAT);
+            gl.glTexParameterf(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_WRAP_S, gl.GL_REPEAT);
+            gl.glTexParameterf(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_WRAP_T, gl.GL_REPEAT);
+
+            // Texture image flips vertically. Shall use TextureCoords class to retrieve
+            // the top, bottom, left and right coordinates, instead of using 0.0f and 1.0f.
+           /* TextureCoords textureCoords = texture.getImageTexCoords();
+            textureTop = textureCoords.top();
+            textureBottom = textureCoords.bottom();
+            textureLeft = textureCoords.left();
+            textureRight = textureCoords.right(); */
+        } catch (Exception e){
+            texture = null;
+        }
+
+        return texture;
     }//..
 
     public static JLabel mkGraphic(Class c,String image,int x,int y,int w, int h){

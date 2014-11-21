@@ -2,7 +2,6 @@ package wrld;
 
 import com.bulletphysics.util.ObjectArrayList;
 import com.jogamp.opengl.util.texture.Texture;
-import com.jogamp.opengl.util.texture.TextureIO;
 
 import javax.media.opengl.GL2;
 import javax.vecmath.Vector3f;
@@ -27,15 +26,17 @@ public class ObjectLoader {
        this.gl = gl;
     }//..
 
-    public int LoadOBJ(String filename,String fileLocation){
+    public int LoadOBJ(String fileLocation,String filename,ObjectArrayList<Vector3f> points,Vector<Material> material ){
 
 
         Vector<String> coord= new Vector<String>();
         Vector<Coordinate> vertex = new Vector<Coordinate>();
         Vector<Face> faces = new Vector<Face>();
         Vector<Coordinate> normal = new Vector<Coordinate>();
-        Vector<Material> material = new Vector<Material>();
         Vector<TexCoord> textureCoord = new Vector<TexCoord>();
+
+        if(material==null)
+            material=new Vector<Material>();
 
         boolean isNormal = false, isTexture = false;
 
@@ -64,9 +65,7 @@ public class ObjectLoader {
 
             line = coord.get(i);
 
-            if(line.charAt(0) == '#'){ // check what the line is describing i.e comment, vertex, vector normal, face
-                //continue;
-            }else if(line.charAt(0) == 'v' && line.charAt(1) == ' '){
+            if(line.charAt(0) == 'v' && line.charAt(1) == ' '){
                 // if it is a vector add to vectors array
                 String[] token = line.split(delims);
                 float tmpx = Float.parseFloat(token[1]),
@@ -122,125 +121,129 @@ public class ObjectLoader {
                 }
 
             }else if(line.charAt(0) == 'u' && line.charAt(1) == 's' && line.charAt(2) == 'e'){// if use material
-                String[] token = line.split(delims);
+                if(material!=null)
+                if(material.size()!=0) {
+                    String[] token = line.split(delims);
 
-                String tmp = token[1];
+                    String tmp = token[1];
 
-                for (int j = 0;j < material.size();j++ ){
+                    for (int j = 0; j < material.size(); j++) {
 
-                    if(material.get(j).name.equals(tmp)){
-                        curmat = j;
-                        break;
+                        if (material.get(j).name.equals(tmp)) {
+                            curmat = j;
+                            break;
+                        }
                     }
                 }
             }else if(line.charAt(0) == 'm' && line.charAt(1) == 't' && line.charAt(2) == 'l' && line.charAt(3) == 'l'){// if use mtllib
-                //isMaterial = true;
-                String[] token = line.split(delims);
+                if(material.size()==0) {
+                    String[] token = line.split(delims);
+                    //System.out.println("Loading Materials: "+filename);
 
-                String mtlLine;
-                String mtlFileLocation = fileLocation+token[1];
-                BufferedReader mtlIn;
+                    String mtlLine;
+                    String mtlFileLocation = fileLocation + token[1];
+                    BufferedReader mtlIn;
 
-                Vector<String> temp = new Vector<String>();
+                    Vector<String> temp = new Vector<String>();
 
 
-                try{
-                    mtlIn = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(mtlFileLocation)));
-                    while((mtlLine = mtlIn.readLine()) != null) {// read entire .mtl file into ram
-                        if(mtlLine.length() > 0)
-                            temp.add(mtlLine);
-                    }
-                }catch (Exception e){
-                    e.printStackTrace();
-                    System.out.println("Error Loading: "+mtlFileLocation);
-                }
-
-                String matName = " ", texFilename;
-                float
-                        amb[] = new float[]{0,0,0},
-                        dif[] = new float[]{0,0,0},
-                        spec[] = new float[]{0,0,0},
-                        alpha=0,ns=0,ni=0;
-                int illum =0;
-                Texture texture = null;
-                boolean isMat = false;
-                texFilename = "n";
-
-                //begin iterating through .mtl
-                for(int m =0; m < temp.size(); m++ ){
-                    if(temp.get(m).charAt(0) == '#'){// skip comments
-                        //continue;
-                    }else if(temp.get(m).charAt(0) == 'n' && temp.get(m).charAt(1) == 'e' && temp.get(m).charAt(2) == 'w'){
-                        if(isMat){
-                            if(!texFilename.equals("n")){
-                                material.add(new Material(matName,alpha,ns,ni,dif,amb,spec,illum,texture));
-                                texFilename = "n";
-                            }else {
-                                //System.out.println("New Material: "+matName+" "+alpha+" "+ns+" "+ni+" "+dif[0]+" "+amb[0]+" "+spec[0]+" "+illum);
-                                material.add(new Material(matName,alpha,ns,ni,dif,amb,spec,illum,null));
-                            }
+                    try {
+                        mtlIn = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(mtlFileLocation)));
+                        while ((mtlLine = mtlIn.readLine()) != null) {// read entire .mtl file into ram
+                            if (mtlLine.length() > 0)
+                                temp.add(mtlLine);
                         }
-                        isMat = false;
-                        String nToken[] = temp.get(m).split(delims);
-                        matName = nToken[1];
-
-                    }else if(temp.get(m).charAt(0) == 'N' && temp.get(m).charAt(1) == 's'){
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        ns = Float.parseFloat(nToken[1]);
-
-                    }else if(temp.get(m).charAt(0) == 'K' && temp.get(m).charAt(1) == 'a'){// read Ka ambient float vector
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        amb[0] = Float.parseFloat(nToken[1]);
-                        amb[1] = Float.parseFloat(nToken[2]);
-                        amb[2] = Float.parseFloat(nToken[3]);
-                    }else if(temp.get(m).charAt(0) == 'K' && temp.get(m).charAt(1) == 'd'){// read Ka diffuse float vector
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        dif[0] = Float.parseFloat(nToken[1]);
-                        dif[1] = Float.parseFloat(nToken[2]);
-                        dif[2] = Float.parseFloat(nToken[3]);
-                    }else if(temp.get(m).charAt(0) == 'K' && temp.get(m).charAt(1) == 's'){// read Ka specular float vector
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        spec[0] = Float.parseFloat(nToken[1]);
-                        spec[1] = Float.parseFloat(nToken[2]);
-                        spec[2] = Float.parseFloat(nToken[3]);
-                    }else if(temp.get(m).charAt(0) == 'N' && temp.get(m).charAt(1) == 'i'){// read Ni ?
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        ni = Float.parseFloat(nToken[1]);
-                    }else if(temp.get(m).charAt(0) == 'd' && temp.get(m).charAt(1) == ' '){// read alpha
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        alpha = Float.parseFloat(nToken[1]);
-                    }else if(temp.get(m).charAt(0) == 'i' && temp.get(m).charAt(1) == 'l' && temp.get(m).charAt(2) == 'l'){// read illum
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        illum = Integer.parseInt(nToken[1]);
-                    } else if(temp.get(m).charAt(0) == 'm' && temp.get(m).charAt(1) == 'a' && temp.get(m).charAt(2) == 'p'){// read map_Kd
-                        isMat = true;
-                        String spaceDelim = "\\s+";
-                        String dotDelim = "[.]";
-                        String nToken[] = temp.get(m).split(spaceDelim);
-                        String ftype[] = nToken[1].split(dotDelim);
-                        texFilename = nToken[1];
-                        if(loadTexture(texture, fileLocation+ texFilename, ftype[1]) != null){
-                            texture =loadTexture(texture, fileLocation +texFilename,ftype[1]);
-                        }else {texFilename = "n";}
-
-
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        System.out.println("Error Loading: " + mtlFileLocation);
                     }
-                }// end for .mtl
-                System.out.println("Materials Loaded");
-                if(isMat){
-                    if(!texFilename.equals("n")){
-                        material.add(new Material(matName,alpha,ns,ni,dif,amb,spec,illum,texture));
-                    }else {
-                        material.add(new Material(matName, alpha, ns, ni, dif, amb, spec, illum, null));
+
+                    String matName = " ", texFilename;
+                    float
+                            amb[] = new float[]{0, 0, 0},
+                            dif[] = new float[]{0, 0, 0},
+                            spec[] = new float[]{0, 0, 0},
+                            alpha = 0, ns = 0, ni = 0;
+                    int illum = 0;
+                    Texture texture = null;
+                    boolean isMat = false;
+                    texFilename = "n";
+
+                    //begin iterating through .mtl
+                    for (int m = 0; m < temp.size(); m++) {
+                        if (temp.get(m).charAt(0) == '#') {// skip comments
+                            //continue;
+                        } else if (temp.get(m).charAt(0) == 'n' && temp.get(m).charAt(1) == 'e' && temp.get(m).charAt(2) == 'w') {
+                            if (isMat) {
+                                if (!texFilename.equals("n")) {
+                                    material.add(new Material(matName, alpha, ns, ni, dif, amb, spec, illum, texture));
+                                    texFilename = "n";
+                                } else {
+                                    //System.out.println("New Material: "+matName+" "+alpha+" "+ns+" "+ni+" "+dif[0]+" "+amb[0]+" "+spec[0]+" "+illum);
+                                    material.add(new Material(matName, alpha, ns, ni, dif, amb, spec, illum, null));
+                                }
+                            }
+                            isMat = false;
+                            String nToken[] = temp.get(m).split(delims);
+                            matName = nToken[1];
+
+                        } else if (temp.get(m).charAt(0) == 'N' && temp.get(m).charAt(1) == 's') {
+                            isMat = true;
+                            String nToken[] = temp.get(m).split(delims);
+                            ns = Float.parseFloat(nToken[1]);
+
+                        } else if (temp.get(m).charAt(0) == 'K' && temp.get(m).charAt(1) == 'a') {// read Ka ambient float vector
+                            isMat = true;
+                            String nToken[] = temp.get(m).split(delims);
+                            amb[0] = Float.parseFloat(nToken[1]);
+                            amb[1] = Float.parseFloat(nToken[2]);
+                            amb[2] = Float.parseFloat(nToken[3]);
+                        } else if (temp.get(m).charAt(0) == 'K' && temp.get(m).charAt(1) == 'd') {// read Ka diffuse float vector
+                            isMat = true;
+                            String nToken[] = temp.get(m).split(delims);
+                            dif[0] = Float.parseFloat(nToken[1]);
+                            dif[1] = Float.parseFloat(nToken[2]);
+                            dif[2] = Float.parseFloat(nToken[3]);
+                        } else if (temp.get(m).charAt(0) == 'K' && temp.get(m).charAt(1) == 's') {// read Ka specular float vector
+                            isMat = true;
+                            String nToken[] = temp.get(m).split(delims);
+                            spec[0] = Float.parseFloat(nToken[1]);
+                            spec[1] = Float.parseFloat(nToken[2]);
+                            spec[2] = Float.parseFloat(nToken[3]);
+                        } else if (temp.get(m).charAt(0) == 'N' && temp.get(m).charAt(1) == 'i') {// read Ni ?
+                            isMat = true;
+                            String nToken[] = temp.get(m).split(delims);
+                            ni = Float.parseFloat(nToken[1]);
+                        } else if (temp.get(m).charAt(0) == 'd' && temp.get(m).charAt(1) == ' ') {// read alpha
+                            isMat = true;
+                            String nToken[] = temp.get(m).split(delims);
+                            alpha = Float.parseFloat(nToken[1]);
+                        } else if (temp.get(m).charAt(0) == 'i' && temp.get(m).charAt(1) == 'l' && temp.get(m).charAt(2) == 'l') {// read illum
+                            isMat = true;
+                            String nToken[] = temp.get(m).split(delims);
+                            illum = Integer.parseInt(nToken[1]);
+                        } else if (temp.get(m).charAt(0) == 'm' && temp.get(m).charAt(1) == 'a' && temp.get(m).charAt(2) == 'p') {// read map_Kd
+                            isMat = true;
+                            String spaceDelim = "\\s+";
+                            String nToken[] = temp.get(m).split(spaceDelim);
+                            texFilename = nToken[1];
+                            if ((texture = Utils.loadTexture(getClass(),gl,fileLocation + texFilename)) != null) {
+                            } else {
+                                texFilename = "n";
+                            }
+
+
+                        }
+                    }// end for .mtl
+                    //System.out.println("Materials Loaded");
+                    if (isMat) {
+                        if (!texFilename.equals("n")) {
+                            material.add(new Material(matName, alpha, ns, ni, dif, amb, spec, illum, texture));
+                        } else {
+                            material.add(new Material(matName, alpha, ns, ni, dif, amb, spec, illum, null));
+                        }
                     }
-                }
+                }// end if(materials.size()==0)
 
             }else  if(line.charAt(0) == 'v' && line.charAt(1) == 't'){
                 String[] token = line.split(delims);
@@ -258,48 +261,48 @@ public class ObjectLoader {
         gl.glNewList(num, gl.GL_COMPILE);
         int last = -1;
         for(int i=0; i<faces.size();i++){
-            if(last != faces.get(i).mat){
-                float diffuse [] ={ material.get(faces.get(i).mat).dif[0],material.get(faces.get(i).mat).dif[1],material.get(faces.get(i).mat).dif[2],1};
-                float ambient[] = {material.get(faces.get(i).mat).amb[0],material.get(faces.get(i).mat).amb[1],material.get(faces.get(i).mat).amb[2],1};
-                float specular[] = {material.get(faces.get(i).mat).spec[0],material.get(faces.get(i).mat).spec[1],material.get(faces.get(i).mat).spec[2],1};
+            if(last != faces.get(i).mat ){
+                    float diffuse[] = {material.get(faces.get(i).mat).dif[0], material.get(faces.get(i).mat).dif[1], material.get(faces.get(i).mat).dif[2], 1};
+                    float ambient[] = {material.get(faces.get(i).mat).amb[0], material.get(faces.get(i).mat).amb[1], material.get(faces.get(i).mat).amb[2], 1};
+                    float specular[] = {material.get(faces.get(i).mat).spec[0], material.get(faces.get(i).mat).spec[1], material.get(faces.get(i).mat).spec[2], 1};
 
-                gl.glMaterialfv(gl.GL_FRONT,gl.GL_DIFFUSE,mkFloatBuffer(diffuse));
-                gl.glMaterialfv(gl.GL_FRONT,gl.GL_AMBIENT,mkFloatBuffer(ambient));
-                gl.glMaterialfv(gl.GL_FRONT,gl.GL_SPECULAR,mkFloatBuffer(specular));
-                gl.glMaterialf(gl.GL_FRONT,gl.GL_SHININESS,material.get(faces.get(i).mat).na);
-                last = faces.get(i).mat;
+                    gl.glMaterialfv(gl.GL_FRONT, gl.GL_DIFFUSE, mkFloatBuffer(diffuse));
+                    gl.glMaterialfv(gl.GL_FRONT, gl.GL_AMBIENT, mkFloatBuffer(ambient));
+                    gl.glMaterialfv(gl.GL_FRONT, gl.GL_SPECULAR, mkFloatBuffer(specular));
+                    gl.glMaterialf(gl.GL_FRONT, gl.GL_SHININESS, material.get(faces.get(i).mat).na);
+                    last = faces.get(i).mat;
 
-                if(material.get(faces.get(i).mat).texture == null){
-                    gl.glDisable(gl.GL_TEXTURE_2D);
-                }else {
-                    material.get(faces.get(i).mat).texture.enable(gl);
-                    material.get(faces.get(i).mat).texture.bind(gl);
-                }
+                    if (material.get(faces.get(i).mat).texture == null) {
+                        gl.glDisable(gl.GL_TEXTURE_2D);
+                    } else {
+                        material.get(faces.get(i).mat).texture.enable(gl);
+                        material.get(faces.get(i).mat).texture.bind(gl);
+                    }
             }
             if(faces.get(i).four){
                 gl.glBegin(gl.GL_QUADS);
-                if(isTexture && material.get(faces.get(i).mat).texture != null ){
+                if(isTexture ){
                     gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[0]-1).u,textureCoord.get(faces.get(i).texCoord[0]-1).v);
                 }
                 if(isNormal)
                     gl.glNormal3f(normal.get(faces.get(i).faceNum-1).x,normal.get(faces.get(i).faceNum-1).y,normal.get(faces.get(i).faceNum-1).z);
                 gl.glVertex3f(vertex.get(faces.get(i).faces[0] - 1).x, vertex.get(faces.get(i).faces[0] - 1).y, vertex.get(faces.get(i).faces[0] - 1).z);
 
-                if(isTexture && material.get(faces.get(i).mat).texture != null ){
+                if(isTexture ){
                     gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[1]-1).u,textureCoord.get(faces.get(i).texCoord[1]-1).v);
                 }
                 if(isNormal)
                     gl.glNormal3f(normal.get(faces.get(i).faceNum-1).x,normal.get(faces.get(i).faceNum-1).y,normal.get(faces.get(i).faceNum-1).z);
                 gl.glVertex3f(vertex.get(faces.get(i).faces[1] - 1).x, vertex.get(faces.get(i).faces[1] - 1).y, vertex.get(faces.get(i).faces[1] - 1).z);
 
-                if(isTexture && material.get(faces.get(i).mat).texture != null ){
+                if(isTexture ){
                     gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[2]-1).u,textureCoord.get(faces.get(i).texCoord[2]-1).v);
                 }
                 if(isNormal)
                     gl.glNormal3f(normal.get(faces.get(i).faceNum-1).x,normal.get(faces.get(i).faceNum-1).y,normal.get(faces.get(i).faceNum-1).z);
                 gl.glVertex3f(vertex.get(faces.get(i).faces[2] - 1).x, vertex.get(faces.get(i).faces[2] - 1).y, vertex.get(faces.get(i).faces[2] - 1).z);
 
-                if(isTexture && material.get(faces.get(i).mat).texture != null ){
+                if(isTexture  ){
                     gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[3]-1).u,textureCoord.get(faces.get(i).texCoord[3]-1).v);
                 }
                 if(isNormal)
@@ -307,27 +310,32 @@ public class ObjectLoader {
                 gl.glVertex3f(vertex.get(faces.get(i).faces[3] - 1).x, vertex.get(faces.get(i).faces[3] - 1).y, vertex.get(faces.get(i).faces[3] - 1).z);
                 gl.glEnd();
             }else{
+                boolean needPoints;
+                needPoints = points!=null ? true : false;
                 gl.glBegin(gl.GL_TRIANGLES);
-                if(isTexture ){
+
+                if(isTexture )
                     gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[0]-1).u,textureCoord.get(faces.get(i).texCoord[0]-1).v);
-                }
                 if(isNormal)
                     gl.glNormal3f(normal.get(faces.get(i).faceNum - 1).x, normal.get(faces.get(i).faceNum - 1).y, normal.get(faces.get(i).faceNum - 1).z);
+                if(needPoints)
+                    points.add(new Vector3f(vertex.get(faces.get(i).faces[0] - 1).x, vertex.get(faces.get(i).faces[0] - 1).y, vertex.get(faces.get(i).faces[0] - 1).z));
                 gl.glVertex3f(vertex.get(faces.get(i).faces[0] - 1).x, vertex.get(faces.get(i).faces[0] - 1).y, vertex.get(faces.get(i).faces[0] - 1).z);
 
-
-                if(isTexture ){
+                if(isTexture )
                     gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[1]-1).u,textureCoord.get(faces.get(i).texCoord[1]-1).v);
-                }
                 if(isNormal)
                     gl.glNormal3f(normal.get(faces.get(i).faceNum-1).x,normal.get(faces.get(i).faceNum-1).y,normal.get(faces.get(i).faceNum-1).z);
+                if(needPoints)
+                    points.add(new Vector3f(vertex.get(faces.get(i).faces[1] - 1).x, vertex.get(faces.get(i).faces[1] - 1).y, vertex.get(faces.get(i).faces[1] - 1).z));
                 gl.glVertex3f(vertex.get(faces.get(i).faces[1] - 1).x, vertex.get(faces.get(i).faces[1] - 1).y, vertex.get(faces.get(i).faces[1] - 1).z);
 
-                if(isTexture){
+                if(isTexture)
                     gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[2]-1).u,textureCoord.get(faces.get(i).texCoord[2]-1).v);
-                }
                 if(isNormal)
                     gl.glNormal3f(normal.get(faces.get(i).faceNum-1).x,normal.get(faces.get(i).faceNum-1).y,normal.get(faces.get(i).faceNum-1).z);
+                if(needPoints)
+                    points.add(new Vector3f(vertex.get(faces.get(i).faces[2] - 1).x, vertex.get(faces.get(i).faces[2] - 1).y, vertex.get(faces.get(i).faces[2] - 1).z));
                 gl.glVertex3f(vertex.get(faces.get(i).faces[2] - 1).x, vertex.get(faces.get(i).faces[2] - 1).y, vertex.get(faces.get(i).faces[2] - 1).z);
 
                 gl.glEnd();
@@ -336,366 +344,12 @@ public class ObjectLoader {
 
         gl.glEndList();
         return num;
-    }//..
-
-
-    public int LoadOBJ(String fileLocation,String filename, ObjectArrayList<Vector3f> points){
-
-        System.out.println("Loading Object: "+filename);
-
-        Vector<String> coord= new Vector<String>();
-        Vector<Coordinate> vertex = new Vector<Coordinate>();
-        Vector<Face> faces = new Vector<Face>();
-        Vector<Coordinate> normal = new Vector<Coordinate>();
-        Vector<Material> material = new Vector<Material>();
-        Vector<TexCoord> textureCoord = new Vector<TexCoord>();
-
-        boolean isMaterial=false, isNormal = false, isTexture = false;
-
-        int curmat=0;
-
-        String delims = "[ /]+";
-        String line;
-
-
-        BufferedReader br;
-
-        try {
-            br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(fileLocation+filename), "UTF-8"));
-            while((line = br.readLine()) != null) {// read entire .obj file into ram
-                if(line.length() > 0)
-                    coord.add(line);
-            }
-
-        } catch (Exception e){
-            e.printStackTrace();
-            System.out.println("Error Loading: "+fileLocation+filename);
-        }
-
-
-        for(int i=0; i<coord.size();i++){// loop through all lines of .obj in ram
-
-            line = coord.get(i);
-
-            if(line.charAt(0) == '#'){ // check what the line is describing i.e comment, vertex, vector normal, face
-                //continue;
-            }else if(line.charAt(0) == 'v' && line.charAt(1) == ' '){
-                // if it is a vector add to vectors array
-                String[] token = line.split(delims);
-                float tmpx = Float.parseFloat(token[1]),
-                        tmpy = Float.parseFloat(token[2]),
-                        tmpz = Float.parseFloat(token[3]);
-                vertex.add(new Coordinate(tmpx,tmpy,tmpz));
-
-            }else if(line.charAt(0) == 'v' && line.charAt(1) == 'n'){
-                // if normal add to noramas array
-                String[] token = line.split(delims);
-                float tmpx = Float.parseFloat(token[1]),
-                        tmpy = Float.parseFloat(token[2]),
-                        tmpz = Float.parseFloat(token[3]);
-                normal.add(new Coordinate(tmpx,tmpy,tmpz));
-                isNormal = true;
-            }else if(line.charAt(0) == 'f'){
-                // if face add to normals face
-                String[] token = line.split(delims); // parse line based on delimiters;
-
-                if(token.length == 13){//if quad and texcoord
-                    int     a = Integer.parseInt(token[1]),
-                            b =Integer.parseInt(token[3]),//face number
-                            c = Integer.parseInt(token[4]),
-                            d =Integer.parseInt(token[7]),
-                            e =Integer.parseInt(token[10]),
-                            t1 =Integer.parseInt(token[2]),
-                            t2 =Integer.parseInt(token[5]),
-                            t3 =Integer.parseInt(token[8]),
-                            t4 =Integer.parseInt(token[11]);
-                    faces.add(new Face(b,a,c,d,e,t1,t2,t3,t4,curmat));
-                }else if(token.length == 9){ //if quad and no texcoord
-                    int     a = Integer.parseInt(token[1]),
-                            b =Integer.parseInt(token[2]), //face number
-                            c = Integer.parseInt(token[3]),
-                            d =Integer.parseInt(token[5]),
-                            e = Integer.parseInt(token[7]);
-                    faces.add(new Face(b,a,c,d,e,0,0,0,0,curmat));
-                }else if(token.length == 7){ //if triangle and no texcoord
-                    int     a = Integer.parseInt(token[1]),
-                            b =Integer.parseInt(token[2]), //face number
-                            c = Integer.parseInt(token[3]),
-                            d =Integer.parseInt(token[5]);
-                    faces.add(new Face(b,a,c,d,0,0,0,curmat));
-                }else if(token.length == 10){//if triangle vertex and texcoord
-                    int     a = Integer.parseInt(token[1]),
-                            b =Integer.parseInt(token[3]), //face number
-                            c = Integer.parseInt(token[4]),
-                            d =Integer.parseInt(token[7]),
-                            t1 =Integer.parseInt(token[2]),
-                            t2 =Integer.parseInt(token[5]),
-                            t3 =Integer.parseInt(token[8]);
-                    faces.add(new Face(b,a,c,d,t1,t2,t3,curmat));
-                }
-
-            }else if(line.charAt(0) == 'u' && line.charAt(1) == 's' && line.charAt(2) == 'e'){// if use material
-                String[] token = line.split(delims);
-
-                String tmp = token[1];
-
-                for (int j = 0;j < material.size();j++ ){
-
-                    if(material.get(j).name.equals(tmp)){
-                        curmat = j;
-                        break;
-                    }
-                }
-            }else if(line.charAt(0) == 'm' && line.charAt(1) == 't' && line.charAt(2) == 'l' && line.charAt(3) == 'l'){// if use mtllib
-                isMaterial = true;
-                String[] token = line.split(delims);
-
-                String mtlLine;
-                String mtlFileLocation = fileLocation+token[1];
-                BufferedReader mtlIn;
-
-                Vector<String> temp = new Vector<String>();
-
-
-                try{
-                    mtlIn = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(mtlFileLocation)));
-                    while((mtlLine = mtlIn.readLine()) != null) {// read entire .mtl file into ram
-                        if(mtlLine.length() > 0)
-                            temp.add(mtlLine);
-                    }
-                }catch (Exception e){}
-
-                String matName = " ", texFilename;
-                float
-                        amb[] = new float[]{0,0,0},
-                        dif[] = new float[]{0,0,0},
-                        spec[] = new float[]{0,0,0},
-                        alpha=0,ns=0,ni=0;
-                int illum =0;
-                Texture texture = null;
-                boolean isMat = false;
-                texFilename = "n";
-
-                //begin iterating through .mtl
-                for(int m =0; m < temp.size(); m++ ){
-                    if(temp.get(m).charAt(0) == '#'){// skip comments
-                        //continue;
-                    }else if(temp.get(m).charAt(0) == 'n' && temp.get(m).charAt(1) == 'e' && temp.get(m).charAt(2) == 'w'){
-                        if(isMat){
-                            if(!texFilename.equals("n")){
-                                material.add(new Material(matName,alpha,ns,ni,dif,amb,spec,illum,texture));
-                                texFilename = "n";
-                            }else {
-                                //System.out.println("New Material: "+matName+" "+alpha+" "+ns+" "+ni+" "+dif[0]+" "+amb[0]+" "+spec[0]+" "+illum);
-                                material.add(new Material(matName,alpha,ns,ni,dif,amb,spec,illum,null));
-                            }
-                        }
-                        isMat = false;
-                        String nToken[] = temp.get(m).split(delims);
-                        matName = nToken[1];
-
-                    }else if(temp.get(m).charAt(0) == 'N' && temp.get(m).charAt(1) == 's'){
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        ns = Float.parseFloat(nToken[1]);
-
-                    }else if(temp.get(m).charAt(0) == 'K' && temp.get(m).charAt(1) == 'a'){// read Ka ambient float vector
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        amb[0] = Float.parseFloat(nToken[1]);
-                        amb[1] = Float.parseFloat(nToken[2]);
-                        amb[2] = Float.parseFloat(nToken[3]);
-                    }else if(temp.get(m).charAt(0) == 'K' && temp.get(m).charAt(1) == 'd'){// read Ka diffuse float vector
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        dif[0] = Float.parseFloat(nToken[1]);
-                        dif[1] = Float.parseFloat(nToken[2]);
-                        dif[2] = Float.parseFloat(nToken[3]);
-                    }else if(temp.get(m).charAt(0) == 'K' && temp.get(m).charAt(1) == 's'){// read Ka specular float vector
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        spec[0] = Float.parseFloat(nToken[1]);
-                        spec[1] = Float.parseFloat(nToken[2]);
-                        spec[2] = Float.parseFloat(nToken[3]);
-                    }else if(temp.get(m).charAt(0) == 'N' && temp.get(m).charAt(1) == 'i'){// read Ni ?
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        ni = Float.parseFloat(nToken[1]);
-                    }else if(temp.get(m).charAt(0) == 'd' && temp.get(m).charAt(1) == ' '){// read alpha
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        alpha = Float.parseFloat(nToken[1]);
-                    }else if(temp.get(m).charAt(0) == 'i' && temp.get(m).charAt(1) == 'l' && temp.get(m).charAt(2) == 'l'){// read illum
-                        isMat = true;
-                        String nToken[] = temp.get(m).split(delims);
-                        illum = Integer.parseInt(nToken[1]);
-                    } else if(temp.get(m).charAt(0) == 'm' && temp.get(m).charAt(1) == 'a' && temp.get(m).charAt(2) == 'p'){// read map_Kd
-                        isMat = true;
-                        String spaceDelim = "\\s+";
-                        String dotDelim = "[.]";
-                        String nToken[] = temp.get(m).split(spaceDelim);
-                        String ftype[] = nToken[1].split(dotDelim);
-                        texFilename = nToken[1];
-                        if(loadTexture(texture, fileLocation + texFilename, ftype[1]) != null){
-                            texture =loadTexture(texture, fileLocation+texFilename,ftype[1]);
-                        }else {texFilename = "n";}
-
-
-                    }
-                }// end for .mtl
-                //System.out.println("Materials Loaded");
-                if(isMat){
-                    if(!texFilename.equals("n")){
-                        material.add(new Material(matName,alpha,ns,ni,dif,amb,spec,illum,texture));
-                    }else {
-                        material.add(new Material(matName, alpha, ns, ni, dif, amb, spec, illum, null));
-                    }
-                }
-
-            }else  if(line.charAt(0) == 'v' && line.charAt(1) == 't'){
-                String[] token = line.split(delims);
-                textureCoord.add(new TexCoord(Float.parseFloat(token[1]),1 - Float.parseFloat(token[2])));
-                isTexture = true;
-
-            }// end check what line is describing// endif mtllib
-
-        }// end looping through .obj
-        // System.out.println("Object File Loaded");
-
-
-        if(material.size() == 0){
-            isMaterial = false;
-        }else{
-            isMaterial = true;
-        }
-
-        //draw
-        int num = gl.glGenLists(1);
-        gl.glNewList(num, gl.GL_COMPILE);
-        int last = -1;
-        for(int i=0; i<faces.size();i++){
-            if(last != faces.get(i).mat && isMaterial){
-                float diffuse [] ={ material.get(faces.get(i).mat).dif[0],material.get(faces.get(i).mat).dif[1],material.get(faces.get(i).mat).dif[2],1};
-                float ambient[] = {material.get(faces.get(i).mat).amb[0],material.get(faces.get(i).mat).amb[1],material.get(faces.get(i).mat).amb[2],1};
-                float specular[] = {material.get(faces.get(i).mat).spec[0],material.get(faces.get(i).mat).spec[1],material.get(faces.get(i).mat).spec[2],1};
-
-                gl.glMaterialfv(gl.GL_FRONT,gl.GL_DIFFUSE,mkFloatBuffer(diffuse));
-                gl.glMaterialfv(gl.GL_FRONT,gl.GL_AMBIENT,mkFloatBuffer(ambient));
-                gl.glMaterialfv(gl.GL_FRONT,gl.GL_SPECULAR,mkFloatBuffer(specular));
-                gl.glMaterialf(gl.GL_FRONT,gl.GL_SHININESS,material.get(faces.get(i).mat).na);
-                last = faces.get(i).mat;
-
-                if(material.get(faces.get(i).mat).texture == null){
-                    gl.glDisable(gl.GL_TEXTURE_2D);
-                }else {
-                    material.get(faces.get(i).mat).texture.enable(gl);
-                    material.get(faces.get(i).mat).texture.bind(gl);
-                }
-            }
-            if(faces.get(i).four){
-                gl.glBegin(gl.GL_QUADS);
-                if(isTexture && material.get(faces.get(i).mat).texture != null ){
-                    gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[0]-1).u,textureCoord.get(faces.get(i).texCoord[0]-1).v);
-                }
-                if(isNormal)
-                    gl.glNormal3f(normal.get(faces.get(i).faceNum-1).x,normal.get(faces.get(i).faceNum-1).y,normal.get(faces.get(i).faceNum-1).z);
-                gl.glVertex3f(vertex.get(faces.get(i).faces[0] - 1).x, vertex.get(faces.get(i).faces[0] - 1).y, vertex.get(faces.get(i).faces[0] - 1).z);
-
-                if(isTexture && material.get(faces.get(i).mat).texture != null ){
-                    gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[1]-1).u,textureCoord.get(faces.get(i).texCoord[1]-1).v);
-                }
-                if(isNormal)
-                    gl.glNormal3f(normal.get(faces.get(i).faceNum-1).x,normal.get(faces.get(i).faceNum-1).y,normal.get(faces.get(i).faceNum-1).z);
-                gl.glVertex3f(vertex.get(faces.get(i).faces[1] - 1).x, vertex.get(faces.get(i).faces[1] - 1).y, vertex.get(faces.get(i).faces[1] - 1).z);
-
-                if(isTexture && material.get(faces.get(i).mat).texture != null ){
-                    gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[2]-1).u,textureCoord.get(faces.get(i).texCoord[2]-1).v);
-                }
-                if(isNormal)
-                    gl.glNormal3f(normal.get(faces.get(i).faceNum-1).x,normal.get(faces.get(i).faceNum-1).y,normal.get(faces.get(i).faceNum-1).z);
-                gl.glVertex3f(vertex.get(faces.get(i).faces[2] - 1).x, vertex.get(faces.get(i).faces[2] - 1).y, vertex.get(faces.get(i).faces[2] - 1).z);
-
-                if(isTexture && material.get(faces.get(i).mat).texture != null ){
-                    gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[3]-1).u,textureCoord.get(faces.get(i).texCoord[3]-1).v);
-                }
-                if(isNormal)
-                    gl.glNormal3f(normal.get(faces.get(i).faceNum-1).x,normal.get(faces.get(i).faceNum-1).y,normal.get(faces.get(i).faceNum-1).z);
-                gl.glVertex3f(vertex.get(faces.get(i).faces[3] - 1).x, vertex.get(faces.get(i).faces[3] - 1).y, vertex.get(faces.get(i).faces[3] - 1).z);
-                gl.glEnd();
-            }else{
-                gl.glBegin(gl.GL_TRIANGLES);
-                if(isTexture ){
-                    gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[0]-1).u,textureCoord.get(faces.get(i).texCoord[0]-1).v);
-                }
-                if(isNormal)
-                    gl.glNormal3f(normal.get(faces.get(i).faceNum - 1).x, normal.get(faces.get(i).faceNum - 1).y, normal.get(faces.get(i).faceNum - 1).z);
-                gl.glVertex3f(vertex.get(faces.get(i).faces[0] - 1).x, vertex.get(faces.get(i).faces[0] - 1).y, vertex.get(faces.get(i).faces[0] - 1).z);
-                points.add(new Vector3f(vertex.get(faces.get(i).faces[0] - 1).x, vertex.get(faces.get(i).faces[0] - 1).y, vertex.get(faces.get(i).faces[0] - 1).z));
-
-
-                if(isTexture ){
-                    gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[1]-1).u,textureCoord.get(faces.get(i).texCoord[1]-1).v);
-                }
-                if(isNormal)
-                    gl.glNormal3f(normal.get(faces.get(i).faceNum-1).x,normal.get(faces.get(i).faceNum-1).y,normal.get(faces.get(i).faceNum-1).z);
-                gl.glVertex3f(vertex.get(faces.get(i).faces[1] - 1).x, vertex.get(faces.get(i).faces[1] - 1).y, vertex.get(faces.get(i).faces[1] - 1).z);
-                points.add(new Vector3f(vertex.get(faces.get(i).faces[1] - 1).x, vertex.get(faces.get(i).faces[1] - 1).y, vertex.get(faces.get(i).faces[1] - 1).z));
-
-                if(isTexture){
-                    gl.glTexCoord2f(textureCoord.get(faces.get(i).texCoord[2]-1).u,textureCoord.get(faces.get(i).texCoord[2]-1).v);
-                }
-                if(isNormal)
-                    gl.glNormal3f(normal.get(faces.get(i).faceNum-1).x,normal.get(faces.get(i).faceNum-1).y,normal.get(faces.get(i).faceNum-1).z);
-                gl.glVertex3f(vertex.get(faces.get(i).faces[2] - 1).x, vertex.get(faces.get(i).faces[2] - 1).y, vertex.get(faces.get(i).faces[2] - 1).z);
-                points.add(new Vector3f(vertex.get(faces.get(i).faces[2] - 1).x, vertex.get(faces.get(i).faces[2] - 1).y, vertex.get(faces.get(i).faces[2] - 1).z));
-
-                gl.glEnd();
-            }
-        }
-
-        gl.glEndList();
-        return num;
-
-    }//..
-
-
-    public Texture loadTexture(Texture texture,String textureFileName, String textureFileType){
-        // Load texture from image
-        try {
-            // Create a OpenGL Texture object from (URL, mipmap, file suffix)
-            // Use URL so that can read from JAR and disk file.
-            //BufferedImage image = ImageIO.read(getClass().getClassLoader().getResource(textureFileName));
-
-            texture = TextureIO.newTexture(getClass().getResourceAsStream(textureFileName), true, textureFileType);
-
-            // Use linear filter for texture if image is larger than the original texture
-            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MAG_FILTER, gl.GL_LINEAR);
-            // Use linear filter for texture if image is smaller than the original texture
-            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MIN_FILTER, gl.GL_NEAREST_MIPMAP_LINEAR);
-            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_BASE_LEVEL ,0);
-            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MAX_LEVEL , 20 );
-
-            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE, gl.GL_REPEAT);
-            gl.glTexParameterf(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_WRAP_S, gl.GL_REPEAT);
-            gl.glTexParameterf(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_WRAP_T, gl.GL_REPEAT);
-
-            // Texture image flips vertically. Shall use TextureCoords class to retrieve
-            // the top, bottom, left and right coordinates, instead of using 0.0f and 1.0f.
-           /* TextureCoords textureCoords = texture.getImageTexCoords();
-            textureTop = textureCoords.top();
-            textureBottom = textureCoords.bottom();
-            textureLeft = textureCoords.left();
-            textureRight = textureCoords.right(); */
-        } catch (Exception e){
-            texture = null;
-        }
-
-        return texture;
     }//..
 
     public void loadAnimation(Vector<Integer> frames,String fileLocation,String filename, int num){
 
-        System.out.println("Loading Object: "+filename);
+        Vector<Material> material = new Vector<Material>();
+        //System.out.println("Loading Object: "+filename);
         String tmp ="";
 
         for (int i=1;i<num;i++){
@@ -713,7 +367,7 @@ public class ObjectLoader {
                 tmp = "_"+i;
             }
             String fileSub = filename+tmp+".obj";
-            int obj = LoadOBJ(fileSub,fileLocation);
+            int obj = LoadOBJ(fileLocation,fileSub,null,material);
             frames.add(obj);
         }
     }//..
