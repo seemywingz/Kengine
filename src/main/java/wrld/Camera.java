@@ -151,7 +151,7 @@ public class Camera {
             p.z -= (Math.cos(yrotrad))*flySpeed;
             p.y -= (Math.sin(xrotrad)) * flySpeed;
         }else if(standing()){
-            body.applyCentralImpulse(getDirection(forceFactor, 0));
+            body.applyCentralImpulse(getRunVelocity(forceFactor, 0));
             //body.setLinearVelocity(getRunVelocity(speed,0));
         }
     }//..
@@ -163,7 +163,7 @@ public class Camera {
             p.z += (Math.cos(yrotrad))*flySpeed*.5;
             p.y += (Math.sin(xrotrad)) * flySpeed;
         }else if(standing()){
-            body.applyCentralImpulse(getDirection(-forceFactor, 0));
+            body.applyCentralImpulse(getRunVelocity(-forceFactor, 0));
         }
     }//..
 
@@ -191,7 +191,7 @@ public class Camera {
         if(flying) {
             p.y += .25;
         }else if (standing()) {
-            body.applyCentralImpulse(new Vector3f(0, 800, 0));
+            body.applyCentralImpulse(new Vector3f(0, 400, 0));
         }
     }//..
 
@@ -292,9 +292,9 @@ public class Camera {
         motionState = new DefaultMotionState(t);
         RigidBodyConstructionInfo info = new RigidBodyConstructionInfo(p.mass,motionState,shape,inertia);
         body = new RigidBody(info);
-        body.setFriction(.5f);
+        body.setFriction(1f);
         //body.setDamping(1f, 1f);
-        body.setRestitution(.1f);
+        body.setRestitution(.2f);
         body.setAngularFactor(0);
         Scene.safeAddRigidBody(body);
     }//..
