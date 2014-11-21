@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3416d372-3786-42ad-8efa-fb3cb5bef395" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/BasketBall.class" afterPath="$PROJECT_DIR$/target/classes/wrld/BasketBall.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Coordinate.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Coordinate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Face.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Face.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.jar" afterPath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Material.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Material.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/ObjectLoader.class" afterPath="$PROJECT_DIR$/target/classes/wrld/ObjectLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/TexCoord.class" afterPath="$PROJECT_DIR$/target/classes/wrld/TexCoord.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/ObjectLoader.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/ObjectLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Textures.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Textures.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Wall.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Wall.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Textures.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Textures.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Utils$1.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Utils$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Utils.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Wall.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Wall.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Kengine.iws" />
@@ -42,33 +33,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
+      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1211" max-vertical-offset="5432">
-              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.22171946" vertical-offset="0" max-vertical-offset="4424">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectLoader.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/ObjectLoader.java">
+      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34079602" vertical-offset="4217" max-vertical-offset="6566">
-              <caret line="311" column="18" selection-start-line="311" selection-start-column="18" selection-end-line="311" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#458#459#0" expanded="true" />
-                <element signature="e#485#486#0" expanded="true" />
-                <element signature="e#655#663#0" expanded="true" />
-                <element signature="e#713#725#0" expanded="true" />
-                <element signature="e#768#774#0" expanded="true" />
-                <element signature="e#824#836#0" expanded="true" />
-                <element signature="e#890#900#0" expanded="true" />
-                <element signature="e#5943#5951#0" expanded="true" />
-                <element signature="e#18401#18411#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="1337" max-vertical-offset="5432">
+              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -544,7 +524,13 @@
       <option name="project" value="LOCAL" />
       <updated>1416600730200</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="OBJ loader Optimization">
+      <created>1416605510660</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1416605510660</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -679,13 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4424">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">
@@ -751,14 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1211" max-vertical-offset="5432">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/ConcaveCollisionModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1877828" vertical-offset="105" max-vertical-offset="1022">
@@ -806,7 +777,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/ObjectLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34079602" vertical-offset="4217" max-vertical-offset="6566">
+        <state vertical-scroll-proportion="10.370646" vertical-offset="185" max-vertical-offset="6566">
           <caret line="311" column="18" selection-start-line="311" selection-start-column="18" selection-end-line="311" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -820,6 +791,22 @@
             <element signature="e#5943#5951#0" expanded="true" />
             <element signature="e#18401#18411#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1211" max-vertical-offset="5432">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22171946" vertical-offset="0" max-vertical-offset="4424">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
