@@ -143,7 +143,7 @@ public class Camera {
         }
     }//..
 
-    float forceFactor = 1000;
+    float forceFactor = 100;
     protected void forward(){
         if(flying) {
             setCartesian();
@@ -167,13 +167,14 @@ public class Camera {
         }
     }//..
 
+    float strafeForce = 50;
     protected void straffLeft(){
         if(flying) {
             setCartesian();
             p.x -= (Math.cos(yrotrad)) * flySpeed * .25;
             p.z -= (Math.sin(yrotrad)) * flySpeed * .25;
         }else if(standing()){
-            body.applyCentralImpulse(getRunVelocity(forceFactor,-90));
+            body.applyCentralImpulse(getRunVelocity(strafeForce, -90));
         }
     }//..
 
@@ -183,7 +184,7 @@ public class Camera {
             p.x += (Math.cos(yrotrad)) * flySpeed;
             p.z += (Math.sin(yrotrad)) * flySpeed;
         }else if(standing()){
-            body.applyCentralImpulse(getRunVelocity(forceFactor, 90));
+            body.applyCentralImpulse(getRunVelocity(strafeForce, 90));
         }
     }//..
 
@@ -191,7 +192,7 @@ public class Camera {
         if(flying) {
             p.y += .25;
         }else if (standing()) {
-            body.applyCentralImpulse(new Vector3f(0, 400, 0));
+            body.applyCentralImpulse(new Vector3f(0, 100, 0));
         }
     }//..
 
