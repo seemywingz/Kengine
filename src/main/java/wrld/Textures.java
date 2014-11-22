@@ -12,7 +12,7 @@ public class Textures {
 
     GL2 gl;
 
-    public static Texture sky,grass, basketBall;
+    public static Texture sky,grass, basketBall,box;
 
     Textures(GL2 gl) {
         this.gl =gl;
@@ -21,6 +21,8 @@ public class Textures {
         basketBall = Utils.loadTexture(getClass(),gl, "/tex/bball.jpg");
         grass = Utils.loadTexture(getClass(),gl, "/tex/ground.png");
         sky = Utils.loadTexture(getClass(),gl, "/tex/sky.jpg");
+        box = Utils.loadTexture(getClass(),gl, "/tex/box.jpg");
+
 
 
     }//..

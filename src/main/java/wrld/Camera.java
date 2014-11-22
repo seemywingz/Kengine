@@ -27,7 +27,9 @@ public class Camera {
     protected float glMatrix[] = new float[16];
 
     protected boolean
-            keyPressed[] = new boolean[256],flying,
+            keyPressed[] = new boolean[256],
+            flying,
+            jumping,
             fog;
 
     protected final int
@@ -47,15 +49,15 @@ public class Camera {
             xrotrad,
             yrotrad,
             maxSpeed = 8,
-            walkSpeed = 8,
-            runSpeed = 25,
+            walkSpeed = 20,
+            runSpeed = 50,
             flySpeed = .5f,
-            height = 2;
+            radius = .25f;
     Vector3f velocity = new Vector3f();
 
     Camera(GL2 gl) {
         this.gl = gl;
-        p = new Point3d(0,10,0,1.79f,83.9146f);
+        p = new Point3d(0,10,0,3f,83.9146f);
         initializePhysics();
     }//..
 
@@ -71,7 +73,7 @@ public class Camera {
             p.y = glMatrix[1];
             p.z = glMatrix[2];
 
-            if(standing())
+            if(standing() || jumping)
                 restrictMaxVelocity();
 
         }else{// set rigid body position
@@ -94,9 +96,8 @@ public class Camera {
         //set max run velocity
         body.getLinearVelocity(velocity);
         float curSpeed = velocity.length();
-        //System.out.println(curSpeed);
-        if(curSpeed > maxSpeed) {
-            velocity.scale(maxSpeed/curSpeed);
+        if(curSpeed > maxSpeed*.56f) {
+            velocity.scale(maxSpeed*.56f/curSpeed);
             body.setLinearVelocity(velocity);
         }
     }//..
@@ -143,7 +144,6 @@ public class Camera {
         }
     }//..
 
-    float forceFactor = 100;
     protected void forward(){
         if(flying) {
             setCartesian();
@@ -151,8 +151,7 @@ public class Camera {
             p.z -= (Math.cos(yrotrad))*flySpeed;
             p.y -= (Math.sin(xrotrad)) * flySpeed;
         }else if(standing()){
-            body.applyCentralImpulse(getRunVelocity(forceFactor, 0));
-            //body.setLinearVelocity(getRunVelocity(speed,0));
+            body.applyCentralImpulse(getRunVelocity(maxSpeed, 0));
         }
     }//..
 
@@ -163,18 +162,17 @@ public class Camera {
             p.z += (Math.cos(yrotrad))*flySpeed*.5;
             p.y += (Math.sin(xrotrad)) * flySpeed;
         }else if(standing()){
-            body.applyCentralImpulse(getRunVelocity(-forceFactor, 0));
+            body.applyCentralImpulse(getRunVelocity(-maxSpeed, 0));
         }
     }//..
 
-    float strafeForce = 50;
     protected void straffLeft(){
         if(flying) {
             setCartesian();
             p.x -= (Math.cos(yrotrad)) * flySpeed * .25;
             p.z -= (Math.sin(yrotrad)) * flySpeed * .25;
         }else if(standing()){
-            body.applyCentralImpulse(getRunVelocity(strafeForce, -90));
+            body.applyCentralImpulse(getRunVelocity(maxSpeed, -90));
         }
     }//..
 
@@ -184,7 +182,7 @@ public class Camera {
             p.x += (Math.cos(yrotrad)) * flySpeed;
             p.z += (Math.sin(yrotrad)) * flySpeed;
         }else if(standing()){
-            body.applyCentralImpulse(getRunVelocity(strafeForce, 90));
+            body.applyCentralImpulse(getRunVelocity(maxSpeed, 90));
         }
     }//..
 
@@ -192,8 +190,23 @@ public class Camera {
         if(flying) {
             p.y += .25;
         }else if (standing()) {
-            body.applyCentralImpulse(new Vector3f(0, 100, 0));
+            body.applyCentralImpulse(new Vector3f(0, 20, 0));
+            jumping=true;
         }
+    }//..
+
+    protected boolean standing(){
+        boolean isStanding = false;
+        float yt = p.y - (2f);
+        Vector3f pos = new Vector3f(p.x,p.y,p.z), posD = new Vector3f(p.x,yt,p.z);
+        System.out.println(p.y+" "+yt);
+        CollisionWorld.ClosestRayResultCallback rayResult = new CollisionWorld.ClosestRayResultCallback(pos,posD);
+        Scene.world.rayTest(pos, posD, rayResult);
+        if(rayResult.hasHit()){
+            isStanding = true;
+            jumping=false;
+        }
+        return isStanding;
     }//..
 
     protected void setCartesian(){
@@ -269,20 +282,9 @@ public class Camera {
         }
     }//..
 
-    protected boolean standing(){
-        boolean isStanding = false;
-        Vector3f pos = new Vector3f(p.x,p.y,p.z), posD = new Vector3f(pos.x,(pos.y)-(height+.2f),pos.z);
-        CollisionWorld.ClosestRayResultCallback rayResult = new CollisionWorld.ClosestRayResultCallback(pos,posD);
-        Scene.world.rayTest(pos, posD, rayResult);
-        if(rayResult.hasHit()){
-            isStanding = true;
-        }
-        return isStanding;
-    }//..
-
     protected void initializePhysics(){
         MotionState motionState;
-        CollisionShape shape = new CapsuleShape(p.size*.5f,height);
+        CollisionShape shape = new CapsuleShape(radius,p.size);
 
         t = new Transform();
         t.setIdentity();

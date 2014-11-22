@@ -24,6 +24,7 @@ import javax.vecmath.Vector3f;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
+import java.awt.print.Book;
 import java.util.Vector;
 
 /**
@@ -54,6 +55,7 @@ public class Scene implements GLEventListener{
     // OpenGL Models
     Vector<Model> models = new Vector<Model>();
     protected Vector<Ball> balls = new Vector<Ball>();
+    Vector<Cube> boxes = new Vector<Cube>();
     FloorModel floor;
     SkyDome sky;
     Ball b;
@@ -135,6 +137,8 @@ public class Scene implements GLEventListener{
         floor = new FloorModel(gl,textures.grass,new Point3d(0,0), world);
         sky = new SkyDome(gl,textures.sky,new Point3d(0,-500,0,1));
 
+        mkPyramid(-100,0);
+
         lastRenderTime = System.currentTimeMillis();
 
     }//..
@@ -164,6 +168,9 @@ public class Scene implements GLEventListener{
         for (Ball b: balls){
             b.draw();
         }
+        for (Cube c:boxes){
+            c.draw();
+        }
 
         try {
             if(addLogic != null)
@@ -172,12 +179,13 @@ public class Scene implements GLEventListener{
             e.printStackTrace();
         }
 
-        if(timer==10000){
+        /*if(timer==10000){
             camera.fog=true;
             timer+=20;
         }else{
             timer+=20;
-        }
+        }**/
+
         if(step<20){
             Utils.wait((int) (20-step));
         }
@@ -373,6 +381,21 @@ public class Scene implements GLEventListener{
         //body.setDamping(.3f,.3f);
         boundingBox.add(body);
         world.addRigidBody(body);
+    }//..
+
+    protected void mkPyramid(int strtx, int srtrz){
+        float mass = 20,sz = .5f, sep = sz*2; //  a pyramid of boxes
+        int b = 9;
+        for (int i=0;i<5;i++){
+            for(int k=b;k>0;k--){//depth
+                for(int j=b;j>0;j--){//width
+                    boxes.add( new Cube(gl,new Point3d(strtx+j*sep,(sz)+(sz*i*2),srtrz+k*sep, sz,mass),world,textures.box));
+                }
+            }
+            b-=2;
+            strtx+=sep;
+            srtrz+=sep;
+        }
     }//..
 
     protected float[] getGroundAtPoint(double x, double z){

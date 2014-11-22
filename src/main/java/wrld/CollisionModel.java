@@ -18,10 +18,11 @@ import javax.vecmath.Vector3f;
 public class CollisionModel extends Model{
 
     CollisionShape shape;
+    boolean scale;
 
     float
             friction=1f,
-            linDamping=.01f,angDamping=.01f,
+            linDamping=.1f,angDamping=.1f,
             angularFactor=1,
             restitution=.5f;
 
@@ -36,7 +37,8 @@ public class CollisionModel extends Model{
 
         gl.glPushMatrix();
             gl.glMultMatrixf(Utils.mkFloatBuffer(glMatrix));
-            gl.glScaled(p.size, p.size, p.size);
+            if(scale)
+                gl.glScaled(p.size, p.size, p.size);
             gl.glCallList(callist);
         gl.glPopMatrix();
     }//..
