@@ -9,8 +9,8 @@ Ks 0.596143 0.596143 0.596143
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd Skeleton.jpg
-map_d Skeleton.jpg
+map_Kd Skeleton.png
+map_d Skeleton.png
 
 newmtl Shield
 Ns 258.823529
