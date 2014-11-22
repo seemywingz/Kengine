@@ -2,20 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3416d372-3786-42ad-8efa-fb3cb5bef395" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/BasketBall.class" afterPath="$PROJECT_DIR$/target/classes/wrld/BasketBall.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/wrld/Skeleton.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.sh" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Camera.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Camera.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/CollisionModel.class" afterPath="$PROJECT_DIR$/target/classes/wrld/CollisionModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.jar" afterPath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Model.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Model.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$1.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$2.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Textures.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Textures.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/BasketBall.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/BasketBall.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton.png" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Model.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Model.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/SkyDome.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/SkyDome.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000001.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000001.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000001.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000001.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000002.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000002.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000002.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000002.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000003.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000003.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000003.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000003.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000004.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000004.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000004.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000004.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000005.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000005.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000005.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000005.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000006.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000006.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000006.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000006.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000007.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000007.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000007.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000007.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000008.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000008.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000008.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000008.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000009.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000009.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000009.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000009.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000010.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000010.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000010.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000010.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000011.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000011.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000011.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000011.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000012.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000012.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000012.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000012.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000013.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000013.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000013.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000013.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000014.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000014.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000014.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000014.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000015.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000015.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000015.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000015.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000016.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000016.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000016.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000016.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000017.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000017.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000017.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000017.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000018.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000018.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000018.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000018.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000019.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000019.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000019.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000019.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000020.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000020.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000020.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000020.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000021.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000021.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000021.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000021.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000022.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000022.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000022.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000022.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000023.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000023.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000023.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000023.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000024.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000024.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000024.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000024.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000025.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000025.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000025.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000025.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000026.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000026.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000026.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000026.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000027.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000027.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000027.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000027.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000028.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000028.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000028.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000028.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000029.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000029.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000029.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000029.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000030.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000030.mtl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000030.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000030.obj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Kengine.iws" />
@@ -45,57 +107,49 @@
       <file leaf-file-name="Camera.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="749" max-vertical-offset="4550">
-              <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3675" max-vertical-offset="4550">
+              <caret line="292" column="52" selection-start-line="292" selection-start-column="52" selection-end-line="292" selection-end-column="52" />
               <folding>
-                <element signature="e#6958#6959#0" expanded="true" />
-                <element signature="e#6989#6990#0" expanded="true" />
-                <element signature="e#8187#8188#0" expanded="true" />
-                <element signature="e#8235#8236#0" expanded="true" />
+                <element signature="e#6960#6961#0" expanded="true" />
+                <element signature="e#6991#6992#0" expanded="true" />
+                <element signature="e#8189#8190#0" expanded="true" />
+                <element signature="e#8237#8238#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SkyDome.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/SkyDome.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6651584" vertical-offset="168" max-vertical-offset="868">
-              <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2013" max-vertical-offset="5894">
-              <caret line="186" column="9" selection-start-line="186" selection-start-column="9" selection-end-line="186" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.44343892" vertical-offset="1288" max-vertical-offset="5880">
+              <caret line="131" column="115" selection-start-line="131" selection-start-column="115" selection-end-line="131" selection-end-column="115" />
               <folding>
                 <element signature="e#1805#1812#0" expanded="true" />
                 <element signature="e#1906#1912#0" expanded="true" />
-                <element signature="e#7483#7484#0" expanded="true" />
-                <element signature="e#7510#7511#0" expanded="true" />
-                <element signature="e#8445#8446#0" expanded="true" />
-                <element signature="e#8498#8499#0" expanded="true" />
-                <element signature="e#8881#8882#0" expanded="true" />
-                <element signature="e#8934#8935#0" expanded="true" />
-                <element signature="e#9439#9898#0" expanded="true" />
-                <element signature="e#9897#9898#0" expanded="true" />
-                <element signature="e#14715#14716#0" expanded="true" />
-                <element signature="e#14775#14776#0" expanded="true" />
+                <element signature="e#7492#7493#0" expanded="true" />
+                <element signature="e#7519#7520#0" expanded="true" />
+                <element signature="e#8454#8455#0" expanded="true" />
+                <element signature="e#8507#8508#0" expanded="true" />
+                <element signature="e#8890#8891#0" expanded="true" />
+                <element signature="e#8943#8944#0" expanded="true" />
+                <element signature="e#9448#9907#0" expanded="true" />
+                <element signature="e#9906#9907#0" expanded="true" />
+                <element signature="e#14724#14725#0" expanded="true" />
+                <element signature="e#14784#14785#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cube.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Cube.java">
+      <file leaf-file-name="Skeleton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Skeleton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1764">
-              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,19 +157,12 @@
       <file leaf-file-name="CollisionModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="798">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasketBall.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/BasketBall.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="448">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="1106">
+              <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+              <folding>
+                <element signature="e#966#967#0" expanded="true" />
+                <element signature="e#1010#1011#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,11 +187,13 @@
         <option value="$PROJECT_DIR$/Kengine.bat" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Textures.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Cube.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/BasketBall.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/SkyDome.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/Model.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/Skeleton.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
       </list>
     </option>
   </component>
@@ -242,6 +291,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Kengine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Kengine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="obj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -626,7 +701,19 @@
       <option name="project" value="LOCAL" />
       <updated>1416622088263</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Camera Movement Fix: Jumping">
+      <created>1416623120306</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1416623120306</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Skeleton MTL update">
+      <created>1416624162723</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1416624162723</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -680,7 +767,9 @@
     <MESSAGE value="OBJ loader Optimize" />
     <MESSAGE value="OBJ loader Optimization" />
     <MESSAGE value="Camera Movement Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Camera Movement Fix" />
+    <MESSAGE value="Camera Movement Fix: Jumping" />
+    <MESSAGE value="Skeleton MTL update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skeleton MTL update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -700,16 +789,16 @@
           <folding>
             <element signature="e#1805#1812#0" expanded="true" />
             <element signature="e#1906#1912#0" expanded="true" />
-            <element signature="e#7483#7484#0" expanded="true" />
-            <element signature="e#7510#7511#0" expanded="true" />
-            <element signature="e#8445#8446#0" expanded="true" />
-            <element signature="e#8498#8499#0" expanded="true" />
-            <element signature="e#8881#8882#0" expanded="true" />
-            <element signature="e#8934#8935#0" expanded="true" />
-            <element signature="e#9439#9898#0" expanded="true" />
-            <element signature="e#9897#9898#0" expanded="true" />
-            <element signature="e#14715#14716#0" expanded="true" />
-            <element signature="e#14775#14776#0" expanded="true" />
+            <element signature="e#7492#7493#0" expanded="true" />
+            <element signature="e#7519#7520#0" expanded="true" />
+            <element signature="e#8454#8455#0" expanded="true" />
+            <element signature="e#8507#8508#0" expanded="true" />
+            <element signature="e#8890#8891#0" expanded="true" />
+            <element signature="e#8943#8944#0" expanded="true" />
+            <element signature="e#9448#9907#0" expanded="true" />
+            <element signature="e#9906#9907#0" expanded="true" />
+            <element signature="e#14724#14725#0" expanded="true" />
+            <element signature="e#14784#14785#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -737,16 +826,16 @@
           <folding>
             <element signature="e#1805#1812#0" expanded="true" />
             <element signature="e#1906#1912#0" expanded="true" />
-            <element signature="e#7483#7484#0" expanded="true" />
-            <element signature="e#7510#7511#0" expanded="true" />
-            <element signature="e#8445#8446#0" expanded="true" />
-            <element signature="e#8498#8499#0" expanded="true" />
-            <element signature="e#8881#8882#0" expanded="true" />
-            <element signature="e#8934#8935#0" expanded="true" />
-            <element signature="e#9439#9898#0" expanded="true" />
-            <element signature="e#9897#9898#0" expanded="true" />
-            <element signature="e#14715#14716#0" expanded="true" />
-            <element signature="e#14775#14776#0" expanded="true" />
+            <element signature="e#7492#7493#0" expanded="true" />
+            <element signature="e#7519#7520#0" expanded="true" />
+            <element signature="e#8454#8455#0" expanded="true" />
+            <element signature="e#8507#8508#0" expanded="true" />
+            <element signature="e#8890#8891#0" expanded="true" />
+            <element signature="e#8943#8944#0" expanded="true" />
+            <element signature="e#9448#9907#0" expanded="true" />
+            <element signature="e#9906#9907#0" expanded="true" />
+            <element signature="e#14724#14725#0" expanded="true" />
+            <element signature="e#14784#14785#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -774,16 +863,16 @@
           <folding>
             <element signature="e#1805#1812#0" expanded="true" />
             <element signature="e#1906#1912#0" expanded="true" />
-            <element signature="e#7483#7484#0" expanded="true" />
-            <element signature="e#7510#7511#0" expanded="true" />
-            <element signature="e#8445#8446#0" expanded="true" />
-            <element signature="e#8498#8499#0" expanded="true" />
-            <element signature="e#8881#8882#0" expanded="true" />
-            <element signature="e#8934#8935#0" expanded="true" />
-            <element signature="e#9439#9898#0" expanded="true" />
-            <element signature="e#9897#9898#0" expanded="true" />
-            <element signature="e#14715#14716#0" expanded="true" />
-            <element signature="e#14775#14776#0" expanded="true" />
+            <element signature="e#7492#7493#0" expanded="true" />
+            <element signature="e#7519#7520#0" expanded="true" />
+            <element signature="e#8454#8455#0" expanded="true" />
+            <element signature="e#8507#8508#0" expanded="true" />
+            <element signature="e#8890#8891#0" expanded="true" />
+            <element signature="e#8943#8944#0" expanded="true" />
+            <element signature="e#9448#9907#0" expanded="true" />
+            <element signature="e#9906#9907#0" expanded="true" />
+            <element signature="e#14724#14725#0" expanded="true" />
+            <element signature="e#14784#14785#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -799,13 +888,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Point3d.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1568">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -846,22 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/ConcaveCollisionModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1877828" vertical-offset="105" max-vertical-offset="1022">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/ConvexCollisionModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.20361991" vertical-offset="328" max-vertical-offset="770">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Wall.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20487805" vertical-offset="0" max-vertical-offset="2240">
@@ -885,18 +951,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="10.370646" vertical-offset="185" max-vertical-offset="6566">
           <caret line="311" column="18" selection-start-line="311" selection-start-column="18" selection-end-line="311" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#655#663#0" expanded="true" />
-            <element signature="e#713#725#0" expanded="true" />
-            <element signature="e#768#774#0" expanded="true" />
-            <element signature="e#824#836#0" expanded="true" />
-            <element signature="e#890#900#0" expanded="true" />
-            <element signature="e#5943#5951#0" expanded="true" />
-            <element signature="e#18401#18411#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -916,17 +971,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="798">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/BasketBall.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="448">
+        <state vertical-scroll-proportion="0.33484164" vertical-offset="6" max-vertical-offset="448">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
@@ -934,51 +981,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Cube.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1764">
+        <state vertical-scroll-proportion="0.3484163" vertical-offset="126" max-vertical-offset="1764">
           <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/SkyDome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2013" max-vertical-offset="5894">
-          <caret line="186" column="9" selection-start-line="186" selection-start-column="9" selection-end-line="186" selection-end-column="9" />
-          <folding>
-            <element signature="e#1805#1812#0" expanded="true" />
-            <element signature="e#1906#1912#0" expanded="true" />
-            <element signature="e#7483#7484#0" expanded="true" />
-            <element signature="e#7510#7511#0" expanded="true" />
-            <element signature="e#8445#8446#0" expanded="true" />
-            <element signature="e#8498#8499#0" expanded="true" />
-            <element signature="e#8881#8882#0" expanded="true" />
-            <element signature="e#8934#8935#0" expanded="true" />
-            <element signature="e#9439#9898#0" expanded="true" />
-            <element signature="e#9897#9898#0" expanded="true" />
-            <element signature="e#14715#14716#0" expanded="true" />
-            <element signature="e#14775#14776#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="1.0795181" vertical-offset="0" max-vertical-offset="868">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="749" max-vertical-offset="4550">
-          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3675" max-vertical-offset="4550">
+          <caret line="292" column="52" selection-start-line="292" selection-start-column="52" selection-end-line="292" selection-end-column="52" />
           <folding>
-            <element signature="e#6958#6959#0" expanded="true" />
-            <element signature="e#6989#6990#0" expanded="true" />
-            <element signature="e#8187#8188#0" expanded="true" />
-            <element signature="e#8235#8236#0" expanded="true" />
+            <element signature="e#6960#6961#0" expanded="true" />
+            <element signature="e#6991#6992#0" expanded="true" />
+            <element signature="e#8189#8190#0" expanded="true" />
+            <element signature="e#8237#8238#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/SkyDome.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6651584" vertical-offset="168" max-vertical-offset="868">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.64932126" vertical-offset="371" max-vertical-offset="1596">
+          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="63" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/ConcaveCollisionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4253393" vertical-offset="0" max-vertical-offset="1022">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/ConvexCollisionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1764706" vertical-offset="160" max-vertical-offset="770">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="1106">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding>
+            <element signature="e#966#967#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Skeleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44343892" vertical-offset="1288" max-vertical-offset="5880">
+          <caret line="131" column="115" selection-start-line="131" selection-start-column="115" selection-end-line="131" selection-end-column="115" />
+          <folding>
+            <element signature="e#1805#1812#0" expanded="true" />
+            <element signature="e#1906#1912#0" expanded="true" />
+            <element signature="e#7492#7493#0" expanded="true" />
+            <element signature="e#7519#7520#0" expanded="true" />
+            <element signature="e#8454#8455#0" expanded="true" />
+            <element signature="e#8507#8508#0" expanded="true" />
+            <element signature="e#8890#8891#0" expanded="true" />
+            <element signature="e#8943#8944#0" expanded="true" />
+            <element signature="e#9448#9907#0" expanded="true" />
+            <element signature="e#9906#9907#0" expanded="true" />
+            <element signature="e#14724#14725#0" expanded="true" />
+            <element signature="e#14784#14785#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

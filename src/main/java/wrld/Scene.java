@@ -127,9 +127,9 @@ public class Scene implements GLEventListener{
         callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points,null);
         models.add(new ConvexCollisionModel(gl,new Point3d(50,0,0,.08f),world,points,callist));
 
-        Vector<Integer>frames = new Vector<Integer>();// Skleton A
+        /*Vector<Integer>frames = new Vector<Integer>();// Skleton A
         objectLoader.loadAnimation(frames,"/obj/Skeleton/","Skeleton",20);
-        models.add(new Model(gl, new Point3d(10, 1.5f, 5, .16f, 3f), frames, 1000));// world, points, callist));
+        models.add(new Skeleton(gl, new Point3d(-90, 1.5f, 5, 1, 3f),world, frames));// world, points, callist));*/
 
         textures = new Textures(gl);
         balls.add(b = new BasketBall(gl, new Point3d(0, 1000, 5), world, textures.basketBall));
@@ -179,13 +179,12 @@ public class Scene implements GLEventListener{
             e.printStackTrace();
         }
 
-        if(timer==10000){
+        /*if(timer==10000){
             camera.fog=true;
             timer+=20;
         }else{
             timer+=20;
-        }
-
+        }**/
         if(step<20){
             Utils.wait((int) (20-step));
         }

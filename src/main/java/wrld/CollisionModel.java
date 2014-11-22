@@ -11,6 +11,7 @@ import com.bulletphysics.linearmath.Transform;
 
 import javax.media.opengl.GL2;
 import javax.vecmath.Vector3f;
+import java.util.Vector;
 
 /**
  * Created by kevin on 11/13/14.
@@ -30,6 +31,10 @@ public class CollisionModel extends Model{
         super(gl, p, callist);
     }//..
 
+    CollisionModel(GL2 gl, Point3d p,Vector<Integer> frames,int frameWait) {
+        super(gl,p,frames,frameWait);
+    }//..
+
     @Override
     public void draw(){
         t = body.getWorldTransform(t);
@@ -39,8 +44,26 @@ public class CollisionModel extends Model{
             gl.glMultMatrixf(Utils.mkFloatBuffer(glMatrix));
             if(scale)
                 gl.glScaled(p.size, p.size, p.size);
-            gl.glCallList(callist);
+            drawFramesOrList();
         gl.glPopMatrix();
+    }//..
+
+    protected void drawFramesOrList(){
+        if(frames != null) {
+            gl.glCallList(frames.get(curFarame));
+            if(frameCnt>=frameWait) {
+                curFarame+=fd;
+                if(curFarame == frames.size()-1){
+                    fd=-fd;
+                }else if(curFarame==0){
+                    fd=-fd;
+                }
+                frameCnt=0;
+            }
+            frameCnt++;
+        }else {
+            gl.glCallList(callist);
+        }
     }//..
 
     protected void initializePhysics(DynamicsWorld world){

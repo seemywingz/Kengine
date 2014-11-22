@@ -199,7 +199,7 @@ public class Camera {
         boolean isStanding = false;
         float yt = p.y - (2f);
         Vector3f pos = new Vector3f(p.x,p.y,p.z), posD = new Vector3f(p.x,yt,p.z);
-        System.out.println(p.y+" "+yt);
+        //System.out.println(p.y+" "+yt);
         CollisionWorld.ClosestRayResultCallback rayResult = new CollisionWorld.ClosestRayResultCallback(pos,posD);
         Scene.world.rayTest(pos, posD, rayResult);
         if(rayResult.hasHit()){

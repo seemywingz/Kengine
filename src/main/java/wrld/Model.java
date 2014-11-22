@@ -22,7 +22,7 @@ public class Model {
     protected int callist = -1;
     protected RigidBody body;
 
-    protected int curFarame,frameWait,frameCnt,fd=1;
+    protected int curFarame=0,frameWait,frameCnt,fd=1;
     protected Vector<Integer> frames = null;
 
 
@@ -36,6 +36,7 @@ public class Model {
         this.gl = gl;
         this.p = p;
         this.frames=frames;
+        this.frameWait=frameWait;
     }//..
 
     protected void draw(){
@@ -47,8 +48,8 @@ public class Model {
             gl.glPopMatrix();
         }else {
             gl.glPushMatrix();
-            gl.glTranslatef(p.x,p.y,p.z);
-            gl.glScaled(p.size,p.size,p.size);
+            gl.glTranslatef(p.x, p.y, p.z);
+            gl.glScaled(p.size, p.size, p.size);
             gl.glCallList(frames.get(curFarame));
             gl.glPopMatrix();
             if(frameCnt>=frameWait) {
@@ -60,6 +61,7 @@ public class Model {
                 }
                 frameCnt=0;
             }
+            frameCnt++;
         }
     }//..
 
