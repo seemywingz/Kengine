@@ -2,82 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3416d372-3786-42ad-8efa-fb3cb5bef395" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/wrld/Skeleton.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.sh" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Camera.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Camera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/CollisionModel.class" afterPath="$PROJECT_DIR$/target/classes/wrld/CollisionModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.jar" afterPath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Model.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Model.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$1.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$2.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton.png" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Model.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Model.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000001.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000001.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000001.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000001.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000002.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000002.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000002.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000002.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000003.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000003.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000003.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000003.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000004.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000004.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000004.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000004.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000005.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000005.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000005.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000005.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000006.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000006.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000006.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000006.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000007.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000007.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000007.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000007.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000008.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000008.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000008.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000008.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000009.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000009.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000009.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000009.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000010.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000010.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000010.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000010.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000011.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000011.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000011.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000011.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000012.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000012.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000012.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000012.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000013.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000013.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000013.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000013.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000014.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000014.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000014.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000014.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000015.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000015.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000015.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000015.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000016.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000016.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000016.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000016.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000017.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000017.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000017.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000017.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000018.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000018.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000018.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000018.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000019.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000019.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000019.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000019.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000020.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000020.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000020.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000020.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000021.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000021.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000021.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000021.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000022.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000022.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000022.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000022.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000023.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000023.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000023.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000023.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000024.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000024.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000024.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000024.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000025.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000025.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000025.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000025.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000026.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000026.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000026.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000026.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000027.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000027.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000027.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000027.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000028.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000028.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000028.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000028.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000029.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000029.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000029.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000029.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000030.mtl" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000030.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000030.obj" afterPath="$PROJECT_DIR$/src/main/resources/obj/Skeleton/Skeleton_000030.obj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/beads-io.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/beads.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/jarjar-1.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/jl1.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/jna.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/mp3spi1.9.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/org-jaudiolibs-audioservers-jack.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/org-jaudiolibs-audioservers-javasound.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/org-jaudiolibs-audioservers.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/org-jaudiolibs-jnajack.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/tools.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/tritonus_aos-0.3.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/lib/tritonus_share.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000001.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000001.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000002.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000002.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000003.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000003.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000004.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000004.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000005.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000005.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000006.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000006.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000007.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000007.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000008.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000008.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000009.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000009.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000010.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000010.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000011.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000011.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000012.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000012.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000013.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000013.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000014.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000014.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000015.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000015.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000016.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000016.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000017.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000017.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000018.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000018.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000019.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000019.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000020.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000020.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000021.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000021.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000022.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000022.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000023.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000023.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000024.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000024.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000025.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000025.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000026.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000026.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000027.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000027.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000028.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000028.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000029.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000029.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000030.obj" afterPath="$PROJECT_DIR$/target/classes/obj/Skeleton/Skeleton_000030.obj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Kengine.iws" />
@@ -110,10 +77,7 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="3675" max-vertical-offset="4550">
               <caret line="292" column="52" selection-start-line="292" selection-start-column="52" selection-end-line="292" selection-end-column="52" />
               <folding>
-                <element signature="e#6960#6961#0" expanded="true" />
-                <element signature="e#6991#6992#0" expanded="true" />
-                <element signature="e#8189#8190#0" expanded="true" />
-                <element signature="e#8237#8238#0" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -122,22 +86,9 @@
       <file leaf-file-name="Scene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44343892" vertical-offset="1288" max-vertical-offset="5880">
-              <caret line="131" column="115" selection-start-line="131" selection-start-column="115" selection-end-line="131" selection-end-column="115" />
-              <folding>
-                <element signature="e#1805#1812#0" expanded="true" />
-                <element signature="e#1906#1912#0" expanded="true" />
-                <element signature="e#7492#7493#0" expanded="true" />
-                <element signature="e#7519#7520#0" expanded="true" />
-                <element signature="e#8454#8455#0" expanded="true" />
-                <element signature="e#8507#8508#0" expanded="true" />
-                <element signature="e#8890#8891#0" expanded="true" />
-                <element signature="e#8943#8944#0" expanded="true" />
-                <element signature="e#9448#9907#0" expanded="true" />
-                <element signature="e#9906#9907#0" expanded="true" />
-                <element signature="e#14724#14725#0" expanded="true" />
-                <element signature="e#14784#14785#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.29073483" vertical-offset="1148" max-vertical-offset="5726">
+              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,11 +96,9 @@
       <file leaf-file-name="Skeleton.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Skeleton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+            <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="476">
               <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,8 +109,9 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="1106">
               <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
               <folding>
-                <element signature="e#966#967#0" expanded="true" />
-                <element signature="e#1010#1011#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#847#848#0" expanded="false" />
+                <element signature="e#884#885#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -253,7 +203,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -312,94 +261,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="obj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wrld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wrld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Utils.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -415,7 +283,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Java/JetBrains/ConwaysGame" />
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -423,11 +291,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/lib" />
       <recent name="$PROJECT_DIR$/src/main/resources/tex" />
       <recent name="$PROJECT_DIR$/src/main/java/wrld" />
       <recent name="$PROJECT_DIR$/src/main/resources/obj/tree" />
       <recent name="$PROJECT_DIR$/src/main/resources/obj/Skeleton" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Kengine">
@@ -723,27 +591,27 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23195085" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2795699" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962063" sideWeight="0.48614073" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962063" sideWeight="0.5138593" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962063" sideWeight="0.48392037" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962063" sideWeight="0.51454824" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2795699" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -769,7 +637,8 @@
     <MESSAGE value="Camera Movement Fix" />
     <MESSAGE value="Camera Movement Fix: Jumping" />
     <MESSAGE value="Skeleton MTL update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skeleton MTL update" />
+    <MESSAGE value="Beads" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beads" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -782,24 +651,87 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3675" max-vertical-offset="4550">
+          <caret line="292" column="52" selection-start-line="292" selection-start-column="52" selection-end-line="292" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5838">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Skeleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="476">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="1106">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#884#885#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3675" max-vertical-offset="4550">
+          <caret line="292" column="52" selection-start-line="292" selection-start-column="52" selection-end-line="292" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5880">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Skeleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="476">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="1106">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#884#885#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5474">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1805#1812#0" expanded="true" />
-            <element signature="e#1906#1912#0" expanded="true" />
-            <element signature="e#7492#7493#0" expanded="true" />
-            <element signature="e#7519#7520#0" expanded="true" />
-            <element signature="e#8454#8455#0" expanded="true" />
-            <element signature="e#8507#8508#0" expanded="true" />
-            <element signature="e#8890#8891#0" expanded="true" />
-            <element signature="e#8943#8944#0" expanded="true" />
-            <element signature="e#9448#9907#0" expanded="true" />
-            <element signature="e#9906#9907#0" expanded="true" />
-            <element signature="e#14724#14725#0" expanded="true" />
-            <element signature="e#14784#14785#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -807,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="616">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="1022">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,20 +753,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1330" max-vertical-offset="5488">
           <caret line="119" column="55" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
-          <folding>
-            <element signature="e#1805#1812#0" expanded="true" />
-            <element signature="e#1906#1912#0" expanded="true" />
-            <element signature="e#7492#7493#0" expanded="true" />
-            <element signature="e#7519#7520#0" expanded="true" />
-            <element signature="e#8454#8455#0" expanded="true" />
-            <element signature="e#8507#8508#0" expanded="true" />
-            <element signature="e#8890#8891#0" expanded="true" />
-            <element signature="e#8943#8944#0" expanded="true" />
-            <element signature="e#9448#9907#0" expanded="true" />
-            <element signature="e#9906#9907#0" expanded="true" />
-            <element signature="e#14724#14725#0" expanded="true" />
-            <element signature="e#14784#14785#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -844,7 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="616">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -852,7 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="1022">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,20 +775,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1211" max-vertical-offset="5530">
           <caret line="119" column="55" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
-          <folding>
-            <element signature="e#1805#1812#0" expanded="true" />
-            <element signature="e#1906#1912#0" expanded="true" />
-            <element signature="e#7492#7493#0" expanded="true" />
-            <element signature="e#7519#7520#0" expanded="true" />
-            <element signature="e#8454#8455#0" expanded="true" />
-            <element signature="e#8507#8508#0" expanded="true" />
-            <element signature="e#8890#8891#0" expanded="true" />
-            <element signature="e#8943#8944#0" expanded="true" />
-            <element signature="e#9448#9907#0" expanded="true" />
-            <element signature="e#9906#9907#0" expanded="true" />
-            <element signature="e#14724#14725#0" expanded="true" />
-            <element signature="e#14784#14785#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -881,7 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="406">
           <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,7 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8879493" vertical-offset="0" max-vertical-offset="588">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,7 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20487805" vertical-offset="0" max-vertical-offset="2240">
           <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,10 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8097561" vertical-offset="718" max-vertical-offset="1568">
           <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
-          <folding>
-            <element signature="method#mkGraphic#0;class#Utils#0" expanded="false" />
-            <element signature="method#scaleImageIcon#0;class#Utils#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -951,7 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="10.370646" vertical-offset="185" max-vertical-offset="6566">
           <caret line="311" column="18" selection-start-line="311" selection-start-column="18" selection-end-line="311" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -959,7 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="417">
           <caret line="0" column="99" selection-start-line="0" selection-start-column="99" selection-end-line="0" selection-end-column="99" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -967,7 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7285068" vertical-offset="0" max-vertical-offset="504">
           <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,7 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33484164" vertical-offset="6" max-vertical-offset="448">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -983,7 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3484163" vertical-offset="126" max-vertical-offset="1764">
           <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -991,7 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0795181" vertical-offset="0" max-vertical-offset="868">
           <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,10 +889,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3675" max-vertical-offset="4550">
           <caret line="292" column="52" selection-start-line="292" selection-start-column="52" selection-end-line="292" selection-end-column="52" />
           <folding>
-            <element signature="e#6960#6961#0" expanded="true" />
-            <element signature="e#6991#6992#0" expanded="true" />
-            <element signature="e#8189#8190#0" expanded="true" />
-            <element signature="e#8237#8238#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1012,7 +898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64932126" vertical-offset="371" max-vertical-offset="1596">
           <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="63" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,7 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4253393" vertical-offset="0" max-vertical-offset="1022">
           <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,7 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1764706" vertical-offset="160" max-vertical-offset="770">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,8 +920,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="1106">
           <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
           <folding>
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1010#1011#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#884#885#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1047,30 +931,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44343892" vertical-offset="1288" max-vertical-offset="5880">
-          <caret line="131" column="115" selection-start-line="131" selection-start-column="115" selection-end-line="131" selection-end-column="115" />
-          <folding>
-            <element signature="e#1805#1812#0" expanded="true" />
-            <element signature="e#1906#1912#0" expanded="true" />
-            <element signature="e#7492#7493#0" expanded="true" />
-            <element signature="e#7519#7520#0" expanded="true" />
-            <element signature="e#8454#8455#0" expanded="true" />
-            <element signature="e#8507#8508#0" expanded="true" />
-            <element signature="e#8890#8891#0" expanded="true" />
-            <element signature="e#8943#8944#0" expanded="true" />
-            <element signature="e#9448#9907#0" expanded="true" />
-            <element signature="e#9906#9907#0" expanded="true" />
-            <element signature="e#14724#14725#0" expanded="true" />
-            <element signature="e#14784#14785#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.29073483" vertical-offset="1148" max-vertical-offset="5726">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
