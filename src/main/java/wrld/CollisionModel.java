@@ -18,7 +18,7 @@ import javax.vecmath.Vector3f;
 public class CollisionModel extends Model{
 
     CollisionShape shape;
-    boolean scale;
+    boolean scale=true;
 
     float
             friction=1f,

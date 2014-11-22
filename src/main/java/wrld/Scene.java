@@ -179,12 +179,12 @@ public class Scene implements GLEventListener{
             e.printStackTrace();
         }
 
-        /*if(timer==10000){
+        if(timer==10000){
             camera.fog=true;
             timer+=20;
         }else{
             timer+=20;
-        }**/
+        }
 
         if(step<20){
             Utils.wait((int) (20-step));

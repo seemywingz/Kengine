@@ -35,7 +35,7 @@ public class SkyDome {
 
         gl.glScalef(p.size,p.size,p.size);
         gl.glTranslatef(p.x, p.y, p.z);
-        gl.glRotated(-90, 1, 0, 0);
+        gl.glRotated(90, 1, 0, 0);
         gl.glCallList(callist);
 
         gl.glPopMatrix();

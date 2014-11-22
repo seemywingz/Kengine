@@ -83,8 +83,8 @@ public class Camera {
             body.setLinearVelocity(new Vector3f(0, 0, 0));
         }
 
-        if(fog)
-            mkFog();
+        /*if(fog)
+            mkFog();*/
 
         gl.glRotatef(xrot, 1, 0, 0);  //rotate our camera on teh x-axis (left and right)
         gl.glRotatef(yrot, 0, 1, 0);  //rotate our camera on the y-axis (up and down)
@@ -190,7 +190,7 @@ public class Camera {
         if(flying) {
             p.y += .25;
         }else if (standing()) {
-            body.applyCentralImpulse(new Vector3f(0, 20, 0));
+            body.applyCentralImpulse(new Vector3f(0, 50, 0));
             jumping=true;
         }
     }//..

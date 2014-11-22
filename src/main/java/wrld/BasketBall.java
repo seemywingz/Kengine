@@ -14,7 +14,6 @@ public class BasketBall extends Ball {
     BasketBall(GL2 gl, Point3d p, DynamicsWorld world, Texture texture) {
         super(gl, p, world, texture);
 
-        scale=true;
         p.size=0.254f;
         p.mass=0.623f;
         callist=mkGLCallList();
