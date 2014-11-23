@@ -97,7 +97,19 @@ public class Utils {
         return new ImageIcon(  img.getScaledInstance( w, h,  Image.SCALE_SMOOTH )  );
     }//..
 
+
     protected static void startThread(final Logic logic){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                    try {
+                        logic.apply();
+                    }catch (Exception e){e.printStackTrace();}
+            }
+        }).start();
+    }//..
+
+    protected static void startThreadLoop(final Logic logic){
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -105,7 +117,7 @@ public class Utils {
                     try {
                         logic.apply();
                         Thread.sleep(20);
-                    }catch (Exception e){}
+                    }catch (Exception e){e.printStackTrace();}
                 }
             }
         }).start();
