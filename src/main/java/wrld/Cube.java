@@ -20,13 +20,14 @@ public class Cube extends CollisionModel {
     protected float textureTop, textureBottom, textureLeft, textureRight;
 
 
-    Cube(GL2 gl, Point3d p, DynamicsWorld world, Texture texture) {
-        super(gl,p,1);
+    Cube(Point3d p, DynamicsWorld world, Texture texture) {
+        super(p,1);
         this.texture =texture;
 
         angDamping=.1f;
         linDamping=.1f;
         friction=1f;
+        restitution=.25f;
         shape = new BoxShape(new Vector3f(1,1,1));
 
         callist = genCube();

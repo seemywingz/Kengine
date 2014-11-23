@@ -16,8 +16,8 @@ public class ConvexCollisionModel extends CollisionModel {
 
     protected ObjectArrayList<Vector3f> points = new ObjectArrayList<Vector3f>();
 
-    ConvexCollisionModel(GL2 gl, Point3d p, DynamicsWorld world, ObjectArrayList<Vector3f> points, int callist){
-        super(gl,p,callist);
+    ConvexCollisionModel(Point3d p, DynamicsWorld world, ObjectArrayList<Vector3f> points, int callist){
+        super(p,callist);
         this.points=points;
         shape = new ConvexHullShape(points);
         initializePhysics(world);

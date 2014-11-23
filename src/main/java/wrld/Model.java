@@ -14,7 +14,7 @@ import java.util.Vector;
 public class Model {
 
     protected Point3d p;
-    protected GL2 gl;
+    protected static GL2 gl = Scene.gl;
 
     //JBullet Variables
     protected Transform t;
@@ -26,14 +26,12 @@ public class Model {
     protected Vector<Integer> frames = null;
 
 
-    Model(GL2 gl, Point3d p,int callist) {
-        this.gl = gl;
+    Model(Point3d p,int callist) {
         this.p = p;
         this.callist = callist;
     }//..
 
-    Model(GL2 gl, Point3d p,Vector<Integer>frames,int frameWait) {
-        this.gl = gl;
+    Model(Point3d p,Vector<Integer>frames,int frameWait) {
         this.p = p;
         this.frames=frames;
         this.frameWait=frameWait;

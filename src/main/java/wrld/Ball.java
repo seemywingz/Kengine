@@ -3,8 +3,6 @@ package wrld;
 
 import com.bulletphysics.collision.shapes.SphereShape;
 import com.jogamp.opengl.util.texture.Texture;
-
-import javax.media.opengl.GL2;
 import javax.media.opengl.glu.GLU;
 import javax.media.opengl.glu.GLUquadric;
 
@@ -17,8 +15,8 @@ public class Ball extends CollisionModel {
 
     protected Texture texture;
 
-    Ball(GL2 gl, Point3d p, Texture texture) {
-        super(gl, p, 0);
+    Ball( Point3d p, Texture texture) {
+        super( p, 0);
         this.texture=texture;
         callist=mkGLCallList();
         shape = new SphereShape(1);

@@ -24,8 +24,8 @@ public class Wall extends CollisionModel {
     protected float textureTop, textureBottom, textureLeft, textureRight;
     static int obj = 0;
 
-    Wall(GL2 gl, Point3d p, DynamicsWorld world) {
-        super(gl, p, 1);
+    Wall(Point3d p, DynamicsWorld world) {
+        super(p, 1);
 
         if(obj == 0){
             try {

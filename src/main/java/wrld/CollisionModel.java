@@ -21,16 +21,17 @@ public class CollisionModel extends Model{
 
     float
             friction=1f,
-            linDamping=.1f,angDamping=.1f,
+            linDamping=.1f,
+            angDamping=.1f,
             angularFactor=1,
             restitution=.5f;
 
-    CollisionModel(GL2 gl, Point3d p, int callist){
-        super(gl, p, callist);
+    CollisionModel(Point3d p, int callist){
+        super(p, callist);
     }//..
 
-    CollisionModel(GL2 gl, Point3d p,Vector<Integer> frames,int frameWait) {
-        super(gl,p,frames,frameWait);
+    CollisionModel(Point3d p,Vector<Integer> frames,int frameWait) {
+        super(p,frames,frameWait);
     }//..
 
     @Override

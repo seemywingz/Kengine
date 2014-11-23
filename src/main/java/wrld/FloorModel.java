@@ -28,8 +28,8 @@ public class FloorModel extends Model {
 
     Vector<Wall> wall = new Vector<Wall>();
 
-    FloorModel(GL2 gl,Texture t, Point3d p, DynamicsWorld world) {
-        super(gl,p,1);
+    FloorModel(Texture t, Point3d p, DynamicsWorld world) {
+        super(p,1);
 
         mkStaticGroundPlane(world);
 
@@ -67,19 +67,16 @@ public class FloorModel extends Model {
 
         int wsz = 5;
         for(int z=-W;z<W;z+=wsz*2){
-            wall.add(new Wall(gl,new Point3d(L,wsz,z,wsz,0),world));
-            wall.add(new Wall(gl,new Point3d(-L,wsz,z,wsz,0),world));
+            wall.add(new Wall(new Point3d(L,wsz,z,wsz,0),world));
+            wall.add(new Wall(new Point3d(-L,wsz,z,wsz,0),world));
         }
         for(int x=-L;x<L;x+=wsz*2){
-            wall.add(new Wall(gl,new Point3d(x,wsz,W,wsz,0),world));
-            wall.add(new Wall(gl,new Point3d(x,wsz,-W,wsz,0),world));
+            wall.add(new Wall(new Point3d(x,wsz,W,wsz,0),world));
+            wall.add(new Wall(new Point3d(x,wsz,-W,wsz,0),world));
         }
-
-
 
         floorInt = gl.glGenLists(1);
         gl.glNewList(floorInt, gl.GL_COMPILE);
-
 
         gl.glDisable(gl.GL_CULL_FACE);
         gl.glBegin(gl.GL_QUADS);

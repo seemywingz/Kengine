@@ -13,8 +13,8 @@ public class Skeleton extends CollisionModel{
 
     float radius;
 
-    Skeleton(GL2 gl,Point3d p,DynamicsWorld world,Vector<Integer> frames){
-        super(gl, p, frames, 0);
+    Skeleton(Point3d p,DynamicsWorld world,Vector<Integer> frames){
+        super(p, frames, 0);
 
         //scaleGL=false;
         radius=.25f;

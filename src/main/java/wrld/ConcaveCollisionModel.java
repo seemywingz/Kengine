@@ -20,8 +20,8 @@ import java.nio.ByteOrder;
 public class ConcaveCollisionModel extends ConvexCollisionModel {
 
 
-    ConcaveCollisionModel(GL2 gl, Point3d p, DynamicsWorld world, ObjectArrayList<Vector3f> points, int callist) {
-        super(gl, p, world, points, callist);
+    ConcaveCollisionModel(Point3d p, DynamicsWorld world, ObjectArrayList<Vector3f> points, int callist) {
+        super(p, world, points, callist);
     }
 
     @Override
