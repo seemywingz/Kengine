@@ -2,29 +2,19 @@ package wrld;
 
 import com.jogamp.opengl.util.texture.Texture;
 
-import javax.media.opengl.GL2;
-
 /**
  * Created by Kevin on 12/19/13.
  * Stores created textures
  */
-public class Textures {
+public final class Textures {
 
-    GL2 gl;
-
-    public static Texture sky,grass, basketBall,box;
-
-    Textures(GL2 gl) {
-        this.gl =gl;
-
-        //sky = loadTexture(sky,"/com/box/img/sky.jpg",".jpg");
-        basketBall = Utils.loadTexture(getClass(),gl, "/tex/bball.jpg");
-        grass = Utils.loadTexture(getClass(),gl, "/tex/ground.png");
-        sky = Utils.loadTexture(getClass(),gl, "/tex/sky.jpg");
-        box = Utils.loadTexture(getClass(),gl, "/tex/box.jpg");
+    public static Texture
+            sky = Utils.loadTexture(Scene.gl,"/tex/sky.jpg"),
+            grass = Utils.loadTexture(Scene.gl, "/tex/ground.png"),
+            cannonBall = Utils.loadTexture(Scene.gl,"/tex/cannonball.jpg"),
+            basketBall = Utils.loadTexture(Scene.gl, "/tex/basketball.jpg"),
+            box = Utils.loadTexture(Scene.gl, "/tex/box.jpg");
 
 
-
-    }//..
 
 }// end Class Textures

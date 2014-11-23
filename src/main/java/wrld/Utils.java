@@ -23,8 +23,6 @@ interface Logic {
 
 public class Utils {
 
-
-
     protected static Clip mkClip(Class c,String soundFile){
         Clip clip = null;
         try{
@@ -41,7 +39,7 @@ public class Utils {
         //Clip theme = AudioSystem.getClip();
     }//..
 
-    public static Texture loadTexture(Class c,GL2 gl,String textureFileName){
+    public static Texture loadTexture(GL2 gl,String textureFileName){
         Texture texture;
         String delims = "[.]+";
         String file[] = textureFileName.split(delims);
@@ -51,18 +49,19 @@ public class Utils {
             // Use URL so that can read from JAR and disk file.
             //BufferedImage image = ImageIO.read(getClass().getClassLoader().getResource(textureFileName));
 
-            texture = TextureIO.newTexture(c.getResourceAsStream(textureFileName), true, file[1]);
+            texture = TextureIO.newTexture(Utils.class.getResourceAsStream(textureFileName), true, file[1]);
 
             // Use linear filter for texture if image is larger than the original texture
-            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MAG_FILTER, gl.GL_LINEAR);
-            // Use linear filter for texture if image is smaller than the original texture
-            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MIN_FILTER, gl.GL_NEAREST_MIPMAP_LINEAR);
-            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_BASE_LEVEL ,0);
-            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MAX_LEVEL , 20 );
+            gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
 
-            gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE, gl.GL_REPEAT);
-            gl.glTexParameterf(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_WRAP_S, gl.GL_REPEAT);
-            gl.glTexParameterf(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_WRAP_T, gl.GL_REPEAT);
+            // Use linear filter for texture if image is smaller than the original texture
+            gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_NEAREST_MIPMAP_LINEAR);
+            gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_BASE_LEVEL ,0);
+            gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAX_LEVEL , 20 );
+
+            gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE, GL2.GL_REPEAT);
+            gl.glTexParameterf(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_S, GL2.GL_REPEAT);
+            gl.glTexParameterf(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_T, GL2.GL_REPEAT);
 
             // Texture image flips vertically. Shall use TextureCoords class to retrieve
             // the top, bottom, left and right coordinates, instead of using 0.0f and 1.0f.

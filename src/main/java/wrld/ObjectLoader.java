@@ -227,7 +227,7 @@ public class ObjectLoader {
                             String spaceDelim = "\\s+";
                             String nToken[] = temp.get(m).split(spaceDelim);
                             texFilename = nToken[1];
-                            if ((texture = Utils.loadTexture(getClass(),gl,fileLocation + texFilename)) != null) {
+                            if ((texture = Utils.loadTexture(gl,fileLocation + texFilename)) != null) {
                             } else {
                                 texFilename = "n";
                             }

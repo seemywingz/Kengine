@@ -1,8 +1,6 @@
 package wrld;
 
-import com.bulletphysics.collision.shapes.SphereShape;
 import com.bulletphysics.dynamics.DynamicsWorld;
-import com.jogamp.opengl.util.texture.Texture;
 
 import javax.media.opengl.GL2;
 
@@ -11,12 +9,12 @@ import javax.media.opengl.GL2;
  */
 public class BasketBall extends Ball {
 
-    BasketBall(GL2 gl, Point3d p, DynamicsWorld world, Texture texture) {
-        super(gl, p, world, texture);
+    BasketBall(GL2 gl, Point3d p, DynamicsWorld world) {
+        super(gl, p,Textures.basketBall);
 
+        callist=mkGLCallList();
         p.size=0.127f;
         p.mass=0.62369f;
-        callist=mkGLCallList();
 
         //scale = false;
         friction=1;
@@ -24,7 +22,6 @@ public class BasketBall extends Ball {
         angDamping=.1f;
         angularFactor=1;
         restitution=1.2f;
-        shape = new SphereShape(1);
         initializePhysics(world);
     }//..
 

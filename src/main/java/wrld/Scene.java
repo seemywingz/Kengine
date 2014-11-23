@@ -17,13 +17,10 @@ import com.bulletphysics.linearmath.MotionState;
 import com.bulletphysics.linearmath.Transform;
 import com.bulletphysics.util.ObjectArrayList;
 import com.jogamp.opengl.util.FPSAnimator;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 
 import javax.media.opengl.*;
 import javax.media.opengl.glu.GLU;
 import javax.sound.sampled.Clip;
-import javax.sound.sampled.FloatControl;
 import javax.vecmath.Vector3f;
 import java.awt.*;
 import java.awt.event.*;
@@ -40,13 +37,13 @@ public class Scene implements GLEventListener{
     protected static FPSAnimator fpsa;
     protected GLCanvas canvas;
     protected GLU glu;
-    protected GL2 gl;
+    protected static GL2 gl;
 
     protected Robot rob;
     protected int mouseCenter;
     protected Camera camera;
 
-    protected static Textures textures;
+    //protected static Textures textures;
 
     // JBullet Components
     static boolean
@@ -135,11 +132,10 @@ public class Scene implements GLEventListener{
         objectLoader.loadAnimation(frames,"/obj/Skeleton/","Skeleton",20);
         models.add(new Skeleton(gl, new Point3d(-90, 1.5f, 5, 1, 3f),world, frames));// world, points, callist));*/
 
-        textures = new Textures(gl);
-        balls.add(b = new BasketBall(gl, new Point3d(0, 1000, 5), world, textures.basketBall));
+        balls.add(b = new BasketBall(gl, new Point3d(0, 1000, 5), world));
 
-        floor = new FloorModel(gl,textures.grass,new Point3d(0,0), world);
-        sky = new SkyDome(gl,textures.sky,new Point3d(0,-500,0,1));
+        floor = new FloorModel(gl,Textures.grass,new Point3d(0,0), world);
+        sky = new SkyDome(gl,Textures.sky,new Point3d(0,-500,0,1));
 
         mkPyramid(-100,0);
 
@@ -292,7 +288,7 @@ public class Scene implements GLEventListener{
                     @Override
                     public void apply() throws Exception {
                         Vector3f c = camera.getPosition(1);
-                        balls.add(b = new BasketBall(gl, new Point3d(c.x,c.y,c.z), world, textures.basketBall));
+                        balls.add(b = new BasketBall(gl, new Point3d(c.x,c.y,c.z), world));
                         b.setVelocity(camera.getDirection(10,0));
                         balls.add(b);
                         addLogic =null;
@@ -396,7 +392,7 @@ public class Scene implements GLEventListener{
         for (int i=0;i<5;i++){
             for(int k=b;k>0;k--){//depth
                 for(int j=b;j>0;j--){//width
-                    boxes.add( new Cube(gl,new Point3d(strtx+j*sep,(sz)+(sz*i*2),srtrz+k*sep, sz,mass),world,textures.box));
+                    boxes.add( new Cube(gl,new Point3d(strtx+j*sep,(sz)+(sz*i*2),srtrz+k*sep, sz,mass),world,Textures.box));
                 }
             }
             b-=2;

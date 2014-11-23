@@ -1,7 +1,7 @@
 package wrld;
 
 
-import com.bulletphysics.dynamics.DynamicsWorld;
+import com.bulletphysics.collision.shapes.SphereShape;
 import com.jogamp.opengl.util.texture.Texture;
 
 import javax.media.opengl.GL2;
@@ -15,10 +15,10 @@ public class Ball extends CollisionModel {
 
     protected Texture texture;
 
-    Ball(GL2 gl, Point3d p, DynamicsWorld world, Texture texture) {
+    Ball(GL2 gl, Point3d p, Texture texture) {
         super(gl, p, 0);
         this.texture=texture;
-        callist=mkGLCallList();
+        shape = new SphereShape(1);
     }//..
 
     protected int mkGLCallList(){
