@@ -14,16 +14,17 @@ public class BasketBall extends Ball {
     BasketBall(GL2 gl, Point3d p, DynamicsWorld world, Texture texture) {
         super(gl, p, world, texture);
 
-        p.size=0.254f;
-        p.mass=0.623f;
+        p.size=0.127f;
+        p.mass=0.62369f;
         callist=mkGLCallList();
 
+        //scale = false;
         friction=1;
         linDamping=.1f;
         angDamping=.1f;
         angularFactor=1;
-        restitution=1f;
-        shape = new SphereShape(p.size*.5f);
+        restitution=1.2f;
+        shape = new SphereShape(1);
         initializePhysics(world);
     }//..
 

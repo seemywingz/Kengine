@@ -1,14 +1,7 @@
 package wrld;
 
 import com.bulletphysics.collision.shapes.BoxShape;
-import com.bulletphysics.collision.shapes.CollisionShape;
-import com.bulletphysics.dynamics.DiscreteDynamicsWorld;
 import com.bulletphysics.dynamics.DynamicsWorld;
-import com.bulletphysics.dynamics.RigidBody;
-import com.bulletphysics.dynamics.RigidBodyConstructionInfo;
-import com.bulletphysics.linearmath.DefaultMotionState;
-import com.bulletphysics.linearmath.MotionState;
-import com.bulletphysics.linearmath.Transform;
 import com.jogamp.opengl.util.texture.Texture;
 import com.jogamp.opengl.util.texture.TextureCoords;
 
@@ -31,12 +24,10 @@ public class Cube extends CollisionModel {
         super(gl,p,1);
         this.texture =texture;
 
-        scale=false;
         angDamping=.1f;
         linDamping=.1f;
         friction=1f;
-        shape = new BoxShape(new Vector3f(p.size,p.size,p.size));
-
+        shape = new BoxShape(new Vector3f(1,1,1));
 
         callist = genCube();
         initializePhysics(world);
@@ -58,70 +49,70 @@ public class Cube extends CollisionModel {
         gl.glBegin(gl.GL_QUADS);
 
         // Front Face
-        gl.glNormal3f(0.0f, 0.0f, p.size);
+        gl.glNormal3f(0.0f, 0.0f, 1);
         gl.glTexCoord2f(textureLeft, textureBottom);
-        gl.glVertex3f(-p.size, -p.size, p.size); // bottom-left of the texture and quad
+        gl.glVertex3f(-1, -1, 1); // bottom-left of the texture and quad
         gl.glTexCoord2f(textureRight, textureBottom);
-        gl.glVertex3f(p.size, -p.size, p.size);  // bottom-right of the texture and quad
+        gl.glVertex3f(1, -1, 1);  // bottom-right of the texture and quad
         gl.glTexCoord2f(textureRight, textureTop);
-        gl.glVertex3f(p.size, p.size, p.size);   // top-right of the texture and quad
+        gl.glVertex3f(1, 1, 1);   // top-right of the texture and quad
         gl.glTexCoord2f(textureLeft, textureTop);
-        gl.glVertex3f(-p.size, p.size, p.size);  // top-left of the texture and quad
+        gl.glVertex3f(-1, 1, 1);  // top-left of the texture and quad
 
         // Back Face
-        gl.glNormal3f(0.0f, 0.0f, -p.size);
+        gl.glNormal3f(0.0f, 0.0f, -1);
         gl.glTexCoord2f(textureRight, textureBottom);
-        gl.glVertex3f(-p.size, -p.size, -p.size);
+        gl.glVertex3f(-1, -1, -1);
         gl.glTexCoord2f(textureRight, textureTop);
-        gl.glVertex3f(-p.size, p.size, -p.size);
+        gl.glVertex3f(-1, 1, -1);
         gl.glTexCoord2f(textureLeft, textureTop);
-        gl.glVertex3f(p.size, p.size, -p.size);
+        gl.glVertex3f(1, 1, -1);
         gl.glTexCoord2f(textureLeft, textureBottom);
-        gl.glVertex3f(p.size, -p.size, -p.size);
+        gl.glVertex3f(1, -1, -1);
 
         // Top Face
-        gl.glNormal3f(0.0f, p.size, 0.0f);
+        gl.glNormal3f(0.0f, 1, 0.0f);
         gl.glTexCoord2f(textureLeft, textureTop);
-        gl.glVertex3f(-p.size, p.size, -p.size);
+        gl.glVertex3f(-1, 1, -1);
         gl.glTexCoord2f(textureLeft, textureBottom);
-        gl.glVertex3f(-p.size, p.size, p.size);
+        gl.glVertex3f(-1, 1, 1);
         gl.glTexCoord2f(textureRight, textureBottom);
-        gl.glVertex3f(p.size, p.size, p.size);
+        gl.glVertex3f(1, 1, 1);
         gl.glTexCoord2f(textureRight, textureTop);
-        gl.glVertex3f(p.size, p.size, -p.size);
+        gl.glVertex3f(1, 1, -1);
 
         // Bottom Face
-        gl.glNormal3f(0.0f, -p.size, 0.0f);
+        gl.glNormal3f(0.0f, -1, 0.0f);
         gl.glTexCoord2f(textureRight, textureTop);
-        gl.glVertex3f(-p.size, -p.size, -p.size);
+        gl.glVertex3f(-1, -1, -1);
         gl.glTexCoord2f(textureLeft, textureTop);
-        gl.glVertex3f(p.size, -p.size, -p.size);
+        gl.glVertex3f(1, -1, -1);
         gl.glTexCoord2f(textureLeft, textureBottom);
-        gl.glVertex3f(p.size, -p.size, p.size);
+        gl.glVertex3f(1, -1, 1);
         gl.glTexCoord2f(textureRight, textureBottom);
-        gl.glVertex3f(-p.size, -p.size, p.size);
+        gl.glVertex3f(-1, -1, 1);
 
         // Right face
-        gl.glNormal3f(p.size, 0.0f, 0.0f);
+        gl.glNormal3f(1, 0.0f, 0.0f);
         gl.glTexCoord2f(textureRight, textureBottom);
-        gl.glVertex3f(p.size, -p.size, -p.size);
+        gl.glVertex3f(1, -1, -1);
         gl.glTexCoord2f(textureRight, textureTop);
-        gl.glVertex3f(p.size, p.size, -p.size);
+        gl.glVertex3f(1, 1, -1);
         gl.glTexCoord2f(textureLeft, textureTop);
-        gl.glVertex3f(p.size, p.size, p.size);
+        gl.glVertex3f(1, 1, 1);
         gl.glTexCoord2f(textureLeft, textureBottom);
-        gl.glVertex3f(p.size, -p.size, p.size);
+        gl.glVertex3f(1, -1, 1);
 
         // Left Face
-        gl.glNormal3f(-p.size, 0.0f, 0.0f);
+        gl.glNormal3f(-1, 0.0f, 0.0f);
         gl.glTexCoord2f(textureLeft, textureBottom);
-        gl.glVertex3f(-p.size, -p.size, -p.size);
+        gl.glVertex3f(-1, -1, -1);
         gl.glTexCoord2f(textureRight, textureBottom);
-        gl.glVertex3f(-p.size, -p.size, p.size);
+        gl.glVertex3f(-1, -1, 1);
         gl.glTexCoord2f(textureRight, textureTop);
-        gl.glVertex3f(-p.size, p.size, p.size);
+        gl.glVertex3f(-1, 1, 1);
         gl.glTexCoord2f(textureLeft, textureTop);
-        gl.glVertex3f(-p.size, p.size, -p.size);
+        gl.glVertex3f(-1, 1, -1);
 
         gl.glEnd();
         gl.glEndList();

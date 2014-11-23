@@ -19,7 +19,7 @@ import java.nio.FloatBuffer;
 
 interface Logic {
     public abstract void apply() throws Exception;
-}// end interface wrld.Logic
+}// end interface Logic
 
 public class Utils {
 

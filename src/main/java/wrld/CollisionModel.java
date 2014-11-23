@@ -1,7 +1,6 @@
 package wrld;
 
 import com.bulletphysics.collision.shapes.CollisionShape;
-import com.bulletphysics.collision.shapes.SphereShape;
 import com.bulletphysics.dynamics.DynamicsWorld;
 import com.bulletphysics.dynamics.RigidBody;
 import com.bulletphysics.dynamics.RigidBodyConstructionInfo;
@@ -19,7 +18,6 @@ import java.util.Vector;
 public class CollisionModel extends Model{
 
     CollisionShape shape;
-    boolean scale=true;
 
     float
             friction=1f,
@@ -42,7 +40,6 @@ public class CollisionModel extends Model{
 
         gl.glPushMatrix();
             gl.glMultMatrixf(Utils.mkFloatBuffer(glMatrix));
-            if(scale)
                 gl.glScaled(p.size, p.size, p.size);
             drawFramesOrList();
         gl.glPopMatrix();
@@ -72,6 +69,7 @@ public class CollisionModel extends Model{
         t.origin.set(new Vector3f(p.x,p.y,p.z));
         Vector3f inertia = new Vector3f(0,0,0);
         shape.calculateLocalInertia(p.mass,inertia);
+        shape.setLocalScaling(new Vector3f(p.size, p.size, p.size));
 
         MotionState motionState = new DefaultMotionState(t);
         RigidBodyConstructionInfo info = new RigidBodyConstructionInfo(p.mass,motionState,shape,inertia);

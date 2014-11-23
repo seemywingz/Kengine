@@ -47,7 +47,7 @@ public class Ball extends CollisionModel {
         glu.gluQuadricOrientation(quad, glu.GLU_OUTSIDE);
         texture.enable(gl);
         texture.bind(gl);
-        glu.gluSphere(quad, p.size, 36, 72);
+        glu.gluSphere(quad, 1, 36, 72);
         texture.disable(gl);
         gl.glEndList();
         return callList;

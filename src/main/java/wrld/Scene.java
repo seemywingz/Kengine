@@ -17,9 +17,13 @@ import com.bulletphysics.linearmath.MotionState;
 import com.bulletphysics.linearmath.Transform;
 import com.bulletphysics.util.ObjectArrayList;
 import com.jogamp.opengl.util.FPSAnimator;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import javax.media.opengl.*;
 import javax.media.opengl.glu.GLU;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.FloatControl;
 import javax.vecmath.Vector3f;
 import java.awt.*;
 import java.awt.event.*;
@@ -125,7 +129,7 @@ public class Scene implements GLEventListener{
 
         points = new ObjectArrayList<Vector3f>();// Tree
         callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points,null);
-        models.add(new ConvexCollisionModel(gl,new Point3d(50,0,0,.08f),world,points,callist));
+        models.add(new ConvexCollisionModel(gl,new Point3d(50,0,0,.04f),world,points,callist));
 
         /*Vector<Integer>frames = new Vector<Integer>();// Skleton A
         objectLoader.loadAnimation(frames,"/obj/Skeleton/","Skeleton",20);
@@ -139,8 +143,12 @@ public class Scene implements GLEventListener{
 
         mkPyramid(-100,0);
 
-        lastRenderTime = System.currentTimeMillis();
+        final Clip wind = Utils.mkClip(getClass(),"/snd/wind.wav");
+       /* FloatControl gainControl = (FloatControl) wind.getControl(FloatControl.Type.MASTER_GAIN);
+        gainControl.setValue(-10.0f); // Reduce volume by 10 decibels.    */
+        wind.loop(Clip.LOOP_CONTINUOUSLY);
 
+        lastRenderTime = System.currentTimeMillis();
     }//..
 
     @Override

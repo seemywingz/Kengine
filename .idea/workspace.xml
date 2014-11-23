@@ -2,28 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3416d372-3786-42ad-8efa-fb3cb5bef395" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/beads-io.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/beads.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/jarjar-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/jl1.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/jna.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/mp3spi1.9.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/org-jaudiolibs-audioservers-jack.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/org-jaudiolibs-audioservers-javasound.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/org-jaudiolibs-audioservers.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/org-jaudiolibs-jnajack.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/tools.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/tritonus_aos-0.3.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/lib/tritonus_share.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Ball.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Ball.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/BasketBall.class" afterPath="$PROJECT_DIR$/target/classes/wrld/BasketBall.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Camera.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Camera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Kengine$1.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Kengine$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Kengine.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Kengine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.jar" afterPath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/CollisionModel.class" afterPath="$PROJECT_DIR$/target/classes/wrld/CollisionModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/ConvexCollisionModel.class" afterPath="$PROJECT_DIR$/target/classes/wrld/ConvexCollisionModel.class" />
+      <change type="MODIFICATION" beforePath="X:\iThings\Dev\Projects\Git\Kengine\out\artifacts\Kengine_jar\Kengine.jar" afterPath="X:\iThings\Dev\Projects\Git\Kengine\out\artifacts\Kengine_jar\Kengine.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$1.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$2.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Utils$1.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Utils$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Utils.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Ball.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Ball.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/BasketBall.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/BasketBall.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Kengine.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Kengine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/ConvexCollisionModel.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/ConvexCollisionModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Cube.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Cube.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Skeleton.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Skeleton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Utils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Kengine.iws" />
@@ -50,11 +47,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75431037" vertical-offset="1106" max-vertical-offset="4480">
-              <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2710" max-vertical-offset="4965">
+              <caret line="217" column="16" selection-start-line="217" selection-start-column="9" selection-end-line="217" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -63,8 +60,8 @@
       <file leaf-file-name="Scene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5570" max-vertical-offset="6076">
-              <caret line="420" column="10" selection-start-line="420" selection-start-column="10" selection-end-line="420" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1960" max-vertical-offset="6630">
+              <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,18 +69,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Utils.java">
+      <file leaf-file-name="Cube.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Cube.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="896">
-              <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
-              <folding>
-                <element signature="method#mkClip#0;class#Utils#0" expanded="false" />
-                <element signature="method#loadTexture#0;class#Utils#0" expanded="false" />
-                <element signature="method#mkGraphic#0;class#Utils#0" expanded="false" />
-                <element signature="method#mkFloatBuffer#0;class#Utils#0" expanded="false" />
-                <element signature="method#wait#0;class#Utils#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="1.0300429" vertical-offset="90" max-vertical-offset="1860">
+              <caret line="44" column="64" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,16 +97,18 @@
         <option value="$PROJECT_DIR$/src/main/java/wrld/Wall.java" />
         <option value="$PROJECT_DIR$/Kengine.bat" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Textures.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wrld/Cube.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wrld/BasketBall.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/SkyDome.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Model.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Skeleton.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Kengine.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/Ball.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/BasketBall.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/ConvexCollisionModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/Cube.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
       </list>
     </option>
   </component>
@@ -148,9 +141,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1600" />
-    <option name="width" value="1360" />
-    <option name="height" value="768" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1368" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -367,7 +361,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cr8z" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -411,10 +405,53 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -436,6 +473,28 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -460,35 +519,6 @@
       </MavenSettings>
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -500,6 +530,11 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -543,47 +578,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <list size="1">
@@ -683,37 +677,49 @@
       <option name="project" value="LOCAL" />
       <updated>1416707609959</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Beads">
+      <created>1416708207199</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1416708207199</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Beads">
+      <created>1416718764854</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1416718764854</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1600" y="0" width="1360" height="768" extended-state="6" />
+    <frame x="-4" y="-4" width="1368" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23195085" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30107528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962063" sideWeight="0.47861508" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32822084" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962063" sideWeight="0.52138495" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24577573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24539877" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1585736" sideWeight="0.5203252" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1585736" sideWeight="0.4796748" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30107528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -740,18 +746,11 @@
     <MESSAGE value="Camera Movement Fix: Jumping" />
     <MESSAGE value="Skeleton MTL update" />
     <MESSAGE value="Beads" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beads" />
+    <MESSAGE value="Camera, Collision Model: Optimized" />
+    <option name="LAST_COMMIT_MESSAGE" value="Camera, Collision Model: Optimized" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/wrld/Kengine.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
@@ -761,6 +760,84 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Kengine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="810">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2220" max-vertical-offset="6690">
+          <caret line="150" column="53" selection-start-line="150" selection-start-column="53" selection-end-line="150" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#loadTexture#0;class#Utils#0" expanded="false" />
+            <element signature="method#mkGraphic#0;class#Utils#0" expanded="false" />
+            <element signature="e#3880#4102#0" expanded="true" />
+            <element signature="e#4101#4102#0" expanded="true" />
+            <element signature="e#4205#4516#0" expanded="true" />
+            <element signature="e#4515#4516#0" expanded="true" />
+            <element signature="method#mkFloatBuffer#0;class#Utils#0" expanded="false" />
+            <element signature="method#wait#0;class#Utils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1560" max-vertical-offset="4800">
+          <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Kengine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="810">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2250" max-vertical-offset="6780">
+          <caret line="150" column="53" selection-start-line="150" selection-start-column="53" selection-end-line="150" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#loadTexture#0;class#Utils#0" expanded="false" />
+            <element signature="method#mkGraphic#0;class#Utils#0" expanded="false" />
+            <element signature="e#3880#4102#0" expanded="true" />
+            <element signature="e#4101#4102#0" expanded="true" />
+            <element signature="e#4205#4516#0" expanded="true" />
+            <element signature="e#4515#4516#0" expanded="true" />
+            <element signature="method#mkFloatBuffer#0;class#Utils#0" expanded="false" />
+            <element signature="method#wait#0;class#Utils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1148" max-vertical-offset="4480">
@@ -784,9 +861,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="938">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#mkClip#0;class#Utils#0" expanded="false" />
             <element signature="method#loadTexture#0;class#Utils#0" expanded="false" />
             <element signature="method#mkGraphic#0;class#Utils#0" expanded="false" />
+            <element signature="e#3880#4102#0" expanded="true" />
+            <element signature="e#4101#4102#0" expanded="true" />
+            <element signature="e#4205#4516#0" expanded="true" />
+            <element signature="e#4515#4516#0" expanded="true" />
             <element signature="method#mkFloatBuffer#0;class#Utils#0" expanded="false" />
             <element signature="method#wait#0;class#Utils#0" expanded="false" />
           </folding>
@@ -824,9 +904,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="896">
           <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
-            <element signature="method#mkClip#0;class#Utils#0" expanded="false" />
             <element signature="method#loadTexture#0;class#Utils#0" expanded="false" />
             <element signature="method#mkGraphic#0;class#Utils#0" expanded="false" />
+            <element signature="e#3880#4102#0" expanded="true" />
+            <element signature="e#4101#4102#0" expanded="true" />
+            <element signature="e#4205#4516#0" expanded="true" />
+            <element signature="e#4515#4516#0" expanded="true" />
             <element signature="method#mkFloatBuffer#0;class#Utils#0" expanded="false" />
             <element signature="method#wait#0;class#Utils#0" expanded="false" />
           </folding>
@@ -969,13 +1052,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5608974" vertical-offset="0" max-vertical-offset="784">
-          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Light.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
@@ -1018,20 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/BasketBall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33484164" vertical-offset="6" max-vertical-offset="448">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Cube.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3484163" vertical-offset="126" max-vertical-offset="1764">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/SkyDome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0795181" vertical-offset="0" max-vertical-offset="868">
@@ -1053,20 +1115,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/ConvexCollisionModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1764706" vertical-offset="160" max-vertical-offset="770">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14479639" vertical-offset="342" max-vertical-offset="1078">
-          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Skeleton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5248869" vertical-offset="34" max-vertical-offset="476">
@@ -1084,40 +1132,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Kengine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="728">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.1373802" vertical-offset="154" max-vertical-offset="780">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Utils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Ball.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="896">
-          <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
-          <folding>
-            <element signature="method#mkClip#0;class#Utils#0" expanded="false" />
-            <element signature="method#loadTexture#0;class#Utils#0" expanded="false" />
-            <element signature="method#mkGraphic#0;class#Utils#0" expanded="false" />
-            <element signature="method#mkFloatBuffer#0;class#Utils#0" expanded="false" />
-            <element signature="method#wait#0;class#Utils#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5570" max-vertical-offset="6076">
-          <caret line="420" column="10" selection-start-line="420" selection-start-column="10" selection-end-line="420" selection-end-column="10" />
+        <state vertical-scroll-proportion="1.5772532" vertical-offset="0" max-vertical-offset="915">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/BasketBall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6137339" vertical-offset="29" max-vertical-offset="495">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1960" max-vertical-offset="6630">
+          <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/ConvexCollisionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74034333" vertical-offset="0" max-vertical-offset="660">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.22532189" vertical-offset="450" max-vertical-offset="1260">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+          <folding>
+            <element signature="method#loadTexture#0;class#Utils#0" expanded="false" />
+            <element signature="method#mkGraphic#0;class#Utils#0" expanded="false" />
+            <element signature="e#3880#4102#0" expanded="true" />
+            <element signature="e#4101#4102#0" expanded="true" />
+            <element signature="e#4205#4516#0" expanded="true" />
+            <element signature="e#4515#4516#0" expanded="true" />
+            <element signature="method#mkFloatBuffer#0;class#Utils#0" expanded="false" />
+            <element signature="method#wait#0;class#Utils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75431037" vertical-offset="1106" max-vertical-offset="4480">
-          <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2710" max-vertical-offset="4965">
+          <caret line="217" column="16" selection-start-line="217" selection-start-column="9" selection-end-line="217" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/CollisionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9635193" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Cube.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0300429" vertical-offset="90" max-vertical-offset="1860">
+          <caret line="44" column="64" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1182,6 +1275,18 @@
               <list>
                 <option value="0.2" />
                 <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

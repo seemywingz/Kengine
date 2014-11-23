@@ -25,19 +25,8 @@ public class ConvexCollisionModel extends CollisionModel {
 
     @Override
     public void draw() {
-        t = body.getWorldTransform(t);
-        t.getOpenGLMatrix(glMatrix);
-
-        gl.glPushMatrix();
-
-        gl.glMultMatrixf(Utils.mkFloatBuffer(glMatrix));
-        body.getCollisionShape().setLocalScaling(new Vector3f(p.size,p.size,p.size));
-        gl.glScaled(p.size,p.size, p.size);
+        super.draw();
         //ShowLines();
-        gl.glCallList(callist);
-        gl.glDisable(gl.GL_COLOR_MATERIAL);
-        gl.glPopMatrix();
-
     }//..
 
     protected void ShowLines(){
