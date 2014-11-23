@@ -29,7 +29,7 @@ public class Wall extends CollisionModel {
 
         if(obj == 0){
             try {
-                texture = Utils.loadTexture(gl, "/tex/wall.jpg");
+                texture = Textures.wall;
                 TextureCoords textureCoords = texture.getImageTexCoords();
                 textureTop = textureCoords.top();
                 textureBottom = textureCoords.bottom();

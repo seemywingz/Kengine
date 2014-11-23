@@ -227,12 +227,10 @@ public class ObjectLoader {
                             String spaceDelim = "\\s+";
                             String nToken[] = temp.get(m).split(spaceDelim);
                             texFilename = nToken[1];
-                            if ((texture = Utils.loadTexture(gl,fileLocation + texFilename)) != null) {
+                            if ((texture = Utils.loadTexture(fileLocation + texFilename)) != null) {
                             } else {
                                 texFilename = "n";
                             }
-
-
                         }
                     }// end for .mtl
                     //System.out.println("Materials Loaded");

@@ -21,9 +21,9 @@ interface Logic {
     public abstract void apply() throws Exception;
 }// end interface Logic
 
-public class Utils {
+public final class Utils {
 
-    protected static Clip mkClip(Class c,String soundFile){
+    public static Clip mkClip(Class c,String soundFile){
         Clip clip = null;
         try{
             AudioInputStream ais = AudioSystem.getAudioInputStream(c.getClass().getResource(soundFile));
@@ -39,16 +39,12 @@ public class Utils {
         //Clip theme = AudioSystem.getClip();
     }//..
 
-    public static Texture loadTexture(GL2 gl,String textureFileName){
+    public static Texture loadTexture(String textureFileName){
+        GL2 gl = Scene.gl;
         Texture texture;
         String delims = "[.]+";
         String file[] = textureFileName.split(delims);
-        // Load texture from image
         try {
-            // Create a OpenGL Texture object from (URL, mipmap, file suffix)
-            // Use URL so that can read from JAR and disk file.
-            //BufferedImage image = ImageIO.read(getClass().getClassLoader().getResource(textureFileName));
-
             texture = TextureIO.newTexture(Utils.class.getResourceAsStream(textureFileName), true, file[1]);
 
             // Use linear filter for texture if image is larger than the original texture
@@ -63,13 +59,7 @@ public class Utils {
             gl.glTexParameterf(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_S, GL2.GL_REPEAT);
             gl.glTexParameterf(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_T, GL2.GL_REPEAT);
 
-            // Texture image flips vertically. Shall use TextureCoords class to retrieve
-            // the top, bottom, left and right coordinates, instead of using 0.0f and 1.0f.
-           /* TextureCoords textureCoords = texture.getImageTexCoords();
-            textureTop = textureCoords.top();
-            textureBottom = textureCoords.bottom();
-            textureLeft = textureCoords.left();
-            textureRight = textureCoords.right(); */
+            // Texture image loads upside down ??.
         } catch (Exception e){
             texture = null;
         }

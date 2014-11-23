@@ -11,6 +11,8 @@ import javax.media.opengl.glu.GLUquadric;
 /**
  * Created by kevin on 11/18/14.
  */
+
+
 public class Ball extends CollisionModel {
 
     protected Texture texture;
@@ -18,6 +20,7 @@ public class Ball extends CollisionModel {
     Ball(GL2 gl, Point3d p, Texture texture) {
         super(gl, p, 0);
         this.texture=texture;
+        callist=mkGLCallList();
         shape = new SphereShape(1);
     }//..
 

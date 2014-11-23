@@ -270,9 +270,9 @@ public class Scene implements GLEventListener{
                 super.mousePressed(e);
                 if(e.getButton() == MouseEvent.BUTTON1){
                     if(e.isShiftDown()){
-                        shootBall(1);
+                        shootBall(BallType.cannonBall);
                     }else{
-                        shootBall(1);
+                        shootBall(BallType.basketBall);
                     }
 
                 }
@@ -281,14 +281,26 @@ public class Scene implements GLEventListener{
         };
     }//..
 
-    protected void shootBall(int type){
+    protected void shootBall(BallType type){
         switch (type){
-            case 1:
+            case basketBall:
                 addLogic =new Logic() {
                     @Override
                     public void apply() throws Exception {
                         Vector3f c = camera.getPosition(1);
                         balls.add(b = new BasketBall(gl, new Point3d(c.x,c.y,c.z), world));
+                        b.setVelocity(camera.getDirection(10,0));
+                        balls.add(b);
+                        addLogic =null;
+                    }
+                };
+                break;
+            case cannonBall:
+                addLogic =new Logic() {
+                    @Override
+                    public void apply() throws Exception {
+                        Vector3f c = camera.getPosition(1);
+                        balls.add(b = new CannonBall(gl, new Point3d(c.x,c.y,c.z), world));
                         b.setVelocity(camera.getDirection(10,0));
                         balls.add(b);
                         addLogic =null;
