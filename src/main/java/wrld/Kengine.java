@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.lang.management.ManagementFactory;
 
 /**
  * Created by kevin on 11/13/14.
@@ -12,8 +13,10 @@ public class Kengine extends JFrame {
 
     static JFrame frame;
     Scene scene;
+    boolean openJDK;
 
     Kengine(){
+        openJDK=isOpenJDK();
         frame=this;
         setTitle("wrld.NewWorld");
         GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
@@ -34,6 +37,14 @@ public class Kengine extends JFrame {
         setVisible(true);
     }//..
 
+    public boolean isOpenJDK(){
+        //System.out.println(System.getProperty("java.vm.name"));
+        String delims = "[ ]+";
+        String jvmName[] = System.getProperty("java.vm.name").split(delims);
+        if(jvmName[0].toLowerCase().equals("openjdk"))
+            return true;
+        return false;
+    }//..
 
 
     public static void main(String[] args) {
