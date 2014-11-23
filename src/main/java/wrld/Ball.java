@@ -1,7 +1,6 @@
 package wrld;
 
 
-import com.bulletphysics.collision.shapes.SphereShape;
 import com.bulletphysics.dynamics.DynamicsWorld;
 import com.jogamp.opengl.util.texture.Texture;
 
@@ -48,7 +47,7 @@ public class Ball extends CollisionModel {
         glu.gluQuadricOrientation(quad, glu.GLU_OUTSIDE);
         texture.enable(gl);
         texture.bind(gl);
-        glu.gluSphere(quad, .5, 36, 72);
+        glu.gluSphere(quad, p.size, 36, 72);
         texture.disable(gl);
         gl.glEndList();
         return callList;
