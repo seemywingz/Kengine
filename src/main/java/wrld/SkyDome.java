@@ -9,25 +9,18 @@ import javax.media.opengl.glu.GLUquadric;
 /**
  * Created by Kevin on 12/29/13.
  */
-public class SkyDome {
+public class SkyDome extends Model{
 
-     GL2 gl;
-     GLU glu;
-     GLUquadric sQuad;
      int callist = 0, radius;
      protected Texture texture;
 
-    Point3d p;
-
-    SkyDome(GL2 gl, Texture texture, Point3d p) {
-        this.p = p;
-        this.texture = texture;
-        this.gl = gl;
-        glu = new GLU();
-        sQuad = glu.gluNewQuadric();
+    SkyDome(Point3d p) {
+        super(p, 0);
+        this.texture = Textures.sky;
         radius = 8000;
         gegGLCalList();
     }//..
+
 
     public void draw(){
 
@@ -46,6 +39,8 @@ public class SkyDome {
 
 
     protected void gegGLCalList(){
+        GLU glu = new GLU();
+        GLUquadric sQuad= glu.gluNewQuadric();
         callist = gl.glGenLists(1);
         gl.glNewList(callist, gl.GL_COMPILE);
         texture.enable(gl);
@@ -53,7 +48,6 @@ public class SkyDome {
         glu.gluQuadricTexture(sQuad, true);
         glu.gluQuadricOrientation(sQuad, glu.GLU_INSIDE);
         glu.gluSphere(sQuad, radius, 36, 72);
-
         gl.glEndList();
     }//..
 

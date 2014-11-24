@@ -121,27 +121,26 @@ public class Scene implements GLEventListener{
 
         points = new ObjectArrayList<Vector3f>();// Map
         callist = objectLoader.LoadOBJ("/obj/map/","map1.obj",points,null);
-        models.add(new ConcaveCollisionModel(new Point3d(0,-200,-10,3000f),world,points,callist));
+        models.add(new ConcaveCollisionModel(new Point3d(0,-200,-10,3000f),world,points,callist));//*/
 
         points = new ObjectArrayList<Vector3f>();// Tree
         callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points,null);
-        models.add(new ConvexCollisionModel(new Point3d(50,0,0,.04f),world,points,callist));
+        models.add(new ConvexCollisionModel(new Point3d(50,0,0,.04f),world,points,callist));//*/
 
-        /*Vector<Integer>frames = new Vector<Integer>();// Skleton A
+        /*Vector<Integer>frames = new Vector<Integer>();// Skleton
         objectLoader.loadAnimation(frames,"/obj/Skeleton/","Skeleton",20);
-        models.add(new Skeleton(gl, new Point3d(-90, 1.5f, 5, 1, 3f),world, frames));// world, points, callist));*/
+        models.add(new Skeleton(gl, new Point3d(-90, 1.5f, 5, 1, 3f),world, frames));// world, points, callist));//*/
+
+
+        models.add(new FloorModel(Textures.grass,new Point3d(0,0), world));
+        models.add(new SkyDome(new Point3d(0,-500,0,1)));
 
         balls.add(b = new BasketBall(new Point3d(0, 1000, 5), world));
-
-        floor = new FloorModel(Textures.grass,new Point3d(0,0), world);
-        sky = new SkyDome(gl,Textures.sky,new Point3d(0,-500,0,1));
 
         mkBlockPyramid(-100, 0);
         mkBlockTower(-100, 50);
 
         Clip wind = Utils.mkClip(getClass(),"/snd/wind.wav");
-       /* FloatControl gainControl = (FloatControl) wind.getControl(FloatControl.Type.MASTER_GAIN);
-        gainControl.setValue(-10.0f); // Reduce volume by 10 decibels.    */
         wind.loop(Clip.LOOP_CONTINUOUSLY);
 
         lastRenderTime = System.currentTimeMillis();
@@ -156,8 +155,6 @@ public class Scene implements GLEventListener{
 
         camera.setView();
         Light.sun(gl);
-        sky.draw();
-        floor.draw();
 
         long curRenderTime = System.currentTimeMillis();
         float step = (float)(curRenderTime - lastRenderTime);
@@ -417,7 +414,7 @@ public class Scene implements GLEventListener{
         float mass = 20,sz = 0.5f, sep = sz*2; //  a tower of boxes
         for(int k=0;k<4;k++)//depth
             for(int j=0;j<6;j++){//width
-                for(int i=0;i<20;i++){//height
+                for(int i=0;i<10;i++){//height
                     boxes.add( new Cube(new Point3d(strtx+j*sep,(sz)+(sz*i*2),srtrz+k*sep, sz,mass),world,Textures.box));
                 }
             }

@@ -29,7 +29,7 @@ public class Camera {
     protected boolean
             keyPressed[] = new boolean[256],
             flying,
-            jumping,
+            jumping=false,
             fog;
 
     protected final int
@@ -73,7 +73,7 @@ public class Camera {
             p.y = glMatrix[1];
             p.z = glMatrix[2];
 
-            if(standing() || jumping)
+            if(standing())
                 restrictMaxVelocity();
 
         }else{// set rigid body position
@@ -94,6 +94,7 @@ public class Camera {
 
     protected void restrictMaxVelocity(){
         //set max run velocity
+        //System.out.println("Velovity Restriction");
         body.getLinearVelocity(velocity);
         float curSpeed = velocity.length();
         if(curSpeed > maxSpeed*.56f) {
@@ -196,10 +197,13 @@ public class Camera {
 
     protected boolean standing(){
         if(underFoot(new Vector3f(p.x,p.y,p.z))){//directly under
+            jumping=false;
             return true;
         }else if(underFoot(getDirection(radius,90))){// under right side
+            jumping=false;
             return true;
         }else if(underFoot(getDirection(radius,-90))){// under left side
+            jumping=false;
             return true;
         }
         return false;
