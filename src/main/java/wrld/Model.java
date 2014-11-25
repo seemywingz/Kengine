@@ -95,9 +95,9 @@ public class Model {
 
 
 
-    /*Model(GL2 glToUse, Point3d p, Vector<Integer> frames) {
+    /*Model(GL2 glToUse, Point3d pos, Vector<Integer> frames) {
         this.glToUse = glToUse;
-        this.p = p;
+        this.pos = pos;
         callist =0;
         this.frames = frames;
         curFarame=0;
@@ -108,8 +108,8 @@ public class Model {
 
         --draw---
             gl.glPushMatrix();
-                gl.glTranslatef(p.x,p.y,p.z);
-                gl.glScaled(p.size,p.size,p.size);
+                gl.glTranslatef(pos.x,pos.y,pos.z);
+                gl.glScaled(pos.size,pos.size,pos.size);
                 gl.glCallList(frames.get(curFarame));
             gl.glPopMatrix();
             curFarame++;

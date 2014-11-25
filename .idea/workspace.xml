@@ -6,15 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="3416d372-3786-42ad-8efa-fb3cb5bef395" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Camera.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Camera.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.jar" afterPath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$1.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$2.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/SkyDome.class" afterPath="$PROJECT_DIR$/target/classes/wrld/SkyDome.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Textures.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Textures.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Model.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Model.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Textures.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Textures.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Kengine.iws" />
@@ -46,23 +45,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4061" max-vertical-offset="5025">
-              <caret line="319" column="51" selection-start-line="319" selection-start-column="24" selection-end-line="319" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.34475374" vertical-offset="3694" max-vertical-offset="5100">
+              <caret line="270" column="52" selection-start-line="270" selection-start-column="51" selection-end-line="270" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.07066381" vertical-offset="1518" max-vertical-offset="5805">
-              <caret line="99" column="57" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2833" max-vertical-offset="5490">
+              <caret line="232" column="32" selection-start-line="232" selection-start-column="32" selection-end-line="232" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#reshape#0;class#Scene#0" expanded="false" />
                 <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
               </folding>
             </state>
@@ -72,7 +72,7 @@
       <file leaf-file-name="SkyDome.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/SkyDome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="840">
               <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
               <folding />
             </state>
@@ -131,9 +131,9 @@
         <option value="$PROJECT_DIR$/src/main/java/wrld/Cube.java" />
         <option value="$PROJECT_DIR$/src/main/resources/obj/paris/Paris2010.mtl" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Textures.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/SkyDome.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
       </list>
     </option>
   </component>
@@ -714,7 +714,13 @@
       <option name="project" value="LOCAL" />
       <updated>1416802051355</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Model: Optimization, Utils, Textures: Static Classes">
+      <created>1416878571106</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1416878571106</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -735,6 +741,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1585736" sideWeight="0.51926976" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1585736" sideWeight="0.48073024" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -744,7 +751,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -776,7 +782,8 @@
     <MESSAGE value="another ball optimization" />
     <MESSAGE value="Box Tower" />
     <MESSAGE value="Model: Optimization, Utils, Textures: Static Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Model: Optimization, Utils, Textures: Static Classes" />
+    <MESSAGE value="Camera Key Control" />
+    <option name="LAST_COMMIT_MESSAGE" value="Camera Key Control" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -831,6 +838,7 @@
           <caret line="150" column="53" selection-start-line="150" selection-start-column="53" selection-end-line="150" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#reshape#0;class#Scene#0" expanded="false" />
             <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
           </folding>
         </state>
@@ -856,6 +864,7 @@
           <caret line="209" column="41" selection-start-line="209" selection-start-column="41" selection-end-line="209" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#reshape#0;class#Scene#0" expanded="false" />
             <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
           </folding>
         </state>
@@ -888,6 +897,7 @@
           <caret line="448" column="10" selection-start-line="448" selection-start-column="10" selection-end-line="448" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#reshape#0;class#Scene#0" expanded="false" />
             <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
           </folding>
         </state>
@@ -913,6 +923,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#reshape#0;class#Scene#0" expanded="false" />
             <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
           </folding>
         </state>
@@ -945,6 +956,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#reshape#0;class#Scene#0" expanded="false" />
             <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
           </folding>
         </state>
@@ -970,6 +982,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#reshape#0;class#Scene#0" expanded="false" />
             <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
           </folding>
         </state>
@@ -995,6 +1008,7 @@
           <caret line="119" column="55" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#reshape#0;class#Scene#0" expanded="false" />
             <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
           </folding>
         </state>
@@ -1020,6 +1034,7 @@
           <caret line="119" column="55" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#reshape#0;class#Scene#0" expanded="false" />
             <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
           </folding>
         </state>
@@ -1160,14 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4061" max-vertical-offset="5025">
-          <caret line="319" column="51" selection-start-line="319" selection-start-column="24" selection-end-line="319" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/SkyDome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
@@ -1178,12 +1185,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.07066381" vertical-offset="1518" max-vertical-offset="5805">
-          <caret line="99" column="57" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2833" max-vertical-offset="5490">
+          <caret line="232" column="32" selection-start-line="232" selection-start-column="32" selection-end-line="232" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#reshape#0;class#Scene#0" expanded="false" />
             <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34475374" vertical-offset="3694" max-vertical-offset="5100">
+          <caret line="270" column="52" selection-start-line="270" selection-start-column="51" selection-end-line="270" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1271,4 +1287,10 @@
               <list>
                 <option value="0.2" />
               </list>
-          
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

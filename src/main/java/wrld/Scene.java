@@ -180,13 +180,14 @@ public class Scene implements GLEventListener{
             e.printStackTrace();
         }
 
-        /*if(timer==10000){
+        if(timer==10000){
             camera.fog=true;
             timer+=20;
         }else{
             timer+=20;
-        }**/
-        if(step<20){
+        }//*/
+
+        if(step<20){// keep frame rate on faster machines
             Utils.wait((int) (20-step));
         }
     }//..
@@ -230,10 +231,6 @@ public class Scene implements GLEventListener{
             public void keyReleased(KeyEvent e) {
                 super.keyReleased(e);
                 camera.keyUp(e);
-
-                if(e.getKeyCode() == KeyEvent.getExtendedKeyCodeForChar('p')){
-                    camera.setPosition(new Point3d(0,5,0,camera.p.size,camera.p.mass));
-                }
 
                 if (e.getKeyCode() == KeyEvent.VK_ESCAPE){
                     kengine.dispatchEvent(new WindowEvent(kengine, WindowEvent.WINDOW_CLOSING));
