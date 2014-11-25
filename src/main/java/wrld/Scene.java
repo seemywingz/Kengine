@@ -95,22 +95,22 @@ public class Scene implements GLEventListener{
         glu = new GLU();                         // get GL Utilities
         gl.glClearColor(0.0f, 0.0f, 0.0f, 0.0f); // set background (clear) color
         gl.glClearDepth(1.0f);      // set clear depth value to farthest
-        gl.glEnable(gl.GL_DEPTH_TEST); // enables depth testing
-        gl.glDepthFunc(gl.GL_LEQUAL);  // the type of depth test to do
-        gl.glHint(gl.GL_PERSPECTIVE_CORRECTION_HINT, gl.GL_NICEST); // best perspective correction
-        gl.glShadeModel(gl.GL_SMOOTH); // blends colors nicely, and smoothes out lighting
-        gl.glEnable(gl.GL_GENERATE_MIPMAP);
-        gl.glEnable(gl.GL_LIGHTING);
-        gl.glEnable(gl.GL_NORMALIZE);
-        gl.glEnable(gl.GL_CULL_FACE);
+        gl.glEnable(GL2.GL_DEPTH_TEST); // enables depth testing
+        gl.glDepthFunc(GL2.GL_LEQUAL);  // the type of depth test to do
+        gl.glHint(GL2.GL_PERSPECTIVE_CORRECTION_HINT, GL2.GL_NICEST); // best perspective correction
+        gl.glShadeModel(GL2.GL_SMOOTH); // blends colors nicely, and smoothes out lighting
+        gl.glEnable(GL2.GL_GENERATE_MIPMAP);
+        gl.glEnable(GL2.GL_LIGHTING);
+        gl.glEnable(GL2.GL_NORMALIZE);
+        gl.glEnable(GL2.GL_CULL_FACE);
         gl.glPolygonOffset(2.5f, 0.0f);
         //enable transparency
-        gl.glEnable (gl.GL_BLEND);
-        gl.glBlendFunc (gl.GL_SRC_ALPHA, gl.GL_ONE_MINUS_SRC_ALPHA);
+        gl.glEnable (GL2.GL_BLEND);
+        gl.glBlendFunc (GL2.GL_SRC_ALPHA, GL2.GL_ONE_MINUS_SRC_ALPHA);
         //alpha testing -behing callist
-        gl.glAlphaFunc(gl.GL_GREATER, 0.5f);
-        gl.glEnable(gl.GL_ALPHA_TEST);
-        gl.glActiveTexture(gl.GL_TEXTURE0);
+        gl.glAlphaFunc(GL2.GL_GREATER, 0.5f);
+        gl.glEnable(GL2.GL_ALPHA_TEST);
+        gl.glActiveTexture(GL2.GL_TEXTURE0);
 
         initializePhysics();
         camera=new Camera(gl);
@@ -121,7 +121,7 @@ public class Scene implements GLEventListener{
 
         points = new ObjectArrayList<Vector3f>();// Map
         callist = objectLoader.LoadOBJ("/obj/map/","map1.obj",points,null);
-        models.add(new ConcaveCollisionModel(new Point3d(0,-200,-10,3000f),world,points,callist));//*/
+        models.add(new ConcaveCollisionModel(new Point3d(0,-200,-10,2000f),world,points,callist));//*/
 
         points = new ObjectArrayList<Vector3f>();// Tree
         callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points,null);
@@ -148,10 +148,10 @@ public class Scene implements GLEventListener{
 
     @Override
     public void display(GLAutoDrawable drawable) {
-        gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT); // clear color and depth buffers
+        gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT); // clear color and depth buffers
         gl.glLoadIdentity();  // reset the model-view matrix
-        gl.glMatrixMode(gl.GL_MODELVIEW);
-        gl.glEnable(gl.GL_BLEND);
+        gl.glMatrixMode(GL2.GL_MODELVIEW);
+        gl.glEnable(GL2.GL_BLEND);
 
         camera.setView();
         Light.sun(gl);
@@ -203,12 +203,12 @@ public class Scene implements GLEventListener{
         gl.glViewport(0, 0, width, height);
 
                // Setup perspective projection, with aspect ratio matches viewport
-        gl.glMatrixMode(gl.GL_PROJECTION);  // choose projection matrix
+        gl.glMatrixMode(GL2.GL_PROJECTION);  // choose projection matrix
         gl.glLoadIdentity();             // mouseCenter projection matrix
         glu.gluPerspective(45.0, aspect, .1, 11000); // fovy, aspect, zNear, zFar
 
                 // Enable the model-setView transform
-        gl.glMatrixMode(gl.GL_MODELVIEW);
+        gl.glMatrixMode(GL2.GL_MODELVIEW);
         gl.glLoadIdentity(); // mouseCenter
     }//..
 

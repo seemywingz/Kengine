@@ -327,11 +327,11 @@ public class Camera {
         gl.glFogf(gl.GL_FOG_START, 1.0f); // fog start depth
         gl.glEnable(gl.GL_FOG);           // enables GL_FOG
         gl.glFogi(gl.GL_FOG_MODE, gl.GL_LINEAR); // Fog Mode
-        if(fogDistance>400){
-            fogDistance -= 5;
-        }else if(fogDistance<60){
-            fogDistance-=.6;
-        }
+//        if(fogDistance>400){
+//            fogDistance -= 5;
+//        }else if(fogDistance<60){
+//            fogDistance-=.6;
+//        }
         gl.glFogf(gl.GL_FOG_END, fogDistance);   // fog end depth
     }//..
 

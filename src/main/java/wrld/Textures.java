@@ -9,7 +9,7 @@ import com.jogamp.opengl.util.texture.Texture;
 public final class Textures {
 
     public static Texture
-            sky = Utils.loadTexture("/tex/skydome2.jpg"),
+            sky = Utils.loadTexture("/tex/sky.jpg"),
             grass = Utils.loadTexture("/tex/ground.png"),
             cannonBall = Utils.loadTexture("/tex/cannonball.jpg"),
             basketBall = Utils.loadTexture("/tex/basketball.jpg"),
