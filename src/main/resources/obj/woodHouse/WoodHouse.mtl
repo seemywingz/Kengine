@@ -9,8 +9,8 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.500000
 d 1.000000
 illum 2
-map_Kd MADEIRA2.png
-map_Ka MADEIRA2.png
+map_Kd MADEIRA2.tga
+map_Ka MADEIRA2.tga
 
 newmtl NewHOUSE2_MADEIRA3
 Ns 7.843137
@@ -20,8 +20,8 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.500000
 d 1.000000
 illum 2
-map_Kd MADEIRA3.png
-map_Ka MADEIRA3.png
+map_Kd MADEIRA3.tga
+map_Ka MADEIRA3.tga
 
 newmtl NewHOUSE2_TELHA
 Ns 7.843137
@@ -31,8 +31,8 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.500000
 d 1.000000
 illum 2
-map_Kd TELHA.png
-map_Ka TELHA.png
+map_Kd TELHA.tga
+map_Ka TELHA.tga
 
 newmtl NewHOUSE2_TELHA2
 Ns 7.843137
@@ -42,8 +42,8 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.500000
 d 1.000000
 illum 2
-map_Kd TELHA2.png
-map_Ka TELHA2.png
+map_Kd TELHA2.tga
+map_Ka TELHA2.tga
 
 newmtl NewHOUSE2_TELHA3
 Ns 7.843137
@@ -53,8 +53,8 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.500000
 d 1.000000
 illum 2
-map_Kd TELHA3.png
-map_Ka TELHA3.png
+map_Kd TELHA3.tga
+map_Ka TELHA3.tga
 
 newmtl NewHOUSE2_VIGA
 Ns 7.843137
@@ -64,5 +64,5 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.500000
 d 1.000000
 illum 2
-map_Kd MADEIRA3.png
-map_Ka MADEIRA3.png
+map_Kd MADEIRA3.tga
+map_Ka MADEIRA3.tga

@@ -107,7 +107,7 @@ public class Scene implements GLEventListener{
         //enable transparency
         gl.glEnable (GL2.GL_BLEND);
         gl.glBlendFunc (GL2.GL_SRC_ALPHA, GL2.GL_ONE_MINUS_SRC_ALPHA);
-        //alpha testing -behing callist
+        //alpha testing -behing obj
         gl.glAlphaFunc(GL2.GL_GREATER, 0.5f);
         gl.glEnable(GL2.GL_ALPHA_TEST);
         gl.glActiveTexture(GL2.GL_TEXTURE0);
@@ -127,8 +127,8 @@ public class Scene implements GLEventListener{
         callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points,null);
         models.add(new ConvexCollisionModel(new Point3d(30,0,0,.04f),world,points,callist));//*/
 
-        points = new ObjectArrayList<Vector3f>();// WoodHouse
-        callist = objectLoader.LoadOBJ("/obj/woodHouse/","WoodHouse.obj",points,null);
+        points = new ObjectArrayList<Vector3f>();// outhouse
+        callist = objectLoader.LoadOBJ("/obj/woodhouse/","woodhouse.obj",points,null);
         models.add(new ConcaveCollisionModel(new Point3d(50,0,0,.05f),world,points,callist));//*/
 
         /*Vector<Integer>frames = new Vector<Integer>();// Skleton
