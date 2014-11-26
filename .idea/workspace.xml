@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Kengine:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/main/java/wrld/SkyDome.java" line="18" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3416d372-3786-42ad-8efa-fb3cb5bef395" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Camera.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Camera.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$2.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Kengine.iws" />
@@ -36,21 +47,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6884984" vertical-offset="3514" max-vertical-offset="5100">
-              <caret line="276" column="69" selection-start-line="276" selection-start-column="39" selection-end-line="276" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="985" max-vertical-offset="5850">
+              <caret line="96" column="45" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2833" max-vertical-offset="5490">
-              <caret line="232" column="32" selection-start-line="232" selection-start-column="32" selection-end-line="232" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.5888651" vertical-offset="1705" max-vertical-offset="5580">
+              <caret line="132" column="63" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#reshape#0;class#Scene#0" expanded="false" />
@@ -60,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SkyDome.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/SkyDome.java">
+      <file leaf-file-name="FloorModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/FloorModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="840">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="1635">
+              <caret line="78" column="46" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -75,16 +86,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1680">
               <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Textures.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Textures.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="360">
-              <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -126,8 +127,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/obj/paris/Paris2010.mtl" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Textures.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/SkyDome.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
       </list>
     </option>
   </component>
@@ -720,37 +721,43 @@
       <option name="project" value="LOCAL" />
       <updated>1416957813735</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Camera Key Control">
+      <created>1416958121329</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1416958121329</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1368" height="776" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23195085" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24386503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1585736" sideWeight="0.5184049" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1585736" sideWeight="0.48006135" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1585736" sideWeight="0.51926976" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1585736" sideWeight="0.48073024" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30107528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24386503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30107528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -796,14 +803,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Textures.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="360">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Cube.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1764">
@@ -1096,13 +1095,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/FloorModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61587983" vertical-offset="688" max-vertical-offset="1635">
-          <caret line="78" column="46" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/BasketBall.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06437768" vertical-offset="0" max-vertical-offset="466">
@@ -1145,33 +1137,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/ObjectLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36563876" vertical-offset="3779" max-vertical-offset="6825">
-          <caret line="275" column="57" selection-start-line="275" selection-start-column="57" selection-end-line="275" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Skeleton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35331905" vertical-offset="0" max-vertical-offset="467">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1680">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Textures.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1183,23 +1152,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/FloorModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2833" max-vertical-offset="5490">
-          <caret line="232" column="32" selection-start-line="232" selection-start-column="32" selection-end-line="232" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#reshape#0;class#Scene#0" expanded="false" />
-            <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="1635">
+          <caret line="78" column="46" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Textures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26357827" vertical-offset="0" max-vertical-offset="626">
+          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1680">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/src.zip!/java/util/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33190578" vertical-offset="10315" max-vertical-offset="20295">
+          <caret line="747" column="0" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/ObjectLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33259913" vertical-offset="3899" max-vertical-offset="6825">
+          <caret line="282" column="0" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6884984" vertical-offset="3514" max-vertical-offset="5100">
-          <caret line="276" column="69" selection-start-line="276" selection-start-column="39" selection-end-line="276" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="985" max-vertical-offset="5850">
+          <caret line="96" column="45" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5888651" vertical-offset="1705" max-vertical-offset="5580">
+          <caret line="132" column="63" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#reshape#0;class#Scene#0" expanded="false" />
+            <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

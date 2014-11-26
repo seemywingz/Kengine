@@ -125,7 +125,11 @@ public class Scene implements GLEventListener{
 
         points = new ObjectArrayList<Vector3f>();// Tree
         callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points,null);
-        models.add(new ConvexCollisionModel(new Point3d(50,0,0,.04f),world,points,callist));//*/
+        models.add(new ConvexCollisionModel(new Point3d(30,0,0,.04f),world,points,callist));//*/
+
+        points = new ObjectArrayList<Vector3f>();// WoodHouse
+        callist = objectLoader.LoadOBJ("/obj/woodHouse/","WoodHouse.obj",points,null);
+        models.add(new ConcaveCollisionModel(new Point3d(50,0,0,.05f),world,points,callist));//*/
 
         /*Vector<Integer>frames = new Vector<Integer>();// Skleton
         objectLoader.loadAnimation(frames,"/obj/Skeleton/","Skeleton",20);
@@ -262,7 +266,9 @@ public class Scene implements GLEventListener{
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                if(e.getButton() == MouseEvent.BUTTON1){
+                if(camera.holding){
+                    camera.throwObj();
+                }else if(e.getButton() == MouseEvent.BUTTON1){
                     if(e.isShiftDown()){
                         shootBall(BallType.cannonBall);
                     }else{
