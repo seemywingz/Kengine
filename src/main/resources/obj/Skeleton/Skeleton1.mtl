@@ -1,0 +1,53 @@
+# Blender MTL File: 'Skeleton1.blend'
+# Material Count: 5
+
+newmtl Esqueleto
+Ns 250.980392
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.596143 0.596143 0.596143
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd /home/kevin/X/DownloadsX/blend/74226_Skeleton_rigged_and_animated_for_videogames_zip/Skeleton_rigged_and_animated_for_videogames/textures/Skeleton.jpg
+map_d /home/kevin/X/DownloadsX/blend/74226_Skeleton_rigged_and_animated_for_videogames_zip/Skeleton_rigged_and_animated_for_videogames/textures/Skeleton.jpg
+
+newmtl Shield
+Ns 258.823529
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.797143 0.797143 0.797143
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd /home/kevin/X/DownloadsX/blend/74226_Skeleton_rigged_and_animated_for_videogames_zip/Skeleton_rigged_and_animated_for_videogames/textures/Shield.jpg
+
+newmtl Skull
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.118814 0.118814 0.118814
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd /home/kevin/X/DownloadsX/blend/74226_Skeleton_rigged_and_animated_for_videogames_zip/Skeleton_rigged_and_animated_for_videogames/textures/Skull_burnt.jpg
+
+newmtl Skull_Mandibula
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.100000 0.100000 0.100000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd /home/kevin/X/DownloadsX/blend/74226_Skeleton_rigged_and_animated_for_videogames_zip/Skeleton_rigged_and_animated_for_videogames/textures/Skull_burnt.jpg
+
+newmtl Sword
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd /home/kevin/X/DownloadsX/blend/74226_Skeleton_rigged_and_animated_for_videogames_zip/Skeleton_rigged_and_animated_for_videogames/textures/Sword.jpg
