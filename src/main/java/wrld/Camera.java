@@ -110,8 +110,8 @@ public class Camera {
     }//..
 
     public void look(int xIN, int yIN,int center){
-            float diffx = xIN - center; //check the difference between the current x and the center position
-            float diffy = yIN - center; //check the difference between the current y and the center position
+            float diffx = xIN - center; //check the difference between the current x and the centerPoint position
+            float diffy = yIN - center; //check the difference between the current y and the centerPoint position
             xrot += diffy * .05; //set the xrot to xrot with the addition of the difference in the y position
             yrot += diffx * .05;// set the xrot to yrot with the addition of the difference in the x position
 

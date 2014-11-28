@@ -57,17 +57,16 @@ public class ConcaveCollisionModel extends ConvexCollisionModel {
         boolean useQuantizedAabbCompression = false;
         BvhTriangleMeshShape meshShape = new BvhTriangleMeshShape(vertArray, useQuantizedAabbCompression);
 
-        float mass =  0;
         MotionState motionState;
 
         t = new Transform();
         t.setIdentity();
         t.origin.set(new Vector3f(p.x,p.y,p.z));
         Vector3f inertia = new Vector3f(0,0,0);
-        //meshShape.calculateLocalInertia(mass,inertia);
+        meshShape.calculateLocalInertia(p.mass,inertia);
 
         motionState = new DefaultMotionState(t);
-        RigidBodyConstructionInfo info = new RigidBodyConstructionInfo(mass,motionState,meshShape,inertia);
+        RigidBodyConstructionInfo info = new RigidBodyConstructionInfo(p.mass,motionState,meshShape,inertia);
         body = new RigidBody(info);
         body.setFriction(1f);
         body.setDamping(.3f,.3f);

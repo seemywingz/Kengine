@@ -5,10 +5,7 @@ import com.jogamp.opengl.util.texture.TextureIO;
 import sun.audio.AudioPlayer;
 import javax.imageio.ImageIO;
 import javax.media.opengl.GL2;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.DataLine;
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
@@ -23,20 +20,26 @@ interface Logic {
 
 public final class Utils {
 
-    public static Clip mkClip(Class c,String soundFile){
+    public static Clip mkClip(String soundFile){
         Clip clip = null;
         try{
-            AudioInputStream ais = AudioSystem.getAudioInputStream(c.getClass().getResource(soundFile));
+            AudioInputStream ais = AudioSystem.getAudioInputStream(Utils.class.getResource(soundFile));
             DataLine.Info lineInfo = new DataLine.Info(Clip.class, ais.getFormat());
             clip = (Clip) AudioSystem.getLine(lineInfo);
             clip.open(ais);
-
         }catch (Exception e){
             e.printStackTrace();
         }
         return clip;
         //clip.loop(2);
         //Clip theme = AudioSystem.getClip();
+    }//..
+
+    public static void setClipVolume(Clip clip,double gain){
+        float db = (float) (Math.log(gain)/Math.log(10.0)*20.0);
+        FloatControl gainControl =
+                (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        gainControl.setValue(db); // Reduce by 'volume' decibels.
     }//..
 
     public static Texture loadTexture(String textureFileName){

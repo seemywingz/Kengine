@@ -17,6 +17,7 @@ import com.bulletphysics.linearmath.MotionState;
 import com.bulletphysics.linearmath.Transform;
 import com.bulletphysics.util.ObjectArrayList;
 import com.jogamp.opengl.util.FPSAnimator;
+import javafx.scene.media.AudioClip;
 
 import javax.media.opengl.*;
 import javax.media.opengl.glu.GLU;
@@ -25,6 +26,7 @@ import javax.vecmath.Vector3f;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
+import java.net.URL;
 import java.util.Vector;
 
 /**
@@ -40,13 +42,14 @@ public class Scene implements GLEventListener{
 
     protected Robot rob;
     protected int mouseCenter;
+    protected Point centerPoint;
     protected Camera camera;
 
     //protected static Textures textures;
 
     // JBullet Components
     static boolean
-            solving;
+            solving,mkCenterPoint;
     static DiscreteDynamicsWorld world;
     Vector<RigidBody> boundingBox = new Vector<RigidBody>();
     static final float FPS=1f/20f;
@@ -127,9 +130,13 @@ public class Scene implements GLEventListener{
         callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points,null);
         models.add(new ConvexCollisionModel(new Point3d(30,0,0,.04f),world,points,callist));//*/
 
-        points = new ObjectArrayList<Vector3f>();// outhouse
+        points = new ObjectArrayList<Vector3f>();// woodHouse
         callist = objectLoader.LoadOBJ("/obj/woodhouse/","woodhouse.obj",points,null);
         models.add(new ConcaveCollisionModel(new Point3d(50,0,0,.05f),world,points,callist));//*/
+
+        points = new ObjectArrayList<Vector3f>();// chair
+        callist = objectLoader.LoadOBJ("/obj/tableNchair/","table.obj",points,null);
+        models.add(new ConvexCollisionModel(new Point3d(55,1,0,.8f,18.1437f),world,points,callist));//*/
 
         /*Vector<Integer>frames = new Vector<Integer>();// Skleton
         objectLoader.loadAnimation(frames,"/obj/Skeleton/","Skeleton",20);
@@ -144,8 +151,11 @@ public class Scene implements GLEventListener{
         mkBlockPyramid(-100, 0);
         mkBlockTower(-100, 50);
 
-        Clip wind = Utils.mkClip(getClass(),"/snd/wind.wav");
+        Clip wind = Utils.mkClip("/snd/wind.wav");
         wind.loop(Clip.LOOP_CONTINUOUSLY);
+
+        Clip theme = Utils.mkClip("/snd/theme1.wav");
+        theme.loop(Clip.LOOP_CONTINUOUSLY);
 
         lastRenderTime = System.currentTimeMillis();
     }//..
@@ -243,6 +253,15 @@ public class Scene implements GLEventListener{
         };
     }//..
 
+    protected void centerCursor(int mouseCenter){
+        Point p = kengine.getLocation();
+        int cx = p.x+mouseCenter,
+                cy = p.y+mouseCenter;
+        rob.mouseMove(cx, cy);
+        //System.out.println("r: "+cy);
+        //return new Point(cx,cy);
+    }//...
+
     protected MouseAdapter mkMouseAdapter(){
         return new MouseAdapter() {
             @Override
@@ -251,11 +270,17 @@ public class Scene implements GLEventListener{
             }//..
             @Override
             public void mouseMoved(MouseEvent e) {
-                super.mouseMoved(e);
                 try {
-                    camera.look(e.getX(), e.getY(), mouseCenter);
-                    centerCursor(mouseCenter);
+                    if(kengine.openJDK){
+                        System.out.println("m: " + e.getX() + "\nmc: " + mouseCenter + "\ncp: " + centerPoint.y);
+                        camera.look(e.getX() - 975, e.getY(), mouseCenter);
+                        centerCursor(mouseCenter);
+                    }else {
+                        camera.look(e.getX(), e.getY(), mouseCenter);
+                        centerCursor(mouseCenter);
+                    }
                 }catch (Exception ex){}
+                super.mouseMoved(e);
             }//..
 
             @Override
@@ -431,7 +456,7 @@ public class Scene implements GLEventListener{
         world.rayTest(pointFrom, pointTo, rayResult);
         if(rayResult.hasHit()){
             if(rayResult.collisionObject != models.get(0).getBody()){ // if not the ground
-                return getGroundAtPoint(x+2,z+2);
+                //return getGroundAtPoint(x+2,z+2);
             }else{
                 rayResult.hitPointWorld.get(hit);
             }
@@ -439,12 +464,6 @@ public class Scene implements GLEventListener{
         return hit;
     }//..
 
-    protected void centerCursor(int mouseCenter){
-        Point p = kengine.getLocation();
-        int cx = p.x+mouseCenter,
-            cy = p.y+mouseCenter;
-        rob.mouseMove(cx, cy);
-    }//...
 
     protected void hideCursor(){
         BufferedImage cursorImg = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);

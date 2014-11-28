@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.lang.management.ManagementFactory;
+import java.lang.reflect.Field;
+import java.util.Arrays;
 
 /**
  * Created by kevin on 11/13/14.
