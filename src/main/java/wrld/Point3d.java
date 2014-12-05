@@ -1,5 +1,7 @@
 package wrld;
 
+import javax.vecmath.Vector3f;
+
 public class Point3d {
 
     /* wrld.Point3d Coordinates, Size and Mass */
@@ -36,9 +38,5 @@ public class Point3d {
 		size =p.size;
 		mass =p.mass;
     }//..
-
-	public static float calcDistance(Point3d p1, Point3d p2){
-		return (float) Math.sqrt(Math.pow(p1.z-p2.z,2) + Math.pow(p1.x-p2.x,2));
-	}//..
 	
 }// end wrld.Point3d

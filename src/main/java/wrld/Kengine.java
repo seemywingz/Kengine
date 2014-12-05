@@ -20,7 +20,7 @@ public class Kengine extends JFrame {
     Kengine(){
         openJDK=isOpenJDK();
         frame=this;
-        setTitle("wrld.NewWorld");
+        setTitle("Kengine");
         GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
         setBounds(0, 0, gd.getDisplayMode().getWidth(), gd.getDisplayMode().getHeight());
         setUndecorated(true);

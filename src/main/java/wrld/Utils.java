@@ -7,6 +7,7 @@ import javax.imageio.ImageIO;
 import javax.media.opengl.GL2;
 import javax.sound.sampled.*;
 import javax.swing.*;
+import javax.vecmath.Vector3f;
 import java.awt.*;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -130,8 +131,16 @@ public final class Utils {
         }catch (Exception e){}
     }//..
 
-    public static void playSound(Class c,String path){
-        AudioPlayer.player.start(c.getResourceAsStream(path));
+    public static void playSound(String path){
+        AudioPlayer.player.start(Utils.class.getResourceAsStream(path));
+    }//..
+
+    public static float calcDistance(Point3d p1, Point3d p2){
+        return (float) Math.sqrt(Math.pow(p1.x-p2.x,2) + Math.pow(p1.y-p2.y,2)+ Math.pow(p1.z-p2.z,2));
+    }//..
+
+    public static float calcDistance(Vector3f p1, Vector3f p2){
+        return (float) Math.sqrt(Math.pow(p1.x-p2.x,2) + Math.pow(p1.y-p2.y,2)+ Math.pow(p1.z-p2.z,2));
     }//..
 
     protected static float random(int max){

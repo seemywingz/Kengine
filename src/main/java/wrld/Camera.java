@@ -20,12 +20,14 @@ public class Camera {
 
     GL2 gl;
     Point3d pos;
+    Vector3f lastStep;
 
     //JBullet Variables
     protected Transform transform,
                         holdingTransform = new Transform();
     protected RigidBody body,bodyHolding = null;
     protected float glMatrix[] = new float[16];
+
 
     protected boolean
             keyPressed[] = new boolean[256],
@@ -62,6 +64,7 @@ public class Camera {
         this.gl = gl;
         pos = new Point3d(0,10,0,1.8f,83.9146f);
         initializePhysics();
+        lastStep=getPosition(1);
     }//..
 
     public void setView(){
@@ -158,6 +161,7 @@ public class Camera {
             pos.y -= (Math.sin(xrotrad)) * flySpeed;
         }else if(standing()){
             body.applyCentralImpulse(getRunVelocity(maxSpeed, 0));
+            stepFX();
         }
     }//..
 
@@ -192,12 +196,21 @@ public class Camera {
         }
     }//..
 
+    protected void stepFX(){
+        Vector3f nextStep = getPosition(1);
+        if(Math.abs(Utils.calcDistance(lastStep,nextStep)) > 5){
+            lastStep=nextStep;
+            int rand = (int)(Math.random()*4)+1;
+            Utils.playSound("/snd/step"+rand+".wav");
+        }
+    }//..
+
     protected void jump(){
         if(flying) {
             pos.y += .25;
         }else if (standing()) {
-            body.applyCentralImpulse(new Vector3f(0, 50, 0));
             jumping=true;
+            body.applyCentralImpulse(new Vector3f(0, 50, 0));
         }
     }//..
 
@@ -222,7 +235,7 @@ public class Camera {
         CollisionWorld.ClosestRayResultCallback rayResult =
                 new CollisionWorld.ClosestRayResultCallback(posFrom,posTo);
         Scene.world.rayTest(posFrom, posTo, rayResult);
-        if(rayResult.hasHit()){
+        if(rayResult.hasHit() && rayResult.collisionObject != body){
             return true;
         }else {
             return false;
@@ -312,7 +325,7 @@ public class Camera {
 
         nx += (Math.sin(yrotrad+angle))*throwSpeed;
         nz -= (Math.cos(yrotrad+angle))*throwSpeed;
-        ny -= (Math.sin(xrotrad+angle))*throwSpeed;
+        ny -= (Math.sin(xrotrad))*throwSpeed;
 
         return new Vector3f(nx,ny,nz);
     }//..
