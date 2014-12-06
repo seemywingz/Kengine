@@ -124,17 +124,17 @@ public class Scene implements GLEventListener{
         callist = objectLoader.LoadOBJ("/obj/map/","map1.obj",points,null);
         models.add(new ConcaveCollisionModel(new Point3d(0,-200,-10,2000f),world,points,callist));//*/
 
-//        points = new ObjectArrayList<Vector3f>();// Tree
-//        callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points,null);
-//        models.add(new ConvexCollisionModel(new Point3d(30,0,0,.04f),world,points,callist));//*/
+        points = new ObjectArrayList<Vector3f>();// Tree
+        callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points,null);
+        models.add(new ConvexCollisionModel(new Point3d(30,0,0,.04f),world,points,callist));//*/
 
         points = new ObjectArrayList<Vector3f>();// woodHouse
         callist = objectLoader.LoadOBJ("/obj/woodhouse/","woodhouse.obj",points,null);
         models.add(new ConcaveCollisionModel(new Point3d(50,0,0,.05f),world,points,callist));//*/
 
-//        points = new ObjectArrayList<Vector3f>();// table
-//        callist = objectLoader.LoadOBJ("/obj/tableNchair/","table.obj",points,null);
-//        models.add(new ConvexCollisionModel(new Point3d(55,1,0,.8f,18.1437f),world,points,callist));//*/
+        points = new ObjectArrayList<Vector3f>();// table
+        callist = objectLoader.LoadOBJ("/obj/tableNchair/","table.obj",points,null);
+        models.add(new ConvexCollisionModel(new Point3d(55,1,0,.8f,18.1437f),world,points,callist));//*/
 
         /*Vector<Integer>frames = new Vector<Integer>();// Skleton
         objectLoader.loadAnimation(frames,"/obj/Skeleton/","Skeleton",20);

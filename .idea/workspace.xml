@@ -10,18 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3416d372-3786-42ad-8efa-fb3cb5bef395" name="Default" comment="">
-      <change type="DELETED" beforePath="X:\Dev\Projects\Git\Kengine\target\classes\wrld\Cube.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Camera.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Camera.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$1.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$2.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$4.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene$5.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="X:\Dev\Projects\Git\Kengine\src\main\java\wrld\Cube.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Box.java" />
     </list>
     <ignored path="Kengine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,21 +41,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Camera.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46055436" vertical-offset="3024" max-vertical-offset="6315">
-              <caret line="228" column="49" selection-start-line="228" selection-start-column="49" selection-end-line="228" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2799" max-vertical-offset="6315">
+              <caret line="231" column="30" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="6105">
-              <caret line="132" column="26" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.74840087" vertical-offset="1689" max-vertical-offset="6105">
+              <caret line="136" column="30" selection-start-line="134" selection-start-column="29" selection-end-line="136" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
@@ -124,8 +113,8 @@
         <option value="$PROJECT_DIR$/src/main/java/wrld/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Cube.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Box.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
         <option value="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
       </list>
     </option>
   </component>
@@ -787,7 +776,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24079755" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24079755" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15781488" sideWeight="0.5151515" order="0" side_tool="false" content_ui="combo" />
@@ -1235,22 +1224,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2799" max-vertical-offset="6315">
+          <caret line="231" column="30" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="6105">
-          <caret line="132" column="26" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.74840087" vertical-offset="1689" max-vertical-offset="6105">
+          <caret line="136" column="30" selection-start-line="134" selection-start-column="29" selection-end-line="136" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#mkBoundingBox#0;class#Scene#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Camera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46055436" vertical-offset="3024" max-vertical-offset="6315">
-          <caret line="228" column="49" selection-start-line="228" selection-start-column="49" selection-end-line="228" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
