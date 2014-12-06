@@ -13,14 +13,14 @@ import javax.vecmath.Vector3f;
  */
 
 
-public class Cube extends CollisionModel {
+public class Box extends CollisionModel {
 
 
     Texture texture;
     protected float textureTop, textureBottom, textureLeft, textureRight;
 
 
-    Cube(Point3d p, DynamicsWorld world, Texture texture) {
+    Box(Point3d p, DynamicsWorld world, Texture texture) {
         super(p,1);
         this.texture =texture;
 

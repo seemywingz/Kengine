@@ -17,7 +17,6 @@ import com.bulletphysics.linearmath.MotionState;
 import com.bulletphysics.linearmath.Transform;
 import com.bulletphysics.util.ObjectArrayList;
 import com.jogamp.opengl.util.FPSAnimator;
-import javafx.scene.media.AudioClip;
 
 import javax.media.opengl.*;
 import javax.media.opengl.glu.GLU;
@@ -26,7 +25,6 @@ import javax.vecmath.Vector3f;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
-import java.net.URL;
 import java.util.Vector;
 
 /**
@@ -58,7 +56,7 @@ public class Scene implements GLEventListener{
     // OpenGL Models
     Vector<Model> models = new Vector<Model>();
     protected Vector<Ball> balls = new Vector<Ball>();
-    Vector<Cube> boxes = new Vector<Cube>();
+    Vector<Box> boxes = new Vector<Box>();
     FloorModel floor;
     SkyDome sky;
     Ball b;
@@ -126,17 +124,17 @@ public class Scene implements GLEventListener{
         callist = objectLoader.LoadOBJ("/obj/map/","map1.obj",points,null);
         models.add(new ConcaveCollisionModel(new Point3d(0,-200,-10,2000f),world,points,callist));//*/
 
-        points = new ObjectArrayList<Vector3f>();// Tree
-        callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points,null);
-        models.add(new ConvexCollisionModel(new Point3d(30,0,0,.04f),world,points,callist));//*/
+//        points = new ObjectArrayList<Vector3f>();// Tree
+//        callist = objectLoader.LoadOBJ("/obj/tree/","tree.obj",points,null);
+//        models.add(new ConvexCollisionModel(new Point3d(30,0,0,.04f),world,points,callist));//*/
 
         points = new ObjectArrayList<Vector3f>();// woodHouse
         callist = objectLoader.LoadOBJ("/obj/woodhouse/","woodhouse.obj",points,null);
         models.add(new ConcaveCollisionModel(new Point3d(50,0,0,.05f),world,points,callist));//*/
 
-        points = new ObjectArrayList<Vector3f>();// chair
-        callist = objectLoader.LoadOBJ("/obj/tableNchair/","table.obj",points,null);
-        models.add(new ConvexCollisionModel(new Point3d(55,1,0,.8f,18.1437f),world,points,callist));//*/
+//        points = new ObjectArrayList<Vector3f>();// table
+//        callist = objectLoader.LoadOBJ("/obj/tableNchair/","table.obj",points,null);
+//        models.add(new ConvexCollisionModel(new Point3d(55,1,0,.8f,18.1437f),world,points,callist));//*/
 
         /*Vector<Integer>frames = new Vector<Integer>();// Skleton
         objectLoader.loadAnimation(frames,"/obj/Skeleton/","Skeleton",20);
@@ -183,7 +181,7 @@ public class Scene implements GLEventListener{
         for (Ball b: balls){
             b.draw();
         }
-        for (Cube c:boxes){
+        for (Box c:boxes){
             c.draw();
         }
 
@@ -429,7 +427,7 @@ public class Scene implements GLEventListener{
         for (int i=0;i<5;i++){
             for(int k=b;k>0;k--){//depth
                 for(int j=b;j>0;j--){//width
-                    boxes.add( new Cube(new Point3d(strtx+j*sep,(sz)+(sz*i*2),srtrz+k*sep, sz,mass),world,Textures.box));
+                    boxes.add( new Box(new Point3d(strtx+j*sep,(sz)+(sz*i*2),srtrz+k*sep, sz,mass),world,Textures.box));
                 }
             }
             b-=2;
@@ -443,7 +441,7 @@ public class Scene implements GLEventListener{
         for(int k=0;k<4;k++)//depth
             for(int j=0;j<6;j++){//width
                 for(int i=0;i<10;i++){//height
-                    boxes.add( new Cube(new Point3d(strtx+j*sep,(sz)+(sz*i*2),srtrz+k*sep, sz,mass),world,Textures.box));
+                    boxes.add( new Box(new Point3d(strtx+j*sep,(sz)+(sz*i*2),srtrz+k*sep, sz,mass),world,Textures.box));
                 }
             }
     }//..

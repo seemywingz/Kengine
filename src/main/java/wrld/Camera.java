@@ -10,6 +10,7 @@ import com.bulletphysics.linearmath.MotionState;
 import com.bulletphysics.linearmath.Transform;
 
 import javax.media.opengl.GL2;
+import javax.vecmath.Quat4f;
 import javax.vecmath.Vector3f;
 import java.awt.event.KeyEvent;
 
@@ -23,9 +24,8 @@ public class Camera {
     Vector3f lastStep;
 
     //JBullet Variables
-    protected Transform transform,
-                        holdingTransform = new Transform();
-    protected RigidBody body,bodyHolding = null;
+    protected Transform transform;
+    protected RigidBody body, holdingBody = null;
     protected float glMatrix[] = new float[16];
 
 
@@ -55,7 +55,7 @@ public class Camera {
             yrotrad,
             maxSpeed = 8,
             walkSpeed = 20,
-            runSpeed = 50,
+            runSpeed = 30,
             flySpeed = .5f,
             radius = .5f;
     Vector3f velocity = new Vector3f();
@@ -90,14 +90,14 @@ public class Camera {
         }
 
         if(holding)
-            carry();
+            carryObject();
 
         if(fog)
             mkFog();
 
-        gl.glRotatef(xrot, 1, 0, 0);  //rotate our camera on teh x-axis (left and right)
-        gl.glRotatef(yrot, 0, 1, 0);  //rotate our camera on the y-axis (up and down)
-        gl.glTranslatef(-pos.x, -pos.y-radius, -pos.z); //translate the screen to the position of camera
+        gl.glRotatef(xrot, 1, 0, 0);  //rotate camera on the x-axis (up and down)
+        gl.glRotatef(yrot, 0, 1, 0);  //rotate camera on the y-axis (left and right)
+        gl.glTranslatef(-pos.x, -pos.y - radius, -pos.z); //translate the screen to the position of camera
         body.setActivationState(1);
     }//..
 
@@ -121,6 +121,8 @@ public class Camera {
             // constraints
             xrot = xrot <= -80 ? -80 : xrot;
             xrot = xrot >= 75 ? 75 : xrot;
+//            transform.setRotation(new Quat4f(0,yrot,0,0));
+//            body.setWorldTransform(transform);
     }//..
 
     protected void applyKeyControl(){
@@ -173,6 +175,7 @@ public class Camera {
             pos.y += (Math.sin(xrotrad)) * flySpeed;
         }else if(standing()){
             body.applyCentralImpulse(getRunVelocity(-maxSpeed, 0));
+            stepFX();
         }
     }//..
 
@@ -183,6 +186,7 @@ public class Camera {
             pos.z -= (Math.sin(yrotrad)) * flySpeed * .25;
         }else if(standing()){
             body.applyCentralImpulse(getRunVelocity(maxSpeed, -90));
+            stepFX();
         }
     }//..
 
@@ -193,12 +197,13 @@ public class Camera {
             pos.z += (Math.sin(yrotrad)) * flySpeed;
         }else if(standing()){
             body.applyCentralImpulse(getRunVelocity(maxSpeed, 90));
+            stepFX();
         }
     }//..
 
     protected void stepFX(){
         Vector3f nextStep = getPosition(1);
-        if(Math.abs(Utils.calcDistance(lastStep,nextStep)) > 5){
+        if(Math.abs(Utils.calcDistance(lastStep,nextStep)) > 6){
             lastStep=nextStep;
             int rand = (int)(Math.random()*4)+1;
             Utils.playSound("/snd/step"+rand+".wav");
@@ -218,10 +223,10 @@ public class Camera {
         if(underFoot(new Vector3f(pos.x, pos.y, pos.z))){//directly under
             jumping=false;
             return true;
-        }else if(underFoot(getDirection(radius,90))){// under right side
+        }else if(underFoot(new Vector3f(pos.x-.07f, pos.y, pos.z))){// under right side
             jumping=false;
             return true;
-        }else if(underFoot(getDirection(radius,-90))){// under left side
+        }else if(underFoot(new Vector3f(pos.x+.07f, pos.y, pos.z))){// under right side
             jumping=false;
             return true;
         }
@@ -229,7 +234,7 @@ public class Camera {
     }//..
 
     protected boolean underFoot(Vector3f posFrom){
-        float yt = (pos.y - (pos.size*1.2f));
+        float yt = (pos.y - (pos.size*1.4f));
         Vector3f posTo = new Vector3f(pos.x,yt, pos.z);
         //System.out.println(pos.y+" "+yt);
         CollisionWorld.ClosestRayResultCallback rayResult =
@@ -242,7 +247,7 @@ public class Camera {
         }
     }//..
 
-    protected void grab(){
+    protected void grabObject(){
         Vector3f posFrom = getPosition(1),
                  posTo = getPosition(2f);
         //System.out.println(pos.y+" "+yt);
@@ -252,30 +257,46 @@ public class Camera {
         if(rayResult.hasHit()) {
             float gmass = ((RigidBody) rayResult.collisionObject).getInvMass();
             if (gmass > 0) {
-                bodyHolding = (RigidBody) rayResult.collisionObject;
-                bodyHolding.setActivationState(0);
+                holdingBody = (RigidBody) rayResult.collisionObject;
+                holdingBody.setActivationState(0);
                 holding = true;
             }
         }
     }//..
-    protected void carry(){
+    protected void carryObject(){
+        Transform holdingTransform = new Transform();
+        Vector3f carryPos = getPosition(1.6f);
+
         body.getWorldTransform(holdingTransform);
-        Vector3f carryPos = getPosition(1.5f);
-        holdingTransform.origin.set(carryPos.x,carryPos.y-.5f,carryPos.z);
-        bodyHolding.setWorldTransform(holdingTransform);
-        bodyHolding.setLinearVelocity(new Vector3f(0,0,0));
+        holdingTransform.origin.set(carryPos.x, carryPos.y - .5f, carryPos.z);
+
+        holdingBody.setWorldTransform(holdingTransform);
+        holdingBody.setLinearVelocity(new Vector3f(0, 0, 0));
+        //rotateObject();
     }//..
 
-    protected void drop(){
+    protected void rotateObject(){
+        Transform holdingTransform = new Transform();
+        holdingBody.getWorldTransform(holdingTransform);
+
+        Quat4f holdingRotation = new Quat4f();
+        transform.getRotation(holdingRotation);
+
+        holdingTransform.setRotation(holdingRotation);
+        holdingBody.setWorldTransform(holdingTransform);
+    }//..
+
+
+    protected void dropObject(){
         holding = false;
-        bodyHolding.setActivationState(1);
-//        bodyHolding.setLinearVelocity(new Vector3f(0,0,0));
+        holdingBody.setActivationState(1);
+//        holdingBody.setLinearVelocity(new Vector3f(0,0,0));
     }//..
 
     public void throwObj(){
         if(holding){
-            bodyHolding.setActivationState(1);
-            bodyHolding.setLinearVelocity(getDirection(20, 0));
+            holdingBody.setActivationState(1);
+            holdingBody.setLinearVelocity(getDirection(20, 0));
             holding=false;
         }
     }//..
@@ -350,9 +371,9 @@ public class Camera {
 
         if(ke.getKeyCode() == f){
             if(holding)
-                drop();
+                dropObject();
             else
-                grab();
+                grabObject();
         }
         if (ke.getKeyCode() == ctrl){
             flying=!flying;
