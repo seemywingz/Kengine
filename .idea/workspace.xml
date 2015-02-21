@@ -9,28 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/wrld/SkyDome.java" line="18" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3416d372-3786-42ad-8efa-fb3cb5bef395" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/obj/woodHouse/MADEIRA2.tga" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/obj/woodHouse/MADEIRA3.tga" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/obj/woodHouse/TELHA.tga" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/obj/woodHouse/TELHA2.tga" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/obj/woodHouse/TELHA3.tga" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/obj/woodHouse/WoodHouse.mtl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/obj/woodHouse/Woodhouse.obj" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.jar" afterPath="$PROJECT_DIR$/out/artifacts/Kengine_jar/Kengine.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wrld/Scene.class" afterPath="$PROJECT_DIR$/target/classes/wrld/Scene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/BallType.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/BallType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Box.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Box.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Camera.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/CannonBall.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/CannonBall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Kengine_jar2.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Kengine_jar2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" afterPath="$PROJECT_DIR$/src/main/java/wrld/Scene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="3416d372-3786-42ad-8efa-fb3cb5bef395" name="Default" comment="" />
     <ignored path="Kengine.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -73,7 +52,7 @@
       <file leaf-file-name="Scene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="6735">
+            <state vertical-scroll-proportion="0.5769231" vertical-offset="1320" max-vertical-offset="6735">
               <caret line="140" column="32" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
               <folding />
             </state>
@@ -584,7 +563,7 @@
       <updated>1416553174371</updated>
       <workItem from="1422297586228" duration="42000" />
       <workItem from="1422329514738" duration="27000" />
-      <workItem from="1424497836318" duration="101000" />
+      <workItem from="1424497836318" duration="337000" />
     </task>
     <task id="LOCAL-00001" summary="Kengine Artifacts">
       <created>1416558788073</created>
@@ -730,11 +709,17 @@
       <option name="project" value="LOCAL" />
       <updated>1417151647490</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Safe House">
+      <created>1424497991996</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1424497991996</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170000" />
+    <option name="totallyTimeSpent" value="406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1920" height="1054" extended-state="6" />
@@ -1179,7 +1164,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wrld/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1610" max-vertical-offset="6370">
+        <state vertical-scroll-proportion="0.5769231" vertical-offset="1320" max-vertical-offset="6735">
           <caret line="140" column="32" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
           <folding />
         </state>
