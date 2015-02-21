@@ -136,9 +136,9 @@ public class Scene implements GLEventListener{
         callist = objectLoader.LoadOBJ("/obj/tableNchair/","table.obj",points,null);
         models.add(new ConvexCollisionModel(new Point3d(55,1,0,.8f,18.1437f),world,points,callist));//*/
 
-        /*Vector<Integer>frames = new Vector<Integer>();// Skleton
+        Vector<Integer>frames = new Vector<Integer>();// Skleton
         objectLoader.loadAnimation(frames,"/obj/Skeleton/","Skeleton",20);
-        models.add(new Skeleton(gl, new Point3d(-90, 1.5f, 5, 1, 3f),world, frames));// world, points, callist));//*/
+        models.add(new Skeleton(new Point3d(-90, 1.5f, 5, 1, 3f),world, frames));// world, points, callist));//*/
 
 
         models.add(new FloorModel(Textures.grass,new Point3d(0,0), world));
@@ -352,6 +352,22 @@ public class Scene implements GLEventListener{
         world.setGravity(new Vector3f(0, -9.8f, 0));
     }//..
 
+    protected float[] getGroundAtPoint(double x, double z){
+        float y = 1000;
+        float hit[] = new float[3];
+        Vector3f pointFrom =  new Vector3f((float)x,y,(float)z), pointTo = new Vector3f((float)x,-y,(float)z);
+        CollisionWorld.ClosestRayResultCallback rayResult = new CollisionWorld.ClosestRayResultCallback(pointFrom,pointTo);
+        world.rayTest(pointFrom, pointTo, rayResult);
+        if(rayResult.hasHit()){
+            if(rayResult.collisionObject != models.get(0).getBody()){ // if not the ground
+                //return getGroundAtPoint(x+2,z+2);
+            }else{
+                rayResult.hitPointWorld.get(hit);
+            }
+        }
+        return hit;
+    }//..
+
     protected void mkBoundingBox(){
         // floor
         float mass = 0;
@@ -444,22 +460,6 @@ public class Scene implements GLEventListener{
                     boxes.add( new Box(new Point3d(strtx+j*sep,(sz)+(sz*i*2),srtrz+k*sep, sz,mass),world,Textures.box));
                 }
             }
-    }//..
-
-    protected float[] getGroundAtPoint(double x, double z){
-        float y = 1000;
-        float hit[] = new float[3];
-        Vector3f pointFrom =  new Vector3f((float)x,y,(float)z), pointTo = new Vector3f((float)x,-y,(float)z);
-        CollisionWorld.ClosestRayResultCallback rayResult = new CollisionWorld.ClosestRayResultCallback(pointFrom,pointTo);
-        world.rayTest(pointFrom, pointTo, rayResult);
-        if(rayResult.hasHit()){
-            if(rayResult.collisionObject != models.get(0).getBody()){ // if not the ground
-                //return getGroundAtPoint(x+2,z+2);
-            }else{
-                rayResult.hitPointWorld.get(hit);
-            }
-        }
-        return hit;
     }//..
 
 
